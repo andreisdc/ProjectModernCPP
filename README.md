@@ -1,2 +1,3 @@
 # ProjectModernCPP
-1.Andrei Samulescu
+1.Andrei
+2.Alexia
