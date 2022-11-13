@@ -1,5 +1,5 @@
 #include <iostream>
-#include "counties/counties.h"
+#include "counties.h"
 
 int main(){
 	return 0;

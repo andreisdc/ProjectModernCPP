@@ -10,13 +10,17 @@ class user {
 private:
 	std::string m_username;
 	std::string m_password;
+	int m_rank;
 public:
 	user();
 	void addUser();
-	std::string getUsername();
-	std::string getPassword();
-	void setUsername(std::string username);
-	void setPassword(std::string password);
+	const std::string getUsername();
+	const std::string getPassword();
+	const int getRank();
+	void setUsername(const std::string username);
+	void setPassword(const std::string password);
+	void setRank(const int rank);
+	friend std::ostream& operator<<(std::ostream& out, const user& u);
 
 };
 
