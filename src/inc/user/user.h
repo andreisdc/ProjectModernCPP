@@ -11,16 +11,25 @@ private:
 	std::string m_username;
 	std::string m_password;
 	int m_rank;
+	int m_points;
 public:
 	user();
 	void addUser();
+
 	const std::string getUsername();
 	const std::string getPassword();
 	const int getRank();
+	const int getPoints();
+
 	void setUsername(const std::string username);
 	void setPassword(const std::string password);
 	void setRank(const int rank);
-	friend std::ostream& operator<<(std::ostream& out, const user& u);
+	void setPoints(const int points);
+
+	void addPoints(const int countyPoints);
+
+	friend std::ostream& operator<<(std::ostream& out, user& u);
+
 
 };
 
