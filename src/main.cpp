@@ -1,6 +1,7 @@
 #include <iostream>
 #include "County.hpp"
 #include "Board.hpp"
+#include "User.hpp"
 
 int main() {
 	County Alba("Alba", 1);

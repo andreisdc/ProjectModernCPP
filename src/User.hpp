@@ -1,19 +1,17 @@
-//
-// Created by alexi on 10/11/2022.
-//
+#pragma once
+
 #include <string>
 #include <iostream>
-#ifndef PROIECT_MODERN_CPP_USER_H
-#define PROIECT_MODERN_CPP_USER_H
 
-class user {
+class User {
 private:
 	std::string m_username;
 	std::string m_password;
 	int m_rank;
 	int m_points;
 public:
-	user();
+	User();
+
 	void addUser();
 
 	const std::string getUsername();
@@ -28,9 +26,5 @@ public:
 
 	void addPoints(const int countyPoints);
 
-	friend std::ostream& operator<<(std::ostream& out, user& u);
-
-
+	friend std::ostream& operator<<(std::ostream& out, User& u);
 };
-
-#endif//PROIECT_MODERN_CPP_USER_H
