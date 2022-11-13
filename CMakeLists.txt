@@ -11,9 +11,6 @@ add_subdirectory(third-party/json)
 
 add_executable(proiect_modern_cpp
         src/main.cpp
-        src/inc/user/user.cpp
-        src/inc/user/user.h
-        src/County.cpp
-        src/County.hpp
-        )
+        src/County.hpp src/County.cpp
+        src/Board.hpp src/Board.cpp)
 target_link_libraries(proiect_modern_cpp PRIVATE nlohmann_json::nlohmann_json)
