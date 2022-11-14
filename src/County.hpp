@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include <vector>
+#include <nlohmann/json.hpp>
+#include <fstream>
+using json = nlohmann::json;
 
 class County {
 private:
@@ -9,6 +12,7 @@ private:
 	int m_exp = 0;
 	int m_numberNeighbors = 0;
 	std::vector<County *> m_listNeighbors;
+	json m_questionsTrivia;
 
 public:
 	County(const std::string &name, int exp);
@@ -16,4 +20,5 @@ public:
 	County *getCounty(int number);
 	void showCountyName();
 	void showNumberNeighbors();
+	void showTriviaQuestions();
 };

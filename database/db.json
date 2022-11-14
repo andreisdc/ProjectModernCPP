@@ -1,12 +1,16 @@
 {
-	"users": {
-		"Name 1": {
-			"username": "ceva",
-			"password": "ceva"
-		},
-		"Name2": {
-			"username": "altceva",
-			"password": "altceva"
-		}
+	"Alba": {
+		"Care este indicativul autovehiculelor din acest judet?": [
+			"AB",
+			"PH",
+			"BV",
+			"CT"
+		],
+		"In ce regiune se afla acest judet?": [
+			"Transilvania",
+			"Muntenia",
+			"Moldova",
+			"Nu se afla in Ro"
+		]
 	}
 }

@@ -1,4 +1,3 @@
-#include <iostream>
 #include "County.hpp"
 #include "Board.hpp"
 #include "User.hpp"
