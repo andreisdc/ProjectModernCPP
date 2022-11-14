@@ -11,6 +11,52 @@
 			"Muntenia",
 			"Moldova",
 			"Nu se afla in Ro"
+		],
+		"In ce zona a judetului se afla muntii Metaliferi?": [
+			"Est",
+			"Vest",
+			"Nord",
+			"Sud"
+		]
+	},
+	"Arad": {
+		"In ce an a avut loc Capitularea de la Siria?": [
+			"1849",
+			"1922",
+			"1822",
+			"1905"
+		],
+		"Orasul Batranei doamne (Echipa de fotbal)": [
+			"Arad",
+			"Unirea",
+			"Voluntari",
+			"FCSB"
+		],
+		"Rau care traverseaza Aradul": [
+			"Mures",
+			"Dunarea",
+			"Dambovita",
+			"Crisul repede"
+		]
+	},
+	"Arges": {
+		"Vechea capitala a Tarii Romanesti": [
+			"Curtea de Arges",
+			"Sarmisegetuza",
+			"Bucuresti",
+			"Campulung"
+		],
+		"Rau care traverseaza municipiul Pitesti": [
+			"Arges",
+			"Dambovita",
+			"Dunarea",
+			"Mures"
+		],
+		"Care este municipiul resedinta de judet al Argesului": [
+			"Pitesti",
+			"Campulung",
+			"Ploiesti",
+			"Campina"
 		]
 	}
 }
