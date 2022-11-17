@@ -19,12 +19,12 @@ public:
 	const int getRank();
 	const int getPoints();
 
-	void setUsername(const std::string username);
-	void setPassword(const std::string password);
-	void setRank(const int rank);
-	void setPoints(const int points);
+	void setUsername(const std::string& username);
+	void setPassword(const std::string& password);
+	void setRank(const int& rank);
+	void setPoints(const int& points);
 
-	void addPoints(const int countyPoints);
+	void addPoints(const int& countyPoints);
 
 	friend std::ostream& operator<<(std::ostream& out, User& u);
 };

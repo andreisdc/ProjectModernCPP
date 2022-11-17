@@ -17,11 +17,11 @@ const std::string User::getPassword() {
 	return m_password;
 }
 
-void User::setUsername(std::string username) {
+void User::setUsername(std::string &username) {
 	this->m_username = username;
 }
 
-void User::setPassword(std::string password) {
+void User::setPassword(std::string &password) {
 	this->m_password = password;
 }
 
