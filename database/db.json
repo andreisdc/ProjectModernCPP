@@ -58,5 +58,85 @@
 			"Ploiesti",
 			"Campina"
 		]
+	},
+	"Bacau": {
+		"In ce regiune istorica se afla judetul Bacau?": [
+			"Moldova",
+			"Muntenia",
+			"Banat",
+			"Dobrogea"
+		],
+		"In ce an Paul al V-lea a infiintat Episcopia de la Bacau?": [
+			"1859",
+			"1888",
+			"1914",
+			"1655"
+		],
+		"Ce rau trece prin judetul Bacau": [
+			"Siret",
+			"Dunarea",
+			"Crisul repede",
+			"Olt"
+		]
+	},
+	"Bihor": {
+		"Cum se mai numeste Varful Bihor?": [
+			"Cucurbata mare",
+			"Moldoveanu",
+			"Omu",
+			"Negoiu"
+		],
+		"Ce rau trece prin acest judet?": [
+			"Crisul negru",
+			"Crisul repede",
+			"Siret",
+			"Mures"
+		],
+		"Resedinta judetului": [
+			"Oradea",
+			"Bihor",
+			"Bucuresti",
+			"Constanta"
+		]
+	},
+	"Bistrita-Nasaud": {
+		"De cine este infiintata Bistrita?": [
+			"Nemti",
+			"Francezi",
+			"Polonezi",
+			"Austrieci"
+		],
+		"In ce an este infiintata prima scoala Greco Catolica?": [
+			"1777",
+			"1922",
+			"1821",
+			"1868"
+		],
+		"Resedinta de judet este": [
+			"Bistrita",
+			"Nasaud",
+			"Pitesti",
+			"Tecuci"
+		]
+	},
+	"Botosani": {
+		"Cine s-a nascut in acest judet?": [
+			"Mihai Eminescu",
+			"Ion Creanga",
+			"Emil Constantinescu",
+			"Traian Basescu"
+		],
+		"Care este regiunea istorica?": [
+			"Moldova",
+			"Muntenia",
+			"Transilvania",
+			"Dobrogea"
+		],
+		"Care este principalul afluent?": [
+			"Sitna",
+			"Jiu",
+			"Ialomita",
+			"Bega"
+		]
 	}
 }
