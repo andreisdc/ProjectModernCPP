@@ -270,7 +270,7 @@
 			"1636",
 			"2021"
 		],
-		"Care este numarul aproximatic de locuitori?": [
+		"Care este numarul aproximativ de locuitori?": [
 			"65000",
 			"320000",
 			"20000",
@@ -301,6 +301,52 @@
 			"Napoca",
 			"Arad",
 			"Baia Mare"
+		],
+		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
+			"Kolozsvar",
+			"Klausenburg",
+			"Cloizanburg",
+			"Cluzvar"
+		]
+	},
+	"Constanta": {
+		"In ce secol Dobrogea devine parte din Tara Romaneasca?":[
+			"Secolul 19",
+			"Secolul 10",
+			"Secolul 15",
+			"Secolul 18"
+		],
+		"Cum se numea orasul Constanta in origine?": [
+			"Tomis",
+			"Tomitus",
+			"Costantius",
+			"Constanta"
+		],
+		"In ce secol a fost fondat orasul Constanta?": [
+			"Secolul 5",
+			"Secolul 1",
+			"Secolul 4",
+			"Secolul 11"
+		]
+	},
+	"Covasna": {
+		"Care e resedita judetului Covasna?": [
+			"Sfantu Gheorghe",
+			"Covasna",
+			"Targu Secuiesc",
+			"Intorsura Buzaului"
+		],
+		"Care rau traverseaza orasul Sfantu Gheorghe?": [
+			"Olt",
+			"Siret",
+			"Putna",
+			"Pad"
+		],
+		"Care este dulcele tipic maghiar?": [
+			"Kurtoskalacs",
+			"Poale in brau",
+			"Strudel",
+			"Krapfen"
 		]
 	}
 }
