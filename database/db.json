@@ -301,6 +301,80 @@
 			"Napoca",
 			"Arad",
 			"Baia Mare"
+		],
+		"In ce secol a fost construita Biserica Calvaria?": [
+			"XI",
+			"X",
+			"XV",
+			"XVI"
+		]
+	},
+	"Constanta": {
+		"In memoria cui a fost construita statuia Ovidiu?": [
+			"Publius Ovidiu Naso",
+			"Ovidiu Edvin",
+			"Augustin Ovidiu",
+			"Ovidiu Caius"
+		],
+		"Cati metri are Farul Genovez?": [
+			"8",
+			"9",
+			"10",
+			"7"
+		],
+		"La initiativa cui a fost construita Moscheea Carol?": [
+			"Carol I",
+			"Carol II",
+			"Carol Ferdinand",
+			"Mihai Carol I"
+		]
+	},
+	"Covasna": {
+		"Care dintre urmatoarele statiuni balneare se afla in Covasna?": [
+			"Baile Balvanyos",
+			"Baile Herculane",
+			"Baile Felix",
+			"Baile Olanesti"
+		],
+		"Care este resedinta de judet?": [
+			"Sfântu Gheorghe",
+			"Miercurea Ciuc",
+			"Tg. Mures",
+			"Mangalia"
+		],
+		"Cum se numeste renumitul vulcan?": [
+			"Balta Dracului",
+			"Valea Incinsa",
+			"Piatra Arsa",
+			"Lacul Trotusi"
+		]
+	},
+	"Dambovita": {
+		"Ce inaltime are Turnul Chindiei?": [
+			"27",
+			"25",
+			"26",
+			"28"
+		],
+		"In ce sat se afla casa memoriala a lui I.L. Caragiale?": [
+			"Ion Luca Caragiale",
+			"Darmanesti",
+			"Humulesti",
+			"Targoviste"
+		],
+		"Acum cati ani a fost construita Manastirea Dealu?":[
+			"500",
+			"450",
+			"555",
+			"550"
+		]
+	},
+	"Dolj": {
+		"Actor renumit din filmul Mihai Viteazul": [
+			"Amza Pellea",
+			"Toma Caragiu",
+			"Sergiu Nicolaescu",
+			"Florin Piersic"
 		]
 	}
 }
