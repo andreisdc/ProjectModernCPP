@@ -302,91 +302,119 @@
 			"Arad",
 			"Baia Mare"
 		],
+		"In ce secol a fost construita Biserica Calvaria?": [
+			"XI",
+			"X",
+			"XV",
+			"XVI"
+		]
+	},
+	"Constanta": {
+		"In memoria cui a fost construita statuia Ovidiu?": [
+			"Publius Ovidiu Naso",
+			"Ovidiu Edvin",
+			"Augustin Ovidiu",
+			"Ovidiu Caius"
+		],
+		"Cati metri are Farul Genovez?": [
+			"8",
+			"9",
+			"10",
+			"7"
+		],
+		"La initiativa cui a fost construita Moscheea Carol?": [
+			"Carol I",
+			"Carol II",
+			"Carol Ferdinand",
+			"Mihai Carol I"
+		]
+	},
+	"Covasna": {
+		"Care dintre urmatoarele statiuni balneare se afla in Covasna?": [
+			"Baile Balvanyos",
+			"Baile Herculane",
+			"Baile Felix",
+			"Baile Olanesti"
+		],
+		"Care este resedinta de judet?": [
+			"Sfântu Gheorghe",
+			"Miercurea Ciuc",
+			"Tg. Mures",
+			"Mangalia"
+		],
+		"Cum se numeste renumitul vulcan?": [
+			"Balta Dracului",
+			"Valea Incinsa",
+			"Piatra Arsa",
+			"Lacul Trotusi"
+		]
+	},
+	"Dambovita": {
+		"Ce inaltime are Turnul Chindiei?": [
+			"27",
+			"25",
+			"26",
+			"28"
+		],
+		"In ce sat se afla casa memoriala a lui I.L. Caragiale?": [
+			"Ion Luca Caragiale",
+			"Darmanesti",
+			"Humulesti",
+			"Targoviste"
+		],
+		"Acum cati ani a fost construita Manastirea Dealu?":[
+			"500",
+			"450",
+			"555",
+			"550"
+		]
+	},
+	"Dolj": {
+		"Actor renumit din filmul Mihai Viteazul": [
+			"Amza Pellea",
+			"Toma Caragiu",
+			"Sergiu Nicolaescu",
+			"Florin Piersic"
+		],
+		"In ce an a fost ridicat Muzeul de Arta din Craiova?": [
+			"1896",
+			"1850",
+			"1950",
+			"1946"
+		],
+		"Din ce an dateaza Casa Baniei?": [
+			"1699",
+			"1700",
+			"1709",
+			"1710"
+		]
+	},
+	"Galati": {
+		"Cati km are Faleza Dunarii?": [
+			"4",
+			"5",
+			"6",
+			"7"
+		],
+		"Cati m are Turnul Televiziunii?": [
+			"150",
+			"100",
+			"250",
+			"200"
+		],
+		"In ce an a fost terminata Biserica Precista?": [
+			"1647",
+			"1644",
+			"1657",
+			"1650"
+	],
 		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
 			"Kolozsvar",
 			"Klausenburg",
 			"Cloizanburg",
 			"Cluzvar"
 		]
-	},
-	"Constanta": {
-		"In ce secol Dobrogea devine parte din Tara Romaneasca?":[
-			"Secolul 19",
-			"Secolul 10",
-			"Secolul 15",
-			"Secolul 18"
-		],
-		"Cum se numea orasul Constanta in origine?": [
-			"Tomis",
-			"Tomitus",
-			"Costantius",
-			"Constanta"
-		],
-		"In ce secol a fost fondat orasul Constanta?": [
-			"Secolul 5",
-			"Secolul 1",
-			"Secolul 4",
-			"Secolul 11"
-		]
-	},
-	"Covasna": {
-		"Care e resedita judetului Covasna?": [
-			"Sfantu Gheorghe",
-			"Covasna",
-			"Targu Secuiesc",
-			"Intorsura Buzaului"
-		],
-		"Care rau traverseaza orasul Sfantu Gheorghe?": [
-			"Olt",
-			"Siret",
-			"Putna",
-			"Pad"
-		],
-		"Care este dulcele tipic maghiar?": [
-			"Kurtoskalacs",
-			"Poale in brau",
-			"Strudel",
-			"Krapfen"
-		]
-	},
-	"Dambovita": {
-		"In ce regiune se gaseste judetul Dambovita?": [
-			"Muntenia",
-			"Ardeal",
-			"Dobrogea",
-			"Transilvania"
-		],
-		"Care este resedinta judetului Dambovita?": [
-			"Targoviste",
-			"Pitesti",
-			"Curtea de Arges",
-			"Ramnicu Valcea"
-		],
-		"Care este cea mai veche și mai înaltă unitate de relief?": [
-			"Muntii Bucegi",
-			"Alpi",
-			"Carpati",
-			"Muntii Apuseni"
-		]
-	},
-	"Dolj": {
-		"Care este resedinta judetului Dolj?": [
-			"Craiova",
-			"Timisoara",
-			"Targu Jiu",
-			"Floresti"
-		],
-		"In ce regiune se gaseste judetul Dolj?": [
-			"Oltenia",
-			"Muntenia",
-			"Ardeal",
-			"Transilvania"
-		],
-		"Ce culoare NU este prezenta in stema judetului Dolj?": [
-			"Verde",
-			"Albastru",
-			"Rosu",
-			"Aur"
-		]
+
 	}
+
 }
