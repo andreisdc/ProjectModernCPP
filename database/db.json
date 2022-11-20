@@ -270,7 +270,7 @@
 			"1636",
 			"2021"
 		],
-		"Care este numarul aproximatic de locuitori?": [
+		"Care este numarul aproximativ de locuitori?": [
 			"65000",
 			"320000",
 			"20000",
@@ -407,7 +407,14 @@
 			"1644",
 			"1657",
 			"1650"
+	],
+		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
+			"Kolozsvar",
+			"Klausenburg",
+			"Cloizanburg",
+			"Cluzvar"
 		]
+
 	}
 
 }
