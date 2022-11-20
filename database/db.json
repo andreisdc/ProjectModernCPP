@@ -375,6 +375,39 @@
 			"Toma Caragiu",
 			"Sergiu Nicolaescu",
 			"Florin Piersic"
+		],
+		"In ce an a fost ridicat Muzeul de Arta din Craiova?": [
+			"1896",
+			"1850",
+			"1950",
+			"1946"
+		],
+		"Din ce an dateaza Casa Baniei?": [
+			"1699",
+			"1700",
+			"1709",
+			"1710"
+		]
+	},
+	"Galati": {
+		"Cati km are Faleza Dunarii?": [
+			"4",
+			"5",
+			"6",
+			"7"
+		],
+		"Cati m are Turnul Televiziunii?": [
+			"150",
+			"100",
+			"250",
+			"200"
+		],
+		"In ce an a fost terminata Biserica Precista?": [
+			"1647",
+			"1644",
+			"1657",
+			"1650"
 		]
 	}
+
 }
