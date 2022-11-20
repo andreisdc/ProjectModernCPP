@@ -348,5 +348,25 @@
 			"Strudel",
 			"Krapfen"
 		]
+	},
+	"Dambovita": {
+		"In ce regiune se gaseste judetul Dambovita?": [
+			"Muntenia",
+			"Ardeal",
+			"Dobrogea",
+			"Transilvania"
+		],
+		"Care este resedinta judetului Dambovita?": [
+			"Targoviste",
+			"Pitesti",
+			"Curtea de Arges",
+			"Ramnicu Valcea"
+		],
+		"Care este cea mai veche și mai înaltă unitate de relief?": [
+			"Muntii Bucegi",
+			"Alpi",
+			"Carpati",
+			"Muntii Apuseni"
+		]
 	}
 }
