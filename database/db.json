@@ -368,5 +368,25 @@
 			"Carpati",
 			"Muntii Apuseni"
 		]
+	},
+	"Dolj": {
+		"Care este resedinta judetului Dolj?": [
+			"Craiova",
+			"Timisoara",
+			"Targu Jiu",
+			"Floresti"
+		],
+		"In ce regiune se gaseste judetul Dolj?": [
+			"Oltenia",
+			"Muntenia",
+			"Ardeal",
+			"Transilvania"
+		],
+		"Ce culoare NU este prezenta in stema judetului Dolj?": [
+			"Verde",
+			"Albastru",
+			"Rosu",
+			"Aur"
+		]
 	}
 }
