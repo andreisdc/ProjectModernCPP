@@ -307,6 +307,12 @@
 			"X",
 			"XV",
 			"XVI"
+		],
+		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
+			"Kolozsvar",
+			"Klausenburg",
+			"Cloizanburg",
+			"Cluzvar"
 		]
 	},
 	"Constanta": {
@@ -407,14 +413,27 @@
 			"1644",
 			"1657",
 			"1650"
-	],
-		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
-			"Kolozsvar",
-			"Klausenburg",
-			"Cloizanburg",
-			"Cluzvar"
+	]
+	},
+	"Giurgiu": {
+		"Ce tip de planta apare in stema judetului Giurgiu?": [
+			"stejar",
+			"plop",
+			"brad",
+			"salcam"
+		],
+		"In ce regiune se gaseste judetul Giurgiu?": [
+			"Muntenia",
+			"Moldova",
+			"Ardeal",
+			"Oltenia"
+		],
+		"Cu ce judete se invecineaza judetul Giurgiu?": [
+			"Teleorman, Dambovița, Ilfov, Calarasi",
+			"Teleorman, Dambovita, Bucuresti, Calarasi",
+			"Prahova, Ialomita, Ilfov, Teleorman",
+			"Dambovita, Teleorman, Ilfov, Ialomita"
 		]
-
 	}
 
 }
