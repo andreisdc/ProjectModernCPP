@@ -1,418 +1,367 @@
 {
-	"Alba": {
-		"Care este indicativul autovehiculelor din acest judet?": [
-			"AB",
-			"PH",
-			"BV",
-			"CT"
-		],
-		"In ce regiune se afla acest judet?": [
-			"Transilvania",
-			"Muntenia",
-			"Moldova",
-			"Nu se afla in Ro"
-		],
-		"In ce zona a judetului se afla muntii Metaliferi?": [
-			"Est",
-			"Vest",
-			"Nord",
-			"Sud"
-		]
-	},
-	"Arad": {
-		"In ce an a avut loc Capitularea de la Siria?": [
-			"1849",
-			"1922",
-			"1822",
-			"1905"
-		],
-		"Orasul Batranei doamne (Echipa de fotbal)": [
-			"Arad",
-			"Unirea",
-			"Voluntari",
-			"FCSB"
-		],
-		"Rau care traverseaza Aradul": [
-			"Mures",
-			"Dunarea",
-			"Dambovita",
-			"Crisul repede"
-		]
-	},
-	"Arges": {
-		"Vechea capitala a Tarii Romanesti": [
-			"Curtea de Arges",
-			"Sarmisegetuza",
-			"Bucuresti",
-			"Campulung"
-		],
-		"Rau care traverseaza municipiul Pitesti": [
-			"Arges",
-			"Dambovita",
-			"Dunarea",
-			"Mures"
-		],
-		"Care este municipiul resedinta de judet al Argesului": [
-			"Pitesti",
-			"Campulung",
-			"Ploiesti",
-			"Campina"
-		]
-	},
-	"Bacau": {
-		"In ce regiune istorica se afla judetul Bacau?": [
-			"Moldova",
-			"Muntenia",
-			"Banat",
-			"Dobrogea"
-		],
-		"In ce an Paul al V-lea a infiintat Episcopia de la Bacau?": [
-			"1859",
-			"1888",
-			"1914",
-			"1655"
-		],
-		"Ce rau trece prin judetul Bacau": [
-			"Siret",
-			"Dunarea",
-			"Crisul repede",
-			"Olt"
-		]
-	},
-	"Bihor": {
-		"Cum se mai numeste Varful Bihor?": [
-			"Cucurbata mare",
-			"Moldoveanu",
-			"Omu",
-			"Negoiu"
-		],
-		"Ce rau trece prin acest judet?": [
-			"Crisul negru",
-			"Crisul repede",
-			"Siret",
-			"Mures"
-		],
-		"Resedinta judetului": [
-			"Oradea",
-			"Bihor",
-			"Bucuresti",
-			"Constanta"
-		]
-	},
-	"Bistrita-Nasaud": {
-		"De cine este infiintata Bistrita?": [
-			"Nemti",
-			"Francezi",
-			"Polonezi",
-			"Austrieci"
-		],
-		"In ce an este infiintata prima scoala Greco Catolica?": [
-			"1777",
-			"1922",
-			"1821",
-			"1868"
-		],
-		"Resedinta de judet este": [
-			"Bistrita",
-			"Nasaud",
-			"Pitesti",
-			"Tecuci"
-		]
-	},
-	"Botosani": {
-		"Cine s-a nascut in acest judet?": [
-			"Mihai Eminescu",
-			"Ion Creanga",
-			"Emil Constantinescu",
-			"Traian Basescu"
-		],
-		"Care este regiunea istorica?": [
-			"Moldova",
-			"Muntenia",
-			"Transilvania",
-			"Dobrogea"
-		],
-		"Care este principalul afluent?": [
-			"Sitna",
-			"Jiu",
-			"Ialomita",
-			"Bega"
-		]
-	},
-	"Brasov": {
-		"Care oras este situat la cea mai mare altitudine?": [
-			"Predeal",
-			"Bran",
-			"Sacele",
-			"Rasnov"
-		],
-		"Cum se numeste orasul in germana": [
-			"KronStadt",
-			"HermannStadt",
-			"Brasso",
-			"Corona"
-		],
-		"Unde este situat judetul?": [
-			"fix in centru",
-			"langa centru",
-			"pe langa centru",
-			"centru"
-		],
-		"Ce nume mare al fotbalului romanesc s-a nascut aici?": [
-			"Marius Lacatus",
-			"Gheorghe Hagi",
-			"Mihai Pintilii",
-			"Mihai Brasoveanu"
-		]
-	},
-	"Braila": {
-		"Ce firma renumita de camasi se regaseste aici?": [
-			"Braiconf",
-			"Verlinne",
-			"Zara",
-			"H&M"
-		],
-		"Ce apa trece prin judet?": [
-			"Dunarea",
-			"Amazon",
-			"Siret",
-			"Olt"
-		],
-		"Ce teatrul celebru este in Braila?": [
-			"Rally",
-			"Teatrul mascarada",
-			"Odeon",
-			"Nottara"
-		],
-		"Cum i se mai spune orasului Braila?": [
-			"Orasul cu salcami",
-			"Necaz",
-			"Ai si uitat",
-			"Saracie"
-		],
-		"De cate ori a fost ars orasul Braila?": [
-			"De 2 ori",
-			"De 10 ori",
-			"O singura data",
-			"Inca arde"
-		],
-		"Ce sunt Hrubele Brailei?": [
-			"Un sistem complex de galerii ce se intind sub centrul vechi",
-			"Porecla locuitorilor",
-			"Moneda lor nationala",
-			"Piesa la motor"
-		]
-	},
-	"Bucuresti": {
-		"Domnitor in timpul caruia este atestat orasul Bucuresti": [
-			"Vlad Tepes",
-			"Burebista",
-			"Mihai Viteazul",
-			"Ion Iliescu"
-		],
-		"In ce an a devenit capitala?": [
-			"Secolul 16",
-			"Secolul 19",
-			"Secolul 14",
-			"Secolul 15"
-		],
-		"Cea mai mare echipa de fotbal din tara?": [
-			"FCSB",
-			"Steaua Bucuresti",
-			"Rapid",
-			"Dinamo"
-		]
-	},
-	"Buzau": {
-		"Ce vulcani se afla in judet?": [
-			"Vulcanii noroiosi",
-			"Sfanta Ana",
-			"Etna",
-			"Vezuviu"
-		],
-		"In ce regiune istorica se afla?": [
-			"Muntenia",
-			"Moldova",
-			"Dobrogea",
-			"Oltenia"
-		],
-		"Ce oras important se afla in judet?": [
-			"Ramnicul Sarat",
-			"Tecuci",
-			"Focsani",
-			"Iasi"
-		]
-	},
-	"Caras-Severin": {
-		"In ce an a fost construita prima locomotiva cu aburi din judet?": [
-			"1872",
-			"2002",
-			"1721",
-			"1609"
-		],
-		"Care este resedinta judetului?": [
-			"Resita",
-			"Caras",
-			"Severin",
-			"Arad"
-		],
-		"Care este indicatorul autovehiculelor?": [
-			"CS",
-			"SC",
-			"AR",
-			"SV"
-		]
-	},
-	"Calarasi": {
-		"In ce an a fost atestat documentar?": [
-			"1700",
-			"1822",
-			"1636",
-			"2021"
-		],
-		"Care este numarul aproximativ de locuitori?": [
-			"65000",
-			"320000",
-			"20000",
-			"120000"
-		],
-		"Care este suprafata judetului?": [
-			"133,22 km^2",
-			"208,32 km^2",
-			"325,23 km^2",
-			"211,12 km^2"
-		],
-		"Din ce regiune apartine judetul Calarasi?": [
-			"Muntenia",
-			"Moldova",
-			"Transilvania",
-			"Oltenia"
-		]
-	},
-	"Cluj": {
-		"In ce regiune se afla judetul?": [
-			"Transilvania",
-			"Moldova",
-			"Oltenia",
-			"Dobrogea"
-		],
-		"Care este resedinta de judet?": [
-			"Cluj Napoca",
-			"Napoca",
-			"Arad",
-			"Baia Mare"
-		],
-		"In ce secol a fost construita Biserica Calvaria?": [
-			"XI",
-			"X",
-			"XV",
-			"XVI"
-		]
-	},
-	"Constanta": {
-		"In memoria cui a fost construita statuia Ovidiu?": [
-			"Publius Ovidiu Naso",
-			"Ovidiu Edvin",
-			"Augustin Ovidiu",
-			"Ovidiu Caius"
-		],
-		"Cati metri are Farul Genovez?": [
-			"8",
-			"9",
-			"10",
-			"7"
-		],
-		"La initiativa cui a fost construita Moscheea Carol?": [
-			"Carol I",
-			"Carol II",
-			"Carol Ferdinand",
-			"Mihai Carol I"
-		]
-	},
-	"Covasna": {
-		"Care dintre urmatoarele statiuni balneare se afla in Covasna?": [
-			"Baile Balvanyos",
-			"Baile Herculane",
-			"Baile Felix",
-			"Baile Olanesti"
-		],
-		"Care este resedinta de judet?": [
-			"Sfântu Gheorghe",
-			"Miercurea Ciuc",
-			"Tg. Mures",
-			"Mangalia"
-		],
-		"Cum se numeste renumitul vulcan?": [
-			"Balta Dracului",
-			"Valea Incinsa",
-			"Piatra Arsa",
-			"Lacul Trotusi"
-		]
-	},
-	"Dambovita": {
-		"Ce inaltime are Turnul Chindiei?": [
-			"27",
-			"25",
-			"26",
-			"28"
-		],
-		"In ce sat se afla casa memoriala a lui I.L. Caragiale?": [
-			"Ion Luca Caragiale",
-			"Darmanesti",
-			"Humulesti",
-			"Targoviste"
-		],
-		"Acum cati ani a fost construita Manastirea Dealu?": [
-			"500",
-			"450",
-			"555",
-			"550"
-		]
-	},
-	"Dolj": {
-		"Actor renumit din filmul Mihai Viteazul": [
-			"Amza Pellea",
-			"Toma Caragiu",
-			"Sergiu Nicolaescu",
-			"Florin Piersic"
-		],
-		"In ce an a fost ridicat Muzeul de Arta din Craiova?": [
-			"1896",
-			"1850",
-			"1950",
-			"1946"
-		],
-		"Din ce an dateaza Casa Baniei?": [
-			"1699",
-			"1700",
-			"1709",
-			"1710"
-		]
-	},
-	"Galati": {
-		"Cati km are Faleza Dunarii?": [
-			"4",
-			"5",
-			"6",
-			"7"
-		],
-		"Cati m are Turnul Televiziunii?": [
-			"150",
-			"100",
-			"250",
-			"200"
-		],
-		"In ce an a fost terminata Biserica Precista?": [
-			"1647",
-			"1644",
-			"1657",
-			"1650"
-		],
-		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
-			"Kolozsvar",
-			"Klausenburg",
-			"Cloizanburg",
-			"Cluzvar"
-		]
-	}
+  "Standard questions": {
+	"Care este indicativul autovehiculelor din acest judet?": [
+	  "AB",
+	  "PH",
+	  "BV",
+	  "CT"
+	],
+
+	"In ce regiune se afla acest judet?": [
+	  "Transilvania",
+	  "Muntenia",
+	  "Moldova",
+	  "Nu se afla in Ro"
+	],
+
+	"In ce zona a judetului se afla muntii Metaliferi?": [
+	  "Est",
+	  "Vest",
+	  "Nord",
+	  "Sud"
+	],
+
+	"Orasul Batranei doamne (Echipa de fotbal)": [
+	  "Arad",
+	  "Unirea",
+	  "Voluntari",
+	  "FCSB"
+	],
+
+	"Rau care traverseaza Aradul": [
+	  "Mures",
+	  "Dunarea",
+	  "Dambovita",
+	  "Crisul repede"
+	],
+
+	"Vechea capitala a Tarii Romanesti": [
+	  "Curtea de Arges",
+	  "Sarmisegetuza",
+	  "Bucuresti",
+	  "Campulung"
+	],
+
+	"Rau care traverseaza municipiul Pitesti": [
+	  "Arges",
+	  "Dambovita",
+	  "Dunarea",
+	  "Mures"
+	],
+
+	"Care este municipiul resedinta de judet al Argesului": [
+	  "Pitesti",
+	  "Campulung",
+	  "Ploiesti",
+	  "Campina"
+	],
+
+	"In ce regiune istorica se afla judetul Bacau?": [
+	  "Moldova",
+	  "Muntenia",
+	  "Banat",
+	  "Dobrogea"
+	],
+
+	"Ce rau trece prin judetul Bacau": [
+	  "Siret",
+	  "Dunarea",
+	  "Crisul repede",
+	  "Olt"
+	],
+
+	"Cum se mai numeste Varful Bihor?": [
+	  "Cucurbata mare",
+	  "Moldoveanu",
+	  "Omu",
+	  "Negoiu"
+	],
+
+	"Ce rau trece prin acest judet?": [
+	  "Crisul negru",
+	  "Crisul repede",
+	  "Siret",
+	  "Mures"
+	],
+
+	"Resedinta judetului": [
+	  "Oradea",
+	  "Bihor",
+	  "Bucuresti",
+	  "Constanta"
+	],
+
+	"De cine este infiintata Bistrita?": [
+	  "Nemti",
+	  "Francezi",
+	  "Polonezi",
+	  "Austrieci"
+	],
+
+	"Resedinta de judet este": [
+	  "Bistrita",
+	  "Nasaud",
+	  "Pitesti",
+	  "Tecuci"
+	],
+
+	"Cine s-a nascut in acest judet?": [
+	  "Mihai Eminescu",
+	  "Ion Creanga",
+	  "Emil Constantinescu",
+	  "Traian Basescu"
+	],
+
+	"Care este regiunea istorica?": [
+	  "Moldova",
+	  "Muntenia",
+	  "Transilvania",
+	  "Dobrogea"
+	],
+
+	"Care este principalul afluent?": [
+	  "Sitna",
+	  "Jiu",
+	  "Ialomita",
+	  "Bega"
+	],
+
+	"Care oras este situat la cea mai mare altitudine?": [
+	  "Predeal",
+	  "Bran",
+	  "Sacele",
+	  "Rasnov"
+	],
+
+	"Cum se numeste orasul in germana": [
+	  "KronStadt",
+	  "HermannStadt",
+	  "Brasso",
+	  "Corona"
+	],
+
+	"Unde este situat judetul?": [
+	  "Fix in centru",
+	  "Langa centru",
+	  "Pe langa centru",
+	  "Centru"
+	],
+
+	"Ce nume mare al fotbalului romanesc s-a nascut aici?": [
+	  "Marius Lacatus",
+	  "Gheorghe Hagi",
+	  "Mihai Pintilii",
+	  "Mihai Brasoveanu"
+	],
+
+	"Ce firma renumita de camasi se regaseste aici?": [
+	  "Braiconf",
+	  "Verlinne",
+	  "Zara",
+	  "H&M"
+	],
+
+	"Ce apa trece prin judet?": [
+	  "Dunarea",
+	  "Amazon",
+	  "Siret",
+	  "Olt"
+	],
+
+	"Ce teatrul celebru este in Braila?": [
+	  "Rally",
+	  "Teatrul mascarada",
+	  "Odeon",
+	  "Nottara"
+	],
+
+	"Cum i se mai spune orasului Braila?": [
+	  "Orasul cu salcami",
+	  "Necaz",
+	  "Ai si uitat",
+	  "Saracie"
+	],
+
+	"De cate ori a fost ars orasul Braila?": [
+	  "De 2 ori",
+	  "De 10 ori",
+	  "O singura data",
+	  "Inca arde"
+	],
+
+	"Ce sunt Hrubele Brailei?": [
+	  "Un sistem complex de galerii ce se intind sub centrul vechi",
+	  "Porecla locuitorilor",
+	  "Moneda lor nationala",
+	  "Piesa la motor"
+	],
+
+	"Domnitor in timpul caruia este atestat orasul Bucuresti": [
+	  "Vlad Tepes",
+	  "Burebista",
+	  "Mihai Viteazul",
+	  "Ion Iliescu"
+	],
+
+	"Cea mai mare echipa de fotbal din tara?": [
+	  "FCSB",
+	  "Steaua Bucuresti",
+	  "Rapid",
+	  "Dinamo"
+	],
+
+	"Ce vulcani se afla in judet?": [
+	  "Vulcanii noroiosi",
+	  "Sfanta Ana",
+	  "Etna",
+	  "Vezuviu"
+	],
+
+	"In ce regiune istorica se afla?": [
+	  "Muntenia",
+	  "Moldova",
+	  "Dobrogea",
+	  "Oltenia"
+	],
+
+	"Ce oras important se afla in judet?": [
+	  "Ramnicul Sarat",
+	  "Tecuci",
+	  "Focsani",
+	  "Iasi"
+	],
+
+	"Care este resedinta judetului?": [
+	  "Resita",
+	  "Caras",
+	  "Severin",
+	  "Arad"
+	],
+
+	"Care este indicatorul autovehiculelor?": [
+	  "CS",
+	  "SC",
+	  "AR",
+	  "SV"
+	],
+
+	"Care este suprafata judetului?": [
+	  "133,22 km^2",
+	  "208,32 km^2",
+	  "325,23 km^2",
+	  "211,12 km^2"
+	],
+
+	"Din ce regiune apartine judetul Calarasi?": [
+	  "Muntenia",
+	  "Moldova",
+	  "Transilvania",
+	  "Oltenia"
+	],
+
+	"In ce regiune se afla judetul?": [
+	  "Transilvania",
+	  "Moldova",
+	  "Oltenia",
+	  "Dobrogea"
+	],
+
+	"Care este resedinta de judet?": [
+	  "Cluj Napoca",
+	  "Napoca",
+	  "Arad",
+	  "Baia Mare"
+	],
+
+	"In memoria cui a fost construita statuia Ovidiu?": [
+	  "Publius Ovidiu Naso",
+	  "Ovidiu Edvin",
+	  "Augustin Ovidiu",
+	  "Ovidiu Caius"
+	],
+
+	"La initiativa cui a fost construita Moscheea Carol?": [
+	  "Carol I",
+	  "Carol II",
+	  "Carol Ferdinand",
+	  "Mihai Carol I"
+	],
+
+	"Care dintre urmatoarele statiuni balneare se afla in Covasna?": [
+	  "Baile Balvanyos",
+	  "Baile Herculane",
+	  "Baile Felix",
+	  "Baile Olanesti"
+	],
+
+	"Cea mai mare resedinta de judet este:": [
+	  "Sfântu Gheorghe",
+	  "Miercurea Ciuc",
+	  "Tg. Mures",
+	  "Mangalia"
+	],
+
+	"Cum se numeste renumitul vulcan?": [
+	  "Balta Dracului",
+	  "Valea Incinsa",
+	  "Piatra Arsa",
+	  "Lacul Trotusi"
+	],
+
+	"In ce sat se afla casa memoriala a lui I.L. Caragiale?": [
+	  "Ion Luca Caragiale",
+	  "Darmanesti",
+	  "Humulesti",
+	  "Targoviste"
+	],
+
+	"Actor renumit din filmul Mihai Viteazul": [
+	  "Amza Pellea",
+	  "Toma Caragiu",
+	  "Sergiu Nicolaescu",
+	  "Florin Piersic"
+	],
+
+	"Cum se numeste orasul Cluj-Napoca in maghiara?": [
+	  "Kolozsvar",
+	  "Klausenburg",
+	  "Cloizanburg",
+	  "Cluzvar"
+	]
+  },
+
+  "Numerical questions": {
+
+	"In ce an a avut loc Capitularea de la Siria?": 1849,
+
+	"In ce an Paul al V-lea a infiintat Episcopia de la Bacau?": 1859,
+
+	"In ce an este infiintata prima scoala Greco Catolica?": 1777,
+
+	"In ce secol a devenit capitala?": 16,
+
+	"In ce an a fost construita prima locomotiva cu aburi din judet?": 1872,
+
+	"In ce an a fost atestat documentar?": 1700,
+
+	"Care este numarul aproximativ de locuitori?": 65000,
+
+	"In ce secol a fost construita Biserica Calvaria?": 11,
+
+	"Cati metri are Farul Genovez?": 8,
+
+	"Ce inaltime are Turnul Chindiei?": 27,
+
+	"Acum cati ani a fost construita Manastirea Dealu?": 500,
+
+	"In ce an a fost ridicat Muzeul de Arta din Craiova?": 1896,
+
+	"Din ce an dateaza Casa Baniei?": 1699,
+
+	"Cati km are Faleza Dunarii?": 4,
+
+	"Cati m are Turnul Televiziunii?": 150,
+
+	"In ce an a fost terminata Biserica Precista?": 1647
+  }
 }
