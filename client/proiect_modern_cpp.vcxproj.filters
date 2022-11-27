@@ -3,8 +3,8 @@
   <ItemGroup>
     <ClCompile Include="src\Board.cpp" />
     <ClCompile Include="src\County.cpp" />
-    <ClCompile Include="src/main.cpp" />
-    <ClCompile Include="src/MainWindow.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MainWindow.cpp" />
     <ClCompile Include="src\Session.cpp" />
     <ClCompile Include="src\User.cpp" />
   </ItemGroup>
@@ -15,15 +15,12 @@
     <ClInclude Include="src\Session.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <QtMoc Include="src\MainWindow.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="src/MainWindow.hpp" />
+    <QtRcc Include="src\MainWindow.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="src/MainWindow.qrc" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="src/MainWindow.ui" />
+    <QtUic Include="src\MainWindow.ui" />
   </ItemGroup>
 </Project>

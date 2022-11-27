@@ -1,8 +1,8 @@
 #pragma once
 
+#include "Board.hpp"
 #include <cstdlib>
 #include <ctime>
-#include "Board.hpp"
 
 void Board::addCounty(County county) {
 	m_listCounty.push_back(county);
@@ -38,4 +38,3 @@ void Board::showAllCounties() {
 	}
 	std::cout << std::endl;
 }
-

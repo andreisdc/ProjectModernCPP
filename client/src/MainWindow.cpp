@@ -32,7 +32,7 @@ void MainWindow::on_buttonWindowInviteAdd_clicked() {
 }
 
 void MainWindow::setAllPoints() {
-	
+
 	ui.labelGameCountyPoints1->setText(initialPoints);
 	ui.labelGameCountyPoints2->setText(initialPoints);
 	ui.labelGameCountyPoints3->setText(initialPoints);
@@ -76,5 +76,3 @@ void MainWindow::on_buttonSignupSignup_clicked() {
 	ui.stackedWidget->setCurrentIndex(3);
 	setAllPoints();
 }
-
-

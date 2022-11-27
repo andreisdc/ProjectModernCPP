@@ -1,7 +1,7 @@
 #pragma once
 
-#include <string>
 #include <iostream>
+#include <string>
 
 class User {
 private:
@@ -9,6 +9,7 @@ private:
 	std::string m_password;
 	int m_rank;
 	int m_points;
+
 public:
 	User();
 
@@ -26,5 +27,5 @@ public:
 
 	void addPoints(const int countyPoints);
 
-	friend std::ostream& operator<<(std::ostream& out, User& u);
+	friend std::ostream &operator<<(std::ostream &out, User &u);
 };
