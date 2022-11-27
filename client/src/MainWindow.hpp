@@ -34,6 +34,22 @@ protected slots:
 
 	void setAllPoints();
 
+	void on_buttonGameCounty1_clicked();
+	void on_buttonGameCounty2_clicked();
+	void on_buttonGameCounty3_clicked();
+	void on_buttonGameCounty4_clicked();
+	void on_buttonGameCounty5_clicked();
+	void on_buttonGameCounty6_clicked();
+	void on_buttonGameCounty7_clicked();
+	void on_buttonGameCounty8_clicked();
+	void on_buttonGameCounty9_clicked();
+	void on_buttonGameCounty10_clicked();
+	void on_buttonGameCounty11_clicked();
+	void on_buttonGameCounty12_clicked();
+	void on_buttonGameCounty13_clicked();
+	void on_buttonGameCounty14_clicked();
+	void on_buttonGameCounty15_clicked();
+
 
 
 private:

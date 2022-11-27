@@ -50,6 +50,66 @@ void MainWindow::setAllPoints() {
 	ui.labelGameCountyPoints15->setText(initialPoints);
 }
 
+void MainWindow::on_buttonGameCounty1_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty2_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty3_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty4_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty5_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty6_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty7_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty8_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty9_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty10_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty11_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty12_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty13_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty14_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
+void MainWindow::on_buttonGameCounty15_clicked() {
+	ui.stackedWidget->setCurrentIndex(6);
+}
+
 void MainWindow::on_buttonStartpageLogin_clicked() {
 	ui.stackedWidget->setCurrentIndex(1);
 }
