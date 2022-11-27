@@ -1,6 +1,18 @@
-#include <iostream>
+#include <nlohmann/json.hpp>
+#include <crow.h>
+#include <sqlite_orm/sqlite_orm.h>
 
 int main() {
-	std::cout << "Hello world!";
+	crow::SimpleApp app;
+
+	CROW_ROUTE(app, "/")
+		([]() {
+			return "Hello world";
+		});
+
+	app.port(8080)
+		.multithreaded()
+		.run();
+
 	return 0;
 }
