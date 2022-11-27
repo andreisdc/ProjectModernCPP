@@ -110,6 +110,26 @@ void MainWindow::on_buttonGameCounty15_clicked() {
 	ui.stackedWidget->setCurrentIndex(6);
 }
 
+void MainWindow::on_buttonQuestionA_clicked() {
+	ui.stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_buttonQuestionB_clicked() {
+	ui.stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_buttonQuestionC_clicked() {
+	ui.stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_buttonQuestionD_clicked() {
+	ui.stackedWidget->setCurrentIndex(7);
+}
+
+void MainWindow::on_buttonQuestionNumberEnter_clicked() {
+	ui.stackedWidget->setCurrentIndex(5);
+}
+
 void MainWindow::on_buttonStartpageLogin_clicked() {
 	ui.stackedWidget->setCurrentIndex(1);
 }

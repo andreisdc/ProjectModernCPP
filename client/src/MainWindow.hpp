@@ -49,8 +49,11 @@ protected slots:
 	void on_buttonGameCounty13_clicked();
 	void on_buttonGameCounty14_clicked();
 	void on_buttonGameCounty15_clicked();
-
-
+	void on_buttonQuestionA_clicked();
+	void on_buttonQuestionB_clicked();
+	void on_buttonQuestionC_clicked();
+	void on_buttonQuestionD_clicked();
+	void on_buttonQuestionNumberEnter_clicked();
 
 private:
 	Ui::MainWindowClass ui;
