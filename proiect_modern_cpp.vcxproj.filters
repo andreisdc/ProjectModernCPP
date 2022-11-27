@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Board.cpp" />
+    <ClCompile Include="src\County.cpp" />
+    <ClCompile Include="src/main.cpp" />
+    <ClCompile Include="src/MainWindow.cpp" />
+    <ClCompile Include="src\Session.cpp" />
+    <ClCompile Include="src\User.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\User.hpp" />
+    <ClInclude Include="src\Board.hpp" />
+    <ClInclude Include="src\County.hpp" />
+    <ClInclude Include="src\Session.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src/MainWindow.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="src/MainWindow.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src/MainWindow.ui" />
+  </ItemGroup>
+</Project>

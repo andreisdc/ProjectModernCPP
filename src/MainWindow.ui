@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1034</width>
+    <height>633</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-10</y>
+      <width>1021</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Startpage">
+     <widget class="QPushButton" name="buttonStartpageLogin">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>230</y>
+        <width>161</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonStartpageSignup">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>280</y>
+        <width>161</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelStartpageTriviador">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>170</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Roman</family>
+        <pointsize>9</pointsize>
+        <italic>false</italic>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="text">
+       <string>TRIVIADOR</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Login">
+     <widget class="QLabel" name="labelLoginLogin">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>180</y>
+        <width>81</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLoginBack">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>430</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLoginUsername">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>250</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLoginPassword">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>300</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Password:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditLoginUsername">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>260</y>
+        <width>381</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditLoginPassword">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>310</y>
+        <width>381</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Segoe MDL2 Assets</family>
+       </font>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLoginLogin">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>360</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButtonLoginShowPassword">
+      <property name="geometry">
+       <rect>
+        <x>720</x>
+        <y>310</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show Password</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Signup">
+     <widget class="QLabel" name="labelSignupSignup">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>150</y>
+        <width>101</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonSignupBack">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>430</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelSignupUsername">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>240</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditSignupUsername">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>250</y>
+        <width>451</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelSignupPassword">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>300</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditSignupPassword">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>310</y>
+        <width>451</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButtonSignupShowPassword">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>310</y>
+        <width>131</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Show Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonSignupSignup">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>360</y>
+        <width>75</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Sign Up</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Lobby">
+     <widget class="QLabel" name="labelLobbyPlayername1">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>80</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>a</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLobbyPlayername2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>200</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>a</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLobbyPlayername3">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>320</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>a</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelLobbyPlayername4">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>450</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>a</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyKickplayer1">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>200</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kick</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyKickplayer2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>320</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kick</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyKickplayer3">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>450</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kick</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyAddplayer">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>470</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyStart">
+      <property name="geometry">
+       <rect>
+        <x>870</x>
+        <y>510</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="windowInvite">
+     <widget class="QPushButton" name="buttonWindowInviteAdd">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>270</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lindeEditWindowInviteUsername">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>270</y>
+        <width>291</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelWindowInviteUsername">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>260</y>
+        <width>111</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Username</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Game">
+     <widget class="QLabel" name="labelGameUsername1">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameUsername2">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameUsername3">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameUsername4">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGamePoints1">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>60</y>
+        <width>64</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGamePoints2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>60</y>
+        <width>64</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGamePoints3">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>60</y>
+        <width>64</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGamePoints4">
+      <property name="geometry">
+       <rect>
+        <x>810</x>
+        <y>60</y>
+        <width>64</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty2">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>160</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty3">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>160</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty4">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>160</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty5">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>160</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty10">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>270</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty9">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>270</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty8">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>270</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty7">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>270</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty12">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>380</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty13">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>380</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty14">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>380</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty15">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>380</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty1">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>160</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty6">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>270</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonGameCounty11">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>380</y>
+        <width>75</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints1">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>220</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints2">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>220</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints3">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>220</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints4">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>220</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints5">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>220</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints8">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>330</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints7">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>330</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints6">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>330</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints9">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>330</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints10">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>330</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints15">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>440</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints14">
+      <property name="geometry">
+       <rect>
+        <x>570</x>
+        <y>440</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints13">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>440</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints12">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>440</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGameCountyPoints11">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>440</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1034</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

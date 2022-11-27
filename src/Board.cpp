@@ -24,7 +24,7 @@ void Board::selectCounty() {
 	int rnd;
 	rnd = rand() % 41 + 0;
 	this->m_county = &m_listCounty[rnd];
-	m_listCountyV.push_back(&m_listCounty[rnd]);
+	//m_listCountyV.push_back(&m_listCounty[rnd]);
 }
 
 void Board::showCounty() {

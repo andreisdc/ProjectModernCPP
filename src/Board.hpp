@@ -10,7 +10,7 @@ private:
 public:
 	void selectCounty();
 	void showCounty();
-		void addCounty(County county);
+	void addCounty(County county);
 	void moveCounty();
 	void showAllCounties();
 };

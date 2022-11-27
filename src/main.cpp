@@ -1,9 +1,15 @@
-#include "County.hpp"
 #include "Board.hpp"
+#include "County.hpp"
+#include "MainWindow.hpp"
 #include "User.hpp"
+#include <QtWidgets/QApplication>
 
-int main() {
-	County Alba("Alba", 1);
+int main(int argc, char *argv[]) {
+	QApplication a(argc, argv);
+	MainWindow w;
+	w.show();
+	;
+	/* County Alba("Alba", 1);
 	County Arad("Arad", 1);
 	County Arges("Arges", 1);
 	County Bacau("Bacau", 1);
@@ -344,6 +350,6 @@ int main() {
 	board.showCounty();
 	board.moveCounty();
 	board.showCounty();
-
-	return 0;
+	*/
+	return a.exec();
 }
