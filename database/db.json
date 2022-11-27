@@ -362,7 +362,7 @@
 			"Humulesti",
 			"Targoviste"
 		],
-		"Acum cati ani a fost construita Manastirea Dealu?":[
+		"Acum cati ani a fost construita Manastirea Dealu?": [
 			"500",
 			"450",
 			"555",
@@ -407,14 +407,12 @@
 			"1644",
 			"1657",
 			"1650"
-	],
+		],
 		"Cum se numeste orasul Cluj-Napoca in maghiara?": [
 			"Kolozsvar",
 			"Klausenburg",
 			"Cloizanburg",
 			"Cluzvar"
 		]
-
 	}
-
 }
