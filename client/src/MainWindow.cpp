@@ -31,6 +31,10 @@ void MainWindow::on_buttonWindowInviteAdd_clicked() {
 	ui.stackedWidget->setCurrentIndex(3);
 }
 
+void MainWindow::on_buttonLobbyLogout_clicked() {
+	ui.stackedWidget->setCurrentIndex(0);
+}
+
 void MainWindow::setAllPoints() {
 
 	ui.labelGameCountyPoints1->setText(initialPoints);
@@ -128,6 +132,7 @@ void MainWindow::on_buttonQuestionD_clicked() {
 
 void MainWindow::on_buttonQuestionNumberEnter_clicked() {
 	ui.stackedWidget->setCurrentIndex(5);
+	ui.lineEditQuestionNumberInput->clear();
 }
 
 void MainWindow::on_buttonStartpageLogin_clicked() {
