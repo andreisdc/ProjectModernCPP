@@ -1,4 +1,5 @@
 #include <crow.h>
+#include <crow/middlewares/session.h>
 #include <sqlite_orm/sqlite_orm.h>
 #include <memory>
 
@@ -23,7 +24,7 @@ struct PastMatch {
 };
 
 int main() {
-	crow::SimpleApp app;
+	crow::App<crow::SessionMiddleware<crow::InMemoryStore>> app;
 
 	using namespace sqlite_orm;
 
