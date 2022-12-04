@@ -6,7 +6,7 @@
 class Board {
 private:
 	std::vector<County> m_listCounty;
-	County *m_county;
+	County *m_county = nullptr;
 
 public:
 	void selectCounty();

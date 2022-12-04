@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>979</width>
+    <width>1024</width>
     <height>633</height>
    </rect>
   </property>
@@ -19,9 +19,12 @@
      <rect>
       <x>0</x>
       <y>-10</y>
-      <width>951</width>
+      <width>1021</width>
       <height>571</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -36,6 +39,10 @@
         <height>24</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">font: 900 9pt &quot;Segoe UI&quot;;
+background-color: rgb(187, 202, 255);</string>
+      </property>
       <property name="text">
        <string>Log In</string>
       </property>
@@ -44,10 +51,14 @@
       <property name="geometry">
        <rect>
         <x>420</x>
-        <y>280</y>
+        <y>260</y>
         <width>161</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 900 9pt &quot;Segoe UI&quot;;
+background-color: rgb(187, 202, 255);</string>
       </property>
       <property name="text">
        <string>Sign Up</string>
@@ -70,11 +81,20 @@
         <bold>true</bold>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:1, stop:0.329545 rgba(255, 0, 0, 255), stop:0.335227 rgba(255, 252, 30, 255), stop:0.66 rgba(237, 255, 0, 255), stop:0.67 rgba(255, 255, 0, 255), stop:0.6875 rgba(0, 15, 255, 255));</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
       <property name="frameShadow">
        <enum>QFrame::Sunken</enum>
       </property>
       <property name="text">
        <string>TRIVIADOR</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
@@ -82,8 +102,8 @@
      <widget class="QLabel" name="labelLoginLogin">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>180</y>
+        <x>210</x>
+        <y>130</y>
         <width>81</width>
         <height>41</height>
        </rect>
@@ -93,6 +113,9 @@
         <pointsize>20</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(141, 122, 77);</string>
+      </property>
       <property name="text">
        <string>Log In</string>
       </property>
@@ -101,7 +124,7 @@
       <property name="geometry">
        <rect>
         <x>440</x>
-        <y>430</y>
+        <y>390</y>
         <width>81</width>
         <height>31</height>
        </rect>
@@ -129,6 +152,9 @@
         <pointsize>16</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(150, 129, 75);</string>
+      </property>
       <property name="text">
        <string>Username:</string>
       </property>
@@ -147,6 +173,9 @@
         <pointsize>16</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(150, 129, 75);</string>
+      </property>
       <property name="text">
        <string>Password:</string>
       </property>
@@ -159,6 +188,9 @@
         <width>381</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="lineEditLoginPassword">
@@ -174,6 +206,9 @@
        <font>
         <family>Segoe MDL2 Assets</family>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
@@ -203,6 +238,19 @@
       </property>
       <property name="text">
        <string>Show Password</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>520</x>
+        <y>120</y>
+        <width>171</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
       </property>
      </widget>
     </widget>
@@ -472,6 +520,19 @@
       </property>
       <property name="text">
        <string>Start</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonLobbyLogout">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>80</y>
+        <width>75</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log Out</string>
       </property>
      </widget>
     </widget>
@@ -1102,6 +1163,12 @@
         <height>22</height>
        </rect>
       </property>
+      <property name="maxLength">
+       <number>5</number>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
      </widget>
      <widget class="QLabel" name="labelQuestionNumberUsername1">
       <property name="geometry">
@@ -1254,8 +1321,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>979</width>
-     <height>24</height>
+     <width>1024</width>
+     <height>22</height>
     </rect>
    </property>
   </widget>
