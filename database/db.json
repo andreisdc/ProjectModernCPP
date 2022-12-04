@@ -781,7 +781,20 @@
 	  "Nicolae Ceausescu",
 	  "Ion Iliescu",
 	  "Traian Basescu"
+	],
+	"Ce poet a ocupat functia de Ministru al Culturii?": [
+	  "Marin Sonescu",
+	  "Mircea Iliade",
+	  "Mihai Eminescu",
+	  "Cezar Petrescu"
+	],
+	"Ce regina obisnuia sa se deghizeze in adolescenta si sa joace fotbal în apropierea palatului regal?": [
+	  "Elisabeta a II-a",
+	  "Maria",
+	  "Elisabeta de Bourbon",
+	  "Ecaterina a II-a"
 	]
+
   },
 
   "Numerical questions": {
@@ -822,8 +835,10 @@
 
 	"In ce an a reusit Mihai Viteazul unirea celor trei mari tari medievale?": 1600,
 
-	"În ce an s-a proclamat independența de stat a României? ": 1877,
+	"In ce an s-a proclamat independența de stat a Romaniei? ": 1877,
 
+	"Câte strofe are poezia “Luceafarul” de Mihai Eminescu? ": 98,
 
+	"Cati ani a durat Razboiul de 100 de ani? ": 116
   }
 }
