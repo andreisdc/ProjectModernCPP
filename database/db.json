@@ -793,8 +793,19 @@
 	  "Maria",
 	  "Elisabeta de Bourbon",
 	  "Ecaterina a II-a"
+	],
+	"Ce culoare are cutia neagra a unui avion?": [
+	  "Portocalie",
+	  "Neagra",
+	  "Galbena",
+	  "Maro"
+	],
+	"Care a fost capitala Imperiului Bizantin?": [
+	  "Constantinopol",
+	  "Roma",
+	  "Ierusalim",
+	  "Atena"
 	]
-
   },
 
   "Numerical questions": {
@@ -839,6 +850,14 @@
 
 	"Câte strofe are poezia “Luceafarul” de Mihai Eminescu? ": 98,
 
-	"Cati ani a durat Razboiul de 100 de ani? ": 116
+	"Cati ani a durat Razboiul de 100 de ani? ": 116,
+
+	"In ce an an a avut loc revolutia in urma careia a fost inlaturat Nicolae Ceausescu?": 1989,
+
+	"Care a fost primul model de masina Dacia?": 1100,
+
+	"Care este numarul de sateliti ai planetei Venus?": 0,
+
+	"A cata planeta de la Soare este Mercur?": 1
   }
 }
