@@ -1,10 +1,25 @@
 #include <crow.h>
 #include <sqlite_orm/sqlite_orm.h>
+#include <memory>
 
 struct User {
 	int id;
 	std::string username;
 	std::string password;
+};
+
+struct UserMatch {
+	int id;
+	std::unique_ptr<int> player_id;
+	int score;
+};
+
+struct PastMatch {
+	int id;
+	std::unique_ptr<int> player1;
+	std::unique_ptr<int> player2;
+	std::unique_ptr<int> player3;
+	std::unique_ptr<int> player4;
 };
 
 int main() {
@@ -18,8 +33,24 @@ int main() {
 			"users",
 			make_column("id", &User::id, autoincrement(), primary_key()),
 			make_column("username", &User::username),
-			make_column("password", &User::password)
-		)
+			make_column("password", &User::password)),
+		make_table(
+			"user_matches",
+			make_column("id", &UserMatch::id, autoincrement(), primary_key()),
+			make_column("player_id", &UserMatch::player_id),
+			make_column("score", &UserMatch::score),
+			foreign_key(&UserMatch::player_id).references(&User::id).on_delete.cascade()),
+		make_table(
+			"past_matches",
+			make_column("id", &PastMatch::id, autoincrement(), primary_key()),
+			make_column("player1", &UserMatch::player_id),
+			make_column("player2", &UserMatch::player_id),
+			make_column("player3", &UserMatch::player_id),
+			make_column("player4", &UserMatch::player_id),
+			foreign_key(&PastMatch::player1).references(&UserMatch::id).on_delete.cascade(),
+			foreign_key(&PastMatch::player2).references(&UserMatch::id).on_delete.cascade(),
+			foreign_key(&PastMatch::player3).references(&UserMatch::id).on_delete.cascade(),
+			foreign_key(&PastMatch::player4).references(&UserMatch::id).on_delete.cascade())
 	);
 
 	CROW_ROUTE(app, "/")
