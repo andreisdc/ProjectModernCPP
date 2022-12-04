@@ -769,6 +769,18 @@
 	  "Klausenburg",
 	  "Cloizanburg",
 	  "Cluzvar"
+	],
+	"Care este cel mai populat oras din lume?": [
+	  "Tokyo",
+	  "New York",
+	  "Shangai",
+	  "Milano"
+	],
+	"Ce personalitate se afla pe bancnota de 10 lei?": [
+	  "Nicolae Grigorescu",
+	  "Nicolae Ceausescu",
+	  "Ion Iliescu",
+	  "Traian Basescu"
 	]
   },
 
@@ -804,6 +816,14 @@
 
 	"Cati m are Turnul Televiziunii?": 150,
 
-	"In ce an a fost terminata Biserica Precista?": 1647
+	"In ce an a fost terminata Biserica Precista?": 1647,
+
+	"Cati ani a condus Nicolae Ceausescu tara noastra?": 24,
+
+	"In ce an a reusit Mihai Viteazul unirea celor trei mari tari medievale?": 1600,
+
+	"În ce an s-a proclamat independența de stat a României? ": 1877,
+
+
   }
 }
