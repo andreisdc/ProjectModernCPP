@@ -3,10 +3,10 @@
   <ItemGroup>
     <ClCompile Include="src\Board.cpp" />
     <ClCompile Include="src\County.cpp" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\MainWindow.cpp" />
     <ClCompile Include="src\Session.cpp" />
     <ClCompile Include="src\User.cpp" />
+    <ClCompile Include="src/MainWindow.cpp" />
+    <ClCompile Include="src/main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\User.hpp" />
@@ -22,5 +22,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="src\MainWindow.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\database\db.json" />
   </ItemGroup>
 </Project>
