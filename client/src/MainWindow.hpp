@@ -1,5 +1,7 @@
 #pragma once
-
+#include <QtGui>
+#include <Qtcore>
+#include <QDialog>
 #include "ui_MainWindow.h"
 #include <QtWidgets/QMainWindow>
 

@@ -1,5 +1,14 @@
 <RCC>
     <qresource prefix="/MainWindow">
         <file>assets/index.png</file>
+        <file>assets/MihaiViteazul.png</file>
+        <file>assets/StefanCelMare.png</file>
+        <file>assets/Carol1.png</file>
+        <file>assets/Ferdinand.png</file>
+        <file>assets/Cuza.png</file>
+        <file>assets/MirceaCelBatran.png</file>
+        <file>assets/VladTepes.png</file>
+        <file>assets/IonCreanga.png</file>
+        <file>assets/MihaiEminescu.png</file>
     </qresource>
 </RCC>

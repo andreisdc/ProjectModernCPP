@@ -1,9 +1,11 @@
 #include "MainWindow.hpp"
+#include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
 	ui.setupUi(this);
+	
 }
-
 MainWindow::~MainWindow() {}
 
 void MainWindow::on_radioButtonLoginShowPassword_released() {}
