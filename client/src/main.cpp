@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
 	QApplication a(argc, argv);
 	MainWindow w;
 	w.show();
-	;
+	
 	/* County Alba("Alba", 1);
 	County Arad("Arad", 1);
 	County Arges("Arges", 1);
