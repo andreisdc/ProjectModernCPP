@@ -1,4 +1,5 @@
 #pragma once
+
 #include <QtGui>
 #include <Qtcore>
 #include <QDialog>
@@ -60,6 +61,8 @@ protected slots:
 	void on_buttonQuestionD_clicked();
 
 	void on_buttonQuestionNumberEnter_clicked();
+
+	void changePassword();
 
 private:
 	Ui::MainWindowClass ui;

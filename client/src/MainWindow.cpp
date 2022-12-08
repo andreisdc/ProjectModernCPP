@@ -8,9 +8,23 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
 }
 MainWindow::~MainWindow() {}
 
-void MainWindow::on_radioButtonLoginShowPassword_released() {}
+void MainWindow::on_radioButtonLoginShowPassword_released() {
+	if (ui.radioButtonLoginShowPassword->isChecked() == true) {
+		ui.lineEditLoginPassword->setEchoMode(QLineEdit::Normal);
+	} else {
+		ui.lineEditLoginPassword->setEchoMode(QLineEdit::Password);
+	}
+}
 
-void MainWindow::on_radioButtonSignupShowPassword_released() {}
+void MainWindow::on_radioButtonSignupShowPassword_released() {
+	if (ui.radioButtonSignupShowPassword->isChecked() == true) {
+		ui.lineEditSignupPassword->setEchoMode(QLineEdit::Normal);
+	}
+	else {
+		ui.lineEditSignupPassword->setEchoMode(QLineEdit::Password);
+	}
+}
+
 
 void MainWindow::on_buttonLobbyKickplayer1_clicked() {
 }
@@ -137,6 +151,10 @@ void MainWindow::on_buttonQuestionNumberEnter_clicked() {
 	ui.lineEditQuestionNumberInput->clear();
 }
 
+void MainWindow::changePassword() {
+	
+}
+
 void MainWindow::on_buttonStartpageLogin_clicked() {
 	ui.stackedWidget->setCurrentIndex(1);
 }
@@ -156,10 +174,12 @@ void MainWindow::on_buttonSignupBack_clicked() {
 void MainWindow::on_buttonLoginLogin_clicked() {
 
 	ui.stackedWidget->setCurrentIndex(3);
+	ui.radioButtonLoginShowPassword->setChecked(false);
 	setAllPoints();
 }
 
 void MainWindow::on_buttonSignupSignup_clicked() {
 	ui.stackedWidget->setCurrentIndex(3);
+	ui.radioButtonSignupShowPassword->setChecked(false);
 	setAllPoints();
 }
