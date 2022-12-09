@@ -33,7 +33,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1126,7 +1126,7 @@ background-color: rgb(255, 138, 99);
        </font>
       </property>
       <property name="text">
-       <string>a</string>
+       <string>username 1</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelLobbyPlayername2">
@@ -1144,7 +1144,7 @@ background-color: rgb(255, 138, 99);
        </font>
       </property>
       <property name="text">
-       <string>a</string>
+       <string>username 2</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelLobbyPlayername3">
@@ -1162,7 +1162,7 @@ background-color: rgb(255, 138, 99);
        </font>
       </property>
       <property name="text">
-       <string>a</string>
+       <string>username 3</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelLobbyPlayername4">
@@ -1180,7 +1180,7 @@ background-color: rgb(255, 138, 99);
        </font>
       </property>
       <property name="text">
-       <string>a</string>
+       <string>username 4</string>
       </property>
      </widget>
      <widget class="QPushButton" name="buttonLobbyKickplayer1">
@@ -1400,7 +1400,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Player 1</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelGameUsername2">
@@ -1413,7 +1413,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Player 2</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelGameUsername3">
@@ -1426,7 +1426,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Player 3</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelGameUsername4">
@@ -1439,7 +1439,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        </rect>
       </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Player 4</string>
       </property>
      </widget>
      <widget class="QLCDNumber" name="lcdNumberGamePoints1">
@@ -1895,53 +1895,69 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonQuestionA">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>360</x>
         <y>240</y>
         <width>521</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Raspuns 1</string>
       </property>
      </widget>
      <widget class="QPushButton" name="buttonQuestionB">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>360</x>
         <y>310</y>
         <width>521</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Raspuns 2</string>
       </property>
      </widget>
      <widget class="QPushButton" name="buttonQuestionC">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>360</x>
         <y>380</y>
         <width>521</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Raspuns 3</string>
       </property>
      </widget>
      <widget class="QPushButton" name="buttonQuestionD">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>360</x>
         <y>450</y>
         <width>521</width>
         <height>51</height>
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string>Raspuns 4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonQuestionFiftyFifty">
+      <property name="geometry">
+       <rect>
+        <x>560</x>
+        <y>600</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>50-50</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
