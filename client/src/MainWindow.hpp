@@ -26,6 +26,7 @@ protected slots:
 	void on_radioButtonLoginShowPassword_released();
 	void on_radioButtonSignupShowPassword_released();
 
+	void on_buttonLobbyLogout_clicked();
 	void on_buttonLobbyKickplayer1_clicked();
 	void on_buttonLobbyKickplayer2_clicked();
 	void on_buttonLobbyKickplayer3_clicked();
@@ -34,8 +35,6 @@ protected slots:
 	void on_buttonLobbyStart_clicked();
 
 	void on_buttonWindowInviteAdd_clicked();
-
-	void on_buttonLobbyLogout_clicked();
 
 	void setAllPoints();
 

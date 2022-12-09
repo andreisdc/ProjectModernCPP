@@ -8,13 +8,11 @@
         <file>assets/Cuza.png</file>
         <file>assets/MirceaCelBatran.png</file>
         <file>assets/VladTepes.png</file>
-        <file>assets/IonCreanga.png</file>
-        <file>assets/MihaiEminescu.png</file>
         <file>assets/Triviador.png</file>
         <file>assets/woodTexture.png</file>
         <file>assets/Interior.png</file>
-        <file>assets/interior2.png</file>
         <file>assets/Ancora.png</file>
         <file>assets/Compas.png</file>
+        <file>assets/GoldBorder.png</file>
     </qresource>
 </RCC>
