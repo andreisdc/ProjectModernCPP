@@ -117,7 +117,9 @@ int main() {
 			});
 
 	CROW_ROUTE(app, "/users/logout").methods(crow::HTTPMethod::GET)
-		([](const crow::request &req) {
+		([&app](const crow::request &req) {
+			app.get_context<SessionMiddleware>(req).remove("id");
+
 			return crow::response(crow::status::OK);
 		});
 
