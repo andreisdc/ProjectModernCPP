@@ -85,6 +85,13 @@ int main() {
 				std::string username = x["username"].s();
 				std::string password = x["password"].s();
 
+				auto selectedIds = storage.select(
+					&User::id,
+					where(is_equal(&User::username, username)));
+
+				if (!selectedIds.empty())
+					return crow::response(400, "User already exists!");
+
 				User user{-1, username, password};
 				auto newUserId = storage.insert(user);
 				user.id = newUserId;
