@@ -65,15 +65,15 @@ int main() {
 	CROW_ROUTE(app, "/users/login")
 		.methods(crow::HTTPMethod::POST)
 			([&app, &storage](const crow::request &req) {
-				auto x = crow::json::load(req.body);
-				if (!x)
+				auto jsonBody = crow::json::load(req.body);
+				if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
 					return crow::response(400);
 
 				if (app.get_context<SessionMiddleware>(req).contains("id"))
 					return crow::response(crow::status::BAD_REQUEST, "Already logged in!");
 
-				std::string username = x["username"].s();
-				std::string password = x["password"].s();
+				std::string username = jsonBody["username"].s();
+				std::string password = jsonBody["password"].s();
 
 				auto selectedIds = storage.select(
 					&User::id,
@@ -92,15 +92,15 @@ int main() {
 	CROW_ROUTE(app, "/users/register")
 		.methods(crow::HTTPMethod::POST)
 			([&app, &storage](const crow::request &req) {
-				auto x = crow::json::load(req.body);
-				if (!x)
+				auto jsonBody = crow::json::load(req.body);
+				if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
 					return crow::response(400);
 
 				if (app.get_context<SessionMiddleware>(req).contains("id"))
 					return crow::response(400, "Already logged in!");
 
-				std::string username = x["username"].s();
-				std::string password = x["password"].s();
+				std::string username = jsonBody["username"].s();
+				std::string password = jsonBody["password"].s();
 
 				auto selectedIds = storage.select(
 					&User::id,
