@@ -22,8 +22,8 @@ CREATE TABLE IF NOT EXISTS past_matches
 	player2 integer,
 	player3 integer,
 	player4 integer,
-	FOREIGN KEY (player1) REFERENCES user_match (id) ON DELETE CASCADE,
-	FOREIGN KEY (player2) REFERENCES user_match (id) ON DELETE CASCADE,
-	FOREIGN KEY (player3) REFERENCES user_match (id) ON DELETE CASCADE,
-	FOREIGN KEY (player4) REFERENCES user_match (id) ON DELETE CASCADE
+	FOREIGN KEY (player1) REFERENCES user_matches (id) ON DELETE CASCADE,
+	FOREIGN KEY (player2) REFERENCES user_matches (id) ON DELETE CASCADE,
+	FOREIGN KEY (player3) REFERENCES user_matches (id) ON DELETE CASCADE,
+	FOREIGN KEY (player4) REFERENCES user_matches (id) ON DELETE CASCADE
 );
