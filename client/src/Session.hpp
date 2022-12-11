@@ -15,6 +15,6 @@ public:
 	Session(User *player1 = nullptr, User *player2 = nullptr, User *player3 = nullptr, User *player4 =nullptr);
 	void getPoint(int nrPlayer);
 	void setPoint();
-	void addPlayer();
+	void addPlayer(int nrPlayer);
 	void kickPlayer();
 };
