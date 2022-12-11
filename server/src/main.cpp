@@ -92,7 +92,9 @@ int main() {
 				return crow::response(201);
 			});
 
-	app.port(8080).run();
+	app.port(8080)
+		.multithreaded()
+		.run();
 
 	return 0;
 }
