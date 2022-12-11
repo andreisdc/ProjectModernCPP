@@ -77,10 +77,13 @@ int main() {
 
 	CROW_ROUTE(app, "/users/register")
 		.methods(crow::HTTPMethod::POST)
-			([&storage](const crow::request &req) {
+			([&app, &storage](const crow::request &req) {
 				auto x = crow::json::load(req.body);
 				if (!x)
 					return crow::response(400);
+
+				if (app.get_context<SessionMiddleware>(req).contains("id"))
+					return crow::response(400, "Already logged in!");
 
 				std::string username = x["username"].s();
 				std::string password = x["password"].s();
