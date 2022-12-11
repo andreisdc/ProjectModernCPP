@@ -92,6 +92,23 @@ int main() {
 				return crow::response(201);
 			});
 
+	/*
+	 * GET /
+	 *
+	 * POST /users/login {username, password}
+	 * POST /users/register {username, password}
+	 *
+	 * POST /lobby/create
+	 * POST /lobby/send_invite {username} -> invite_id
+	 * POST /lobby/cancel_invite {invite_id}
+	 * POST /lobby/accept_invite {invite_id}
+	 * POST /lobby/deny_invite {invite_id}
+	 * POST /lobby/kick {username}
+	 * POST /lobby/start
+	 *
+	 * POST /match/leave
+	 */
+
 	app.port(8080)
 		.multithreaded()
 		.run();
