@@ -24,7 +24,10 @@ struct PastMatch {
 };
 
 int main() {
-	crow::App<crow::CookieParser, crow::SessionMiddleware<crow::InMemoryStore>> app;
+	using SessionMiddleware = crow::SessionMiddleware<crow::InMemoryStore>;
+	using CustomApp = crow::App<crow::CookieParser, SessionMiddleware>;
+
+	CustomApp app;
 
 	using namespace sqlite_orm;
 
