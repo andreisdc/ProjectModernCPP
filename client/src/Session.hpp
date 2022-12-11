@@ -6,18 +6,15 @@
 
 class Session {
 private:
-	User m_Player;
-	Board m_Board;
-	unsigned int m_life = 3;
-	int m_points = 0;
-	std::vector<County *> m_listCountyV;
-	County *selecctCounty;
-
+	User m_player1;
+	User m_player2;
+	User m_player3;
+	User m_player4;
+	int nrPlayer = 0;
 public:
-	Session(User player, Board board);
-	void getRank();
-	void setRank();
-	void getPoint();
+	Session(User player1, User player2, User player3, User player4);
+	void getPoint(int nrPlayer);
 	void setPoint();
-	void addCountyAtList();
+	void addPlayer();
+	void kickPlayer();
 };
