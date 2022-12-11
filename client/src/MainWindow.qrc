@@ -15,5 +15,6 @@
         <file>assets/Compas.png</file>
         <file>assets/GoldBorder.png</file>
         <file>assets/LoginSignupBackground.png</file>
+        <file>assets/Cal.png</file>
     </qresource>
 </RCC>
