@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -2000,8 +2000,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLineEdit" name="lineEditQuestionNumberInput">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>150</y>
+        <x>230</x>
+        <y>260</y>
         <width>251</width>
         <height>22</height>
        </rect>
@@ -2042,9 +2042,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberAnswear">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>190</y>
-        <width>231</width>
+        <x>230</x>
+        <y>310</y>
+        <width>251</width>
         <height>20</height>
        </rect>
       </property>
@@ -2146,8 +2146,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonQuestionNumberEnter">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>150</y>
+        <x>490</x>
+        <y>260</y>
         <width>75</width>
         <height>24</height>
        </rect>
