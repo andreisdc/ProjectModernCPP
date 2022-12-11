@@ -69,6 +69,9 @@ int main() {
 				if (!x)
 					return crow::response(400);
 
+				if (app.get_context<SessionMiddleware>(req).contains("id"))
+					return crow::response(crow::status::BAD_REQUEST, "Already logged in!");
+
 				std::string username = x["username"].s();
 				std::string password = x["password"].s();
 
