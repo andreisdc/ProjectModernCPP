@@ -92,6 +92,11 @@ int main() {
 				return crow::response(201);
 			});
 
+	CROW_ROUTE(app, "/users/logout").methods(crow::HTTPMethod::GET)
+		([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
 	CROW_WEBSOCKET_ROUTE(app, "/ws")
 		.onaccept([&](const crow::request &req, void **userdata) -> bool {
 			std::cout << "New WebSocket connection!" << std::endl;
