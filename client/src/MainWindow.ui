@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1101,8 +1101,8 @@ background-color: rgb(255, 138, 99);
      <widget class="QFrame" name="frame_3">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>-10</y>
+        <x>20</x>
+        <y>-30</y>
         <width>1261</width>
         <height>931</height>
        </rect>
