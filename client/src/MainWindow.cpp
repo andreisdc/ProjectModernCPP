@@ -25,6 +25,10 @@ void MainWindow::on_radioButtonSignupShowPassword_released() {
 	}
 }
 
+void MainWindow::on_Test_clicked() {
+	ui.stackedWidget->setCurrentIndex(0);
+}
+
 
 void MainWindow::on_buttonLobbyKickplayer1_clicked() {
 }

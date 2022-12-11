@@ -27,5 +27,6 @@ public:
 
 	void addPoints(const int countyPoints);
 
+
 	friend std::ostream &operator<<(std::ostream &out, User &u);
 };

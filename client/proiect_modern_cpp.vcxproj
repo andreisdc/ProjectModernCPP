@@ -88,6 +88,7 @@
   <ItemGroup>
     <ClCompile Include="src\Board.cpp" />
     <ClCompile Include="src\County.cpp" />
+    <ClCompile Include="src\GameSession.cpp" />
     <ClCompile Include="src\Session.cpp" />
     <ClCompile Include="src\User.cpp" />
     <QtRcc Include="src\MainWindow.qrc" />
@@ -99,6 +100,7 @@
   <ItemGroup>
     <ClInclude Include="src\Board.hpp" />
     <ClInclude Include="src\County.hpp" />
+    <ClInclude Include="src\GameSession.hpp" />
     <ClInclude Include="src\Session.hpp" />
     <ClInclude Include="src\User.hpp" />
   </ItemGroup>

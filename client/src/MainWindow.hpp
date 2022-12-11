@@ -26,6 +26,8 @@ protected slots:
 	void on_radioButtonLoginShowPassword_released();
 	void on_radioButtonSignupShowPassword_released();
 
+	void on_Test_clicked();
+
 	void on_buttonLobbyKickplayer1_clicked();
 	void on_buttonLobbyKickplayer2_clicked();
 	void on_buttonLobbyKickplayer3_clicked();
