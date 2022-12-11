@@ -92,6 +92,24 @@ int main() {
 				return crow::response(201);
 			});
 
+	CROW_WEBSOCKET_ROUTE(app, "/ws")
+		.onaccept([&](const crow::request &req, void **userdata) -> bool {
+			std::cout << "New WebSocket connection!" << std::endl;
+			return true;
+		})
+		.onopen([&](crow::websocket::connection &conn) {
+			std::cout << "WebSocket connection opened!" << std::endl;
+		})
+		.onmessage([&](crow::websocket::connection &conn, const std::string &message, bool is_binary) {
+			std::cout << "New WebSocket message: " << message << std::endl;
+		})
+		.onerror([&](crow::websocket::connection &conn, const std::string &error_message) {
+			std::cout << "WebSocket connection error! " << error_message << std::endl;
+		})
+		.onclose([&](crow::websocket::connection &conn, const std::string &reason) {
+			std::cout << "WebSocket connection closed." << std::endl;
+		});
+
 	/*
 	 * GET /
 	 *
