@@ -64,13 +64,24 @@ int main() {
 
 	CROW_ROUTE(app, "/users/login")
 		.methods(crow::HTTPMethod::POST)
-			([&storage](const crow::request &req) {
+			([&app, &storage](const crow::request &req) {
 				auto x = crow::json::load(req.body);
 				if (!x)
 					return crow::response(400);
 
 				std::string username = x["username"].s();
 				std::string password = x["password"].s();
+
+				auto selectedIds = storage.select(
+					&User::id,
+					where(is_equal(&User::username, username) and is_equal(&User::password, password)));
+
+				if (selectedIds.empty())
+					return crow::response(crow::status::NOT_FOUND);
+
+				auto selectedId = selectedIds.front();
+
+				app.get_context<SessionMiddleware>(req).set("id", selectedId);
 
 				return crow::response(200);
 			});
