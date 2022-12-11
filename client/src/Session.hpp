@@ -6,13 +6,13 @@
 
 class Session {
 private:
-	User m_player1;
-	User m_player2;
-	User m_player3;
-	User m_player4;
+	User *m_player1 = nullptr;
+	User *m_player2 = nullptr;
+	User *m_player3 = nullptr;
+	User *m_player4 = nullptr;
 	int nrPlayer = 0;
 public:
-	Session(User player1, User player2, User player3, User player4);
+	Session(User *player1 = nullptr, User *player2 = nullptr, User *player3 = nullptr, User *player4 =nullptr);
 	void getPoint(int nrPlayer);
 	void setPoint();
 	void addPlayer();
