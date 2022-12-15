@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1171,10 +1171,10 @@ background-color: rgb(169, 132, 103);
      <widget class="QFrame" name="frame_4">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>390</y>
-        <width>181</width>
-        <height>131</height>
+        <x>10</x>
+        <y>0</y>
+        <width>1251</width>
+        <height>871</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1596,7 +1596,6 @@ background-color: rgb(169, 132, 103);
      <zorder>frameLobbyPlayers</zorder>
      <zorder>buttonLobbyAddplayer</zorder>
      <zorder>buttonLobbyStart</zorder>
-     <zorder>gridLayoutWidget</zorder>
      <zorder>frameLobbyChat</zorder>
     </widget>
     <widget class="QWidget" name="windowInvite">
@@ -2256,10 +2255,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="buttonQuestionFiftyFifty">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>600</y>
-        <width>121</width>
-        <height>91</height>
+        <x>570</x>
+        <y>620</y>
+        <width>120</width>
+        <height>90</height>
        </rect>
       </property>
       <property name="text">
@@ -2274,8 +2273,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="labelQuestionNumberQuestion">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>30</y>
+        <x>280</x>
+        <y>60</y>
         <width>811</width>
         <height>111</height>
        </rect>
@@ -2292,8 +2291,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLineEdit" name="lineEditQuestionNumberInput">
       <property name="geometry">
        <rect>
-        <x>340</x>
-        <y>150</y>
+        <x>490</x>
+        <y>230</y>
         <width>251</width>
         <height>22</height>
        </rect>
@@ -2334,8 +2333,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="labelQuestionNumberAnswear">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>190</y>
+        <x>500</x>
+        <y>270</y>
         <width>231</width>
         <height>20</height>
        </rect>
@@ -2438,14 +2437,40 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="buttonQuestionNumberEnter">
       <property name="geometry">
        <rect>
-        <x>600</x>
-        <y>150</y>
+        <x>750</x>
+        <y>230</y>
         <width>75</width>
         <height>24</height>
        </rect>
       </property>
       <property name="text">
        <string>ENTER</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonQuestionChooseanswer">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>490</y>
+        <width>120</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GET 4 ANSWERS</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonQuestionGetcorrectanswer">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>490</y>
+        <width>161</width>
+        <height>90</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>GET CORRECT ANSWER</string>
       </property>
      </widget>
     </widget>
