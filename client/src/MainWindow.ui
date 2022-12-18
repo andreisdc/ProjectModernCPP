@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1564,11 +1564,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameUsername1">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>100</x>
         <y>40</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Player 1</string>
@@ -1577,11 +1580,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameUsername2">
       <property name="geometry">
        <rect>
-        <x>300</x>
+        <x>390</x>
         <y>40</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Player 2</string>
@@ -1590,11 +1596,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameUsername3">
       <property name="geometry">
        <rect>
-        <x>560</x>
+        <x>620</x>
         <y>40</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Player 3</string>
@@ -1603,11 +1612,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameUsername4">
       <property name="geometry">
        <rect>
-        <x>820</x>
+        <x>880</x>
         <y>40</y>
         <width>49</width>
         <height>16</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Player 4</string>
@@ -1618,7 +1630,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <rect>
         <x>60</x>
         <y>60</y>
-        <width>64</width>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
@@ -1626,9 +1638,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLCDNumber" name="lcdNumberGamePoints2">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>350</x>
         <y>60</y>
-        <width>64</width>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
@@ -1636,9 +1648,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLCDNumber" name="lcdNumberGamePoints3">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>580</x>
         <y>60</y>
-        <width>64</width>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
@@ -1646,9 +1658,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLCDNumber" name="lcdNumberGamePoints4">
       <property name="geometry">
        <rect>
-        <x>810</x>
+        <x>840</x>
         <y>60</y>
-        <width>64</width>
+        <width>111</width>
         <height>23</height>
        </rect>
       </property>
@@ -1656,8 +1668,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty2">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>160</y>
+        <x>466</x>
+        <y>260</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1669,8 +1681,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty3">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>160</y>
+        <x>566</x>
+        <y>260</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1682,8 +1694,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty4">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>160</y>
+        <x>666</x>
+        <y>260</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1695,8 +1707,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty5">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>160</y>
+        <x>756</x>
+        <y>260</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1708,8 +1720,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty10">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>270</y>
+        <x>756</x>
+        <y>370</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1721,8 +1733,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty9">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>270</y>
+        <x>666</x>
+        <y>370</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1734,8 +1746,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty8">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>270</y>
+        <x>566</x>
+        <y>370</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1747,8 +1759,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty7">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>270</y>
+        <x>466</x>
+        <y>370</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1760,8 +1772,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty12">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>380</y>
+        <x>466</x>
+        <y>480</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1773,8 +1785,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty13">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>380</y>
+        <x>566</x>
+        <y>480</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1786,8 +1798,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty14">
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>380</y>
+        <x>666</x>
+        <y>480</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1799,8 +1811,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty15">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>380</y>
+        <x>756</x>
+        <y>480</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1812,9 +1824,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty1">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>160</y>
-        <width>75</width>
+        <x>360</x>
+        <y>260</y>
+        <width>81</width>
         <height>91</height>
        </rect>
       </property>
@@ -1825,8 +1837,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty6">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>270</y>
+        <x>366</x>
+        <y>370</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1838,8 +1850,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonGameCounty11">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>380</y>
+        <x>366</x>
+        <y>480</y>
         <width>75</width>
         <height>91</height>
        </rect>
@@ -1851,8 +1863,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints1">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>220</y>
+        <x>376</x>
+        <y>320</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1864,8 +1876,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints2">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>220</y>
+        <x>476</x>
+        <y>320</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1877,8 +1889,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints3">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>220</y>
+        <x>576</x>
+        <y>320</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1890,8 +1902,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints4">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>220</y>
+        <x>676</x>
+        <y>320</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1903,8 +1915,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints5">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>220</y>
+        <x>766</x>
+        <y>320</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1916,8 +1928,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints8">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>330</y>
+        <x>576</x>
+        <y>430</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1929,8 +1941,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints7">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>330</y>
+        <x>476</x>
+        <y>430</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1942,8 +1954,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints6">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>330</y>
+        <x>376</x>
+        <y>430</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1955,8 +1967,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints9">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>330</y>
+        <x>676</x>
+        <y>430</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1968,8 +1980,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints10">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>330</y>
+        <x>766</x>
+        <y>430</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1981,8 +1993,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints15">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>440</y>
+        <x>766</x>
+        <y>540</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -1994,8 +2006,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints14">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>440</y>
+        <x>676</x>
+        <y>540</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -2007,8 +2019,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints13">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>440</y>
+        <x>576</x>
+        <y>540</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -2020,8 +2032,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints12">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>440</y>
+        <x>476</x>
+        <y>540</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -2033,8 +2045,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelGameCountyPoints11">
       <property name="geometry">
        <rect>
-        <x>270</x>
-        <y>440</y>
+        <x>376</x>
+        <y>540</y>
         <width>49</width>
         <height>16</height>
        </rect>
@@ -2043,6 +2055,64 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <string>TextLabel</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>-1</y>
+        <width>1251</width>
+        <height>861</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame_4</zorder>
+     <zorder>labelGameUsername1</zorder>
+     <zorder>labelGameUsername2</zorder>
+     <zorder>labelGameUsername3</zorder>
+     <zorder>labelGameUsername4</zorder>
+     <zorder>lcdNumberGamePoints1</zorder>
+     <zorder>lcdNumberGamePoints2</zorder>
+     <zorder>lcdNumberGamePoints3</zorder>
+     <zorder>lcdNumberGamePoints4</zorder>
+     <zorder>buttonGameCounty2</zorder>
+     <zorder>buttonGameCounty3</zorder>
+     <zorder>buttonGameCounty4</zorder>
+     <zorder>buttonGameCounty5</zorder>
+     <zorder>buttonGameCounty10</zorder>
+     <zorder>buttonGameCounty9</zorder>
+     <zorder>buttonGameCounty8</zorder>
+     <zorder>buttonGameCounty7</zorder>
+     <zorder>buttonGameCounty12</zorder>
+     <zorder>buttonGameCounty13</zorder>
+     <zorder>buttonGameCounty14</zorder>
+     <zorder>buttonGameCounty15</zorder>
+     <zorder>buttonGameCounty1</zorder>
+     <zorder>buttonGameCounty6</zorder>
+     <zorder>buttonGameCounty11</zorder>
+     <zorder>labelGameCountyPoints1</zorder>
+     <zorder>labelGameCountyPoints2</zorder>
+     <zorder>labelGameCountyPoints3</zorder>
+     <zorder>labelGameCountyPoints4</zorder>
+     <zorder>labelGameCountyPoints5</zorder>
+     <zorder>labelGameCountyPoints8</zorder>
+     <zorder>labelGameCountyPoints7</zorder>
+     <zorder>labelGameCountyPoints6</zorder>
+     <zorder>labelGameCountyPoints9</zorder>
+     <zorder>labelGameCountyPoints10</zorder>
+     <zorder>labelGameCountyPoints15</zorder>
+     <zorder>labelGameCountyPoints14</zorder>
+     <zorder>labelGameCountyPoints13</zorder>
+     <zorder>labelGameCountyPoints12</zorder>
+     <zorder>labelGameCountyPoints11</zorder>
     </widget>
     <widget class="QWidget" name="Question">
      <widget class="QLabel" name="labelQuestionQuestion">
