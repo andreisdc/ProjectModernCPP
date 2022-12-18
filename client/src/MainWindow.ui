@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>7</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1403,9 +1403,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>0</y>
+        <y>-10</y>
         <width>1251</width>
-        <height>871</height>
+        <height>881</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2367,7 +2367,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLineEdit" name="lineEditQuestionNumberInput">
       <property name="geometry">
        <rect>
-        <x>230</x>
+        <x>490</x>
         <y>260</y>
         <width>251</width>
         <height>22</height>
@@ -2383,11 +2383,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberUsername1">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>450</y>
+        <x>180</x>
+        <y>510</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2396,11 +2399,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberPlayer1Answear">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>490</y>
+        <x>180</x>
+        <y>550</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2409,8 +2415,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberAnswear">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>310</y>
+        <x>500</x>
+        <y>300</y>
         <width>251</width>
         <height>20</height>
        </rect>
@@ -2435,11 +2441,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberUsername2">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>450</y>
+        <x>430</x>
+        <y>510</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2448,11 +2457,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberPlayer2Answear">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>490</y>
+        <x>430</x>
+        <y>550</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2461,11 +2473,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberUsername3">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>450</y>
+        <x>660</x>
+        <y>510</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2474,11 +2489,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberPlayer3Answear">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>490</y>
+        <x>660</x>
+        <y>550</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2487,11 +2505,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberUsername4">
       <property name="geometry">
        <rect>
-        <x>790</x>
-        <y>450</y>
+        <x>940</x>
+        <y>510</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2500,11 +2521,14 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberPlayer4Answear">
       <property name="geometry">
        <rect>
-        <x>790</x>
-        <y>490</y>
+        <x>940</x>
+        <y>550</y>
         <width>141</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2513,7 +2537,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonQuestionNumberEnter">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>810</x>
         <y>260</y>
         <width>75</width>
         <height>24</height>
@@ -2523,6 +2547,38 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <string>ENTER</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_20">
+      <property name="geometry">
+       <rect>
+        <x>19</x>
+        <y>-10</y>
+        <width>1251</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame_20</zorder>
+     <zorder>labelQuestionNumberQuestion</zorder>
+     <zorder>lineEditQuestionNumberInput</zorder>
+     <zorder>labelQuestionNumberUsername1</zorder>
+     <zorder>labelQuestionNumberPlayer1Answear</zorder>
+     <zorder>labelQuestionNumberAnswear</zorder>
+     <zorder>labelQuestionNumberUsername2</zorder>
+     <zorder>labelQuestionNumberPlayer2Answear</zorder>
+     <zorder>labelQuestionNumberUsername3</zorder>
+     <zorder>labelQuestionNumberPlayer3Answear</zorder>
+     <zorder>labelQuestionNumberUsername4</zorder>
+     <zorder>labelQuestionNumberPlayer4Answear</zorder>
+     <zorder>buttonQuestionNumberEnter</zorder>
     </widget>
    </widget>
   </widget>
