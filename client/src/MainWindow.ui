@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1203</width>
+    <width>1240</width>
     <height>859</height>
    </rect>
   </property>
@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1151,7 +1151,7 @@ background-color: rgb(255, 138, 99);
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>90</y>
+        <y>140</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -1169,7 +1169,7 @@ background-color: rgb(255, 138, 99);
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>200</y>
+        <y>270</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -1187,7 +1187,7 @@ background-color: rgb(255, 138, 99);
       <property name="geometry">
        <rect>
         <x>120</x>
-        <y>310</y>
+        <y>410</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -1204,10 +1204,10 @@ background-color: rgb(255, 138, 99);
      <widget class="QLabel" name="labelLobbyPlayername4">
       <property name="geometry">
        <rect>
-        <x>120</x>
-        <y>440</y>
-        <width>161</width>
-        <height>31</height>
+        <x>130</x>
+        <y>550</y>
+        <width>181</width>
+        <height>71</height>
        </rect>
       </property>
       <property name="font">
@@ -1222,8 +1222,8 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyKickplayer1">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>210</y>
+        <x>320</x>
+        <y>280</y>
         <width>75</width>
         <height>24</height>
        </rect>
@@ -1235,8 +1235,8 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyKickplayer2">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>320</y>
+        <x>320</x>
+        <y>410</y>
         <width>75</width>
         <height>24</height>
        </rect>
@@ -1248,8 +1248,8 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyKickplayer3">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>450</y>
+        <x>320</x>
+        <y>570</y>
         <width>75</width>
         <height>24</height>
        </rect>
@@ -1261,9 +1261,9 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyAddplayer">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>480</y>
-        <width>151</width>
+        <x>1010</x>
+        <y>700</y>
+        <width>171</width>
         <height>51</height>
        </rect>
       </property>
@@ -1274,9 +1274,9 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyStart">
       <property name="geometry">
        <rect>
-        <x>940</x>
-        <y>540</y>
-        <width>151</width>
+        <x>830</x>
+        <y>700</y>
+        <width>171</width>
         <height>51</height>
        </rect>
       </property>
@@ -1287,8 +1287,8 @@ background-color: rgb(255, 138, 99);
      <widget class="QPushButton" name="buttonLobbyLogout">
       <property name="geometry">
        <rect>
-        <x>350</x>
-        <y>100</y>
+        <x>320</x>
+        <y>140</y>
         <width>75</width>
         <height>24</height>
        </rect>
@@ -1301,7 +1301,7 @@ background-color: rgb(255, 138, 99);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>60</y>
+        <y>110</y>
         <width>81</width>
         <height>80</height>
        </rect>
@@ -1322,7 +1322,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>180</y>
+        <y>250</y>
         <width>81</width>
         <height>80</height>
        </rect>
@@ -1343,7 +1343,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>280</y>
+        <y>390</y>
         <width>81</width>
         <height>80</height>
        </rect>
@@ -1364,7 +1364,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>420</y>
+        <y>540</y>
         <width>81</width>
         <height>80</height>
        </rect>
@@ -1381,16 +1381,124 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1251</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="frameBkgL">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>401</width>
+         <height>661</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/MainWindow/assets/bej.png);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+      <widget class="QFrame" name="frameBkgR">
+       <property name="geometry">
+        <rect>
+         <x>800</x>
+         <y>20</y>
+         <width>421</width>
+         <height>561</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/MainWindow/assets/bleu.png);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>1170</x>
+        <y>613</y>
+        <width>75</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ENTER</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelChat">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>610</y>
+        <width>331</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/bleu.png);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <zorder>frame_6</zorder>
+     <zorder>labelLobbyPlayername1</zorder>
+     <zorder>labelLobbyPlayername2</zorder>
+     <zorder>labelLobbyPlayername3</zorder>
+     <zorder>labelLobbyPlayername4</zorder>
+     <zorder>buttonLobbyKickplayer1</zorder>
+     <zorder>buttonLobbyKickplayer2</zorder>
+     <zorder>buttonLobbyKickplayer3</zorder>
+     <zorder>buttonLobbyAddplayer</zorder>
+     <zorder>buttonLobbyStart</zorder>
+     <zorder>buttonLobbyLogout</zorder>
+     <zorder>frameAvatar1</zorder>
+     <zorder>frameAvatar2</zorder>
+     <zorder>frameAvatar3</zorder>
+     <zorder>frameAvatar4</zorder>
+     <zorder>pushButton</zorder>
+     <zorder>labelChat</zorder>
     </widget>
     <widget class="QWidget" name="windowInvite">
      <widget class="QPushButton" name="buttonWindowInviteAdd">
       <property name="geometry">
        <rect>
-        <x>630</x>
-        <y>270</y>
+        <x>830</x>
+        <y>410</y>
         <width>75</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+       </font>
       </property>
       <property name="text">
        <string>Add</string>
@@ -1399,8 +1507,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLineEdit" name="lindeEditWindowInviteUsername">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>270</y>
+        <x>520</x>
+        <y>410</y>
         <width>291</width>
         <height>22</height>
        </rect>
@@ -1409,21 +1517,48 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelWindowInviteUsername">
       <property name="geometry">
        <rect>
-        <x>200</x>
-        <y>260</y>
+        <x>380</x>
+        <y>400</y>
         <width>111</width>
         <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
+        <family>Viner Hand ITC</family>
         <pointsize>18</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Username</string>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>-10</y>
+        <width>1241</width>
+        <height>871</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame_19</zorder>
+     <zorder>buttonWindowInviteAdd</zorder>
+     <zorder>lindeEditWindowInviteUsername</zorder>
+     <zorder>labelWindowInviteUsername</zorder>
     </widget>
     <widget class="QWidget" name="Game">
      <widget class="QLabel" name="labelGameUsername1">
