@@ -1,6 +1,7 @@
 #include "MainWindow.hpp"
 #include "ui_mainwindow.h"
-
+#include <QFrame>
+#include <QStyle>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent){
 	ui.setupUi(this);
@@ -72,6 +73,10 @@ void MainWindow::setAllPoints() {
 
 void MainWindow::on_buttonGameCounty1_clicked() {
 	ui.stackedWidget->setCurrentIndex(6);
+	QColor col = QColor
+	if (ui.buttonQuestionA->isChecked() == true) {
+		
+	}
 }
 
 void MainWindow::on_buttonGameCounty2_clicked() {
