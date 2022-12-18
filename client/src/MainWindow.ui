@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1674,6 +1674,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1686,6 +1689,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1700,6 +1706,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1712,6 +1721,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1726,6 +1738,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1738,6 +1753,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1752,6 +1770,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1764,6 +1785,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1778,6 +1802,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1790,6 +1817,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1804,6 +1834,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1816,6 +1849,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
@@ -1830,6 +1866,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1843,6 +1882,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -1855,6 +1897,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>75</width>
         <height>91</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string/>
