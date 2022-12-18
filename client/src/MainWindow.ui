@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -1228,6 +1228,9 @@ background-color: rgb(255, 138, 99);
         <height>24</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 85, 0);</string>
+      </property>
       <property name="text">
        <string>Kick</string>
       </property>
@@ -1240,6 +1243,9 @@ background-color: rgb(255, 138, 99);
         <width>75</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 85, 0);</string>
       </property>
       <property name="text">
        <string>Kick</string>
@@ -1254,6 +1260,9 @@ background-color: rgb(255, 138, 99);
         <height>24</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 85, 0);</string>
+      </property>
       <property name="text">
        <string>Kick</string>
       </property>
@@ -1266,6 +1275,9 @@ background-color: rgb(255, 138, 99);
         <width>171</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>Add</string>
@@ -1280,6 +1292,9 @@ background-color: rgb(255, 138, 99);
         <height>51</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>Start</string>
       </property>
@@ -1292,6 +1307,9 @@ background-color: rgb(255, 138, 99);
         <width>75</width>
         <height>24</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 85, 0);</string>
       </property>
       <property name="text">
        <string>Log Out</string>
@@ -1447,6 +1465,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>41</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>ENTER</string>
       </property>
@@ -1500,6 +1521,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <family>Viner Hand ITC</family>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>Add</string>
       </property>
@@ -1512,6 +1536,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>291</width>
         <height>22</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
      </widget>
      <widget class="QLabel" name="labelWindowInviteUsername">
