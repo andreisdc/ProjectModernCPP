@@ -2148,6 +2148,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>Raspuns 1</string>
       </property>
@@ -2166,6 +2169,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <family>Viner Hand ITC</family>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>Raspuns 2</string>
@@ -2186,6 +2192,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>Raspuns 3</string>
       </property>
@@ -2205,6 +2214,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <pointsize>14</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
       <property name="text">
        <string>Raspuns 4</string>
       </property>
@@ -2223,6 +2235,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <family>Viner Hand ITC</family>
         <pointsize>14</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
       </property>
       <property name="text">
        <string>50-50</string>
