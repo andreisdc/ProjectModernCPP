@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>6</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -2118,8 +2118,8 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionQuestion">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>20</y>
+        <x>80</x>
+        <y>80</y>
         <width>811</width>
         <height>111</height>
        </rect>
@@ -2142,6 +2142,12 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Raspuns 1</string>
       </property>
@@ -2154,6 +2160,12 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>521</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Raspuns 2</string>
@@ -2168,6 +2180,12 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>51</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Raspuns 3</string>
       </property>
@@ -2180,6 +2198,12 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <width>521</width>
         <height>51</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Raspuns 4</string>
@@ -2194,6 +2218,12 @@ image: url(:/MainWindow/assets/GoldBorder.png);
         <height>91</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>50-50</string>
       </property>
@@ -2201,6 +2231,32 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <bool>false</bool>
       </property>
      </widget>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>-1</y>
+        <width>1241</width>
+        <height>861</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame_5</zorder>
+     <zorder>labelQuestionQuestion</zorder>
+     <zorder>buttonQuestionA</zorder>
+     <zorder>buttonQuestionB</zorder>
+     <zorder>buttonQuestionC</zorder>
+     <zorder>buttonQuestionD</zorder>
+     <zorder>buttonQuestionFiftyFifty</zorder>
     </widget>
     <widget class="QWidget" name="QuestionNumber">
      <widget class="QLabel" name="labelQuestionNumberQuestion">
