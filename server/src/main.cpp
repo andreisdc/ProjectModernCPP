@@ -1,7 +1,9 @@
 #include <crow.h>
 #include <crow/middlewares/session.h>
-#include <sqlite_orm/sqlite_orm.h>
 #include <memory>
+#include <sqlite_orm/sqlite_orm.h>
+#include <vector>
+#include <iostream>
 
 struct User {
 	int id;
@@ -21,6 +23,40 @@ struct PastMatch {
 	std::unique_ptr<int> player2;
 	std::unique_ptr<int> player3;
 	std::unique_ptr<int> player4;
+};
+
+struct Player {
+	User *user;
+};
+
+struct Lobby {
+public:
+	Lobby(Player *creator) {
+		static int LAST_ID = 0;
+
+		this->id = LAST_ID;
+		this->player1 = creator;
+
+		LAST_ID++;
+	}
+
+	int getId() const {
+		return this->id;
+	}
+
+	int id;
+	Player *player1;
+	Player *player2;
+	Player *player3;
+	Player *player4;
+};
+
+struct Match {
+	int id;
+	Player *player1;
+	Player *player2;
+	Player *player3;
+	Player *player4;
 };
 
 int main() {
@@ -54,11 +90,13 @@ int main() {
 			foreign_key(&PastMatch::player1).references(&UserMatch::id).on_delete.cascade(),
 			foreign_key(&PastMatch::player2).references(&UserMatch::id).on_delete.cascade(),
 			foreign_key(&PastMatch::player3).references(&UserMatch::id).on_delete.cascade(),
-			foreign_key(&PastMatch::player4).references(&UserMatch::id).on_delete.cascade())
-	);
+			foreign_key(&PastMatch::player4).references(&UserMatch::id).on_delete.cascade()));
 
-	CROW_ROUTE(app, "/users/login").methods(crow::HTTPMethod::POST)
-		([&app, &storage](const crow::request &req) {
+	std::vector<Lobby*> vecLobbies = {};
+	std::vector<Match*> vecMatches = {};
+
+	CROW_ROUTE(app, "/users/login")
+		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
 			auto jsonBody = crow::json::load(req.body);
 			if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
 				return crow::response(crow::status::BAD_REQUEST);
@@ -83,8 +121,8 @@ int main() {
 			return crow::response(crow::status::OK);
 		});
 
-	CROW_ROUTE(app, "/users/register").methods(crow::HTTPMethod::POST)
-		([&app, &storage](const crow::request &req) {
+	CROW_ROUTE(app, "/users/register")
+		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
 			auto jsonBody = crow::json::load(req.body);
 			if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
 				return crow::response(crow::status::BAD_REQUEST);
@@ -109,8 +147,8 @@ int main() {
 			return crow::response(crow::status::CREATED);
 		});
 
-	CROW_ROUTE(app, "/users/logout").methods(crow::HTTPMethod::GET)
-		([&app](const crow::request &req) {
+	CROW_ROUTE(app, "/users/logout")
+		.methods(crow::HTTPMethod::GET)([&app](const crow::request &req) {
 			app.get_context<SessionMiddleware>(req).remove("id");
 
 			return crow::response(crow::status::OK);
@@ -134,22 +172,45 @@ int main() {
 			std::cout << "WebSocket connection closed." << std::endl;
 		});
 
-	/*
-	 * GET /
-	 *
-	 * POST /users/login {username, password}
-	 * POST /users/register {username, password}
-	 *
-	 * POST /lobby/create
-	 * POST /lobby/send_invite {username} -> invite_id
-	 * POST /lobby/cancel_invite {invite_id}
-	 * POST /lobby/accept_invite {invite_id}
-	 * POST /lobby/deny_invite {invite_id}
-	 * POST /lobby/kick {username}
-	 * POST /lobby/start
-	 *
-	 * POST /match/leave
-	 */
+	CROW_ROUTE(app, "/lobby/create")
+		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
+			if (!app.get_context<SessionMiddleware>(req).contains("id"))
+				return crow::response(crow::status::BAD_REQUEST, "Not logged in!");
+
+			crow::json::wvalue jsonBody;
+
+			return crow::response(crow::status::CREATED, jsonBody);
+		});
+
+	CROW_ROUTE(app, "/lobby/delete")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
+	CROW_ROUTE(app, "/lobby/join")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
+	CROW_ROUTE(app, "/lobby/invite")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
+	CROW_ROUTE(app, "/lobby/cancel_invite")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
+	CROW_ROUTE(app, "/lobby/accept_invite")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
+
+	CROW_ROUTE(app, "/lobby/deny_invite")
+		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
+			return crow::response(crow::status::OK);
+		});
 
 	app.port(8080)
 		.multithreaded()
