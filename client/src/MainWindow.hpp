@@ -12,6 +12,9 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_MainWindow.h"
 
+#include <nlohmann/json.hpp>
+#include <cpr/cookies.h>
+
 #include "Session.hpp"
 #include "User.hpp"
 
@@ -206,4 +209,6 @@ private:
 	int generateRandomNumberNumber();
 	void getQuestionNumber();
 	void getQuestionSimple();
+
+	cpr::Cookies cookie_jar;
 };

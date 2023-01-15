@@ -8,6 +8,9 @@
 #include <QThread>
 #include <cmath>
 
+#include <cpr/cpr.h>
+#include <nlohmann/json.hpp>
+
 QPushButton *createMaskedPushButton(const QString &label,
 									const QString &path,
 									QWidget *parent,
@@ -201,6 +204,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 	listButtons6x4.push_back(Brasov6x4);
 	listButtons6x4.push_back(Cluj6x4);
 }
+
 MainWindow::~MainWindow() {}
 
 void MainWindow::on_radioButtonLoginShowPassword_released() {
@@ -241,6 +245,11 @@ void MainWindow::on_buttonLobbyKickplayer3_clicked() {
 }
 
 void MainWindow::on_buttonLobbyStart_clicked() {
+	cpr::Response res = cpr::Post(
+			cpr::Url("http://localhost:8080/match/start"),
+			this->cookie_jar);
+
+	this->cookie_jar = res.cookies;
 
 	int n = generateRandomNumberNumber();
 	auto question = intrebariNumere[n]["intrebare"].get<std::string>();
@@ -258,7 +267,15 @@ void MainWindow::on_buttonLobbyStart_clicked() {
 }
 
 void MainWindow::on_buttonLobbyLogout_clicked() {
-	ui.stackedWidget->setCurrentIndex(3);
+	cpr::Response res = cpr::Post(
+			cpr::Url("http://localhost:8080/lobby/delete"),
+			this->cookie_jar);
+
+	this->cookie_jar = res.cookies;
+
+	if (res.status_code == 200) {
+		ui.stackedWidget->setCurrentIndex(3);
+	}
 }
 
 void MainWindow::setAllPoints() {
@@ -365,32 +382,85 @@ void MainWindow::on_buttonSignupBack_clicked() {
 }
 
 void MainWindow::on_buttonLoginLogin_clicked() {
+	std::string username = this->ui.lineEditLoginUsername->text().toStdString();
+	std::string password = this->ui.lineEditLoginPassword->text().toStdString();
 
-	ui.stackedWidget->setCurrentIndex(3);
-	ui.radioButtonLoginShowPassword->setChecked(false);
-	setAllPoints();
+	nlohmann::json body_json = nlohmann::json::object();
+	body_json["username"] = username;
+	body_json["password"] = password;
+
+	cpr::Response res = cpr::Post(
+			cpr::Url("http://localhost:8080/users/login"),
+			cpr::Body{body_json.dump()},
+			cpr::Header{{"Content-Type", "application/json"}},
+			this->cookie_jar);
+
+	this->cookie_jar = res.cookies;
+
+	if (res.status_code == 404) {
+		// Incorrect credentials.
+	} else if (res.status_code == 403 || res.status_code == 200) {
+		ui.stackedWidget->setCurrentIndex(3);
+		ui.radioButtonLoginShowPassword->setChecked(false);
+		setAllPoints();
+	}
 }
 
 void MainWindow::on_buttonSignupSignup_clicked() {
-	ui.stackedWidget->setCurrentIndex(3);
-	ui.radioButtonSignupShowPassword->setChecked(false);
-	setAllPoints();
+	std::string username = this->ui.lineEditSignupUsername->text().toStdString();
+	std::string password = this->ui.lineEditSignupPassword->text().toStdString();
+
+	nlohmann::json body_json = nlohmann::json::object();
+	body_json["username"] = username;
+	body_json["password"] = password;
+
+	cpr::Response res = cpr::Post(
+			cpr::Url("http://localhost:8080/users/register"),
+			cpr::Body{body_json.dump()},
+			cpr::Header{{"Content-Type", "application/json"}},
+			this->cookie_jar);
+
+	this->cookie_jar = res.cookies;
+
+	if (res.status_code == 409) {
+		// Already registered.
+	} else if (res.status_code == 403 || res.status_code == 201) {
+		ui.stackedWidget->setCurrentIndex(3);
+		ui.radioButtonSignupShowPassword->setChecked(false);
+		setAllPoints();
+	}
 }
 
 void MainWindow::on_buttonMainMenuCreateGame_clicked() {
+	cpr::Response res = cpr::Post(
+			cpr::Url("http://localhost:8080/lobby/create"),
+			this->cookie_jar);
 
-	ui.stackedWidget->setCurrentIndex(4);
-	ui.frameAvatar2->setVisible(false);
-	ui.frameAvatar3->setVisible(false);
-	ui.frameAvatar4->setVisible(false);
-	ui.buttonLobbyKickplayer1->setVisible(false);
-	ui.buttonLobbyKickplayer2->setVisible(false);
-	ui.buttonLobbyKickplayer3->setVisible(false);
-	ui.labelLobbyPlayername2->setVisible(false);
-	ui.labelLobbyPlayername3->setVisible(false);
-	ui.labelLobbyPlayername4->setVisible(false);
-	VerifyPlayer();
-	ui.Error->setVisible(false);
+	this->cookie_jar = res.cookies;
+
+	if (res.status_code == 403) {
+		// Not logged in
+		ui.stackedWidget->setCurrentIndex(1);
+
+	} else if (res.status_code == 500) {
+		// Unexpected error
+		ui.stackedWidget->setCurrentIndex(0);
+
+	} else if (res.status_code == 201) {
+		// Created
+		ui.stackedWidget->setCurrentIndex(4);
+		ui.frameAvatar2->setVisible(false);
+		ui.frameAvatar3->setVisible(false);
+		ui.frameAvatar4->setVisible(false);
+		ui.buttonLobbyKickplayer1->setVisible(false);
+		ui.buttonLobbyKickplayer2->setVisible(false);
+		ui.buttonLobbyKickplayer3->setVisible(false);
+		ui.labelLobbyPlayername2->setVisible(false);
+		ui.labelLobbyPlayername3->setVisible(false);
+		ui.labelLobbyPlayername4->setVisible(false);
+		VerifyPlayer();
+		ui.Error->setVisible(false);
+	}
 }
 
 void MainWindow::on_buttonMainMenuJoinGame_clicked() {
