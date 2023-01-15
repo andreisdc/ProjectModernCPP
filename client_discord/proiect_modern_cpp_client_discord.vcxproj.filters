@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="discord_game_sdk">
+      <UniqueIdentifier>{d9026523-fa77-4f1f-99d0-513665d4b8c9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\discord_game_sdk\achievement_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\activity_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\application_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\core.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\image_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\lobby_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\network_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\overlay_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\relationship_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\storage_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\store_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\types.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\user_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\discord_game_sdk\voice_manager.cpp">
+      <Filter>discord_game_sdk</Filter>
+    </ClCompile>
+    <ClCompile Include="src\dllmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\discord_game_sdk\achievement_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\activity_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\application_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\core.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\discord.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\event.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\ffi.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\image_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\lobby_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\network_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\overlay_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\relationship_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\storage_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\store_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\types.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\user_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+    <ClInclude Include="src\discord_game_sdk\voice_manager.h">
+      <Filter>discord_game_sdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

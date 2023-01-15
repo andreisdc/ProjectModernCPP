@@ -7,6 +7,7 @@
 #include <QStyle>
 #include <QThread>
 #include <cmath>
+
 QPushButton *createMaskedPushButton(const QString &label,
 									const QString &path,
 									QWidget *parent,
@@ -34,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 	f.close();
 
 	this->intrebariSimple = intrebari["Standard questions"];
-	this->intrebariNumere   = intrebari["Numerical questions"];
+	this->intrebariNumere = intrebari["Numerical questions"];
 	std::random_device rd;
 	this->mt = std::mt19937(rd());
 	this->distSimple = std::uniform_int_distribution<int>(0, this->intrebariSimple.size() - 1);
@@ -249,13 +250,11 @@ void MainWindow::on_buttonLobbyStart_clicked() {
 	ui.labelQuestionNumberAnswear->setText(ans.c_str());
 	if (session.getNumberPlayer() < 2) {
 		ui.Error->setVisible(true);
-	}
-	else {
+	} else {
 		ui.stackedWidget->setCurrentIndex(6);
 	}
 	ConnectButton(session.getNumberPlayer());
 	StartGame(session.getNumberPlayer());
-
 }
 
 void MainWindow::on_buttonLobbyLogout_clicked() {
@@ -263,6 +262,9 @@ void MainWindow::on_buttonLobbyLogout_clicked() {
 }
 
 void MainWindow::setAllPoints() {
+}
+
+void MainWindow::on_buttonQuestionFiftyFifty_clicked() {
 }
 
 void MainWindow::on_buttonQuestionA_clicked() {
@@ -286,14 +288,21 @@ void MainWindow::on_buttonQuestionNumberEnter_clicked() {
 	ui.lineEditQuestionNumberInput->clear();
 	if (session.getNumberPlayer() < 3) {
 		ui.stackedWidget->setCurrentIndex(7);
-	}
-	else if (session.getNumberPlayer() < 4) {
+	} else if (session.getNumberPlayer() < 4) {
 		ui.stackedWidget->setCurrentIndex(8);
-	}
-	else if (session.getNumberPlayer() < 5) {
+	} else if (session.getNumberPlayer() < 5) {
 		ui.stackedWidget->setCurrentIndex(9);
 	}
-
+	user1.setMoves(2);
+	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	ui.lcdNumberGame3x3Points2->display(user2.getPoints());
+	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	ui.lcdNumberGame5x3Points2->display(user2.getPoints());
+	ui.lcdNumberGame5x3Points3->display(user3.getPoints());
+	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	ui.lcdNumberGame6x4Points2->display(user2.getPoints());
+	ui.lcdNumberGame6x4Points3->display(user3.getPoints());
+	ui.lcdNumberGame6x4Points4->display(user4.getPoints());
 }
 
 void MainWindow::changePassword() {
@@ -389,412 +398,956 @@ void MainWindow::on_buttonMainMenuJoinGame_clicked() {
 }
 
 void MainWindow::on_buttonSatuMare3x3_clicked() {
-	SatuMare3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = SatuMare3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
-	std::cout << "da";
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		SatuMare3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = SatuMare3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		SatuMare3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMoldova3x3_clicked() {
-	Moldova3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Moldova3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Moldova3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Moldova3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Moldova3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTimisoara3x3_clicked() {
-	Timisoara3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Timisoara3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Timisoara3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Timisoara3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Timisoara3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonArdeal3x3_clicked() {
-	Ardeal3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Ardeal3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Ardeal3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Ardeal3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Ardeal3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTransilvania3x3_clicked() {
-	Transilvania3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Transilvania3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Transilvania3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Transilvania3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Transilvania3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonOltenia3x3_clicked() {
-	Oltenia3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Oltenia3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Oltenia3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Oltenia3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Oltenia3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMuntenia3x3_clicked() {
-	Muntenia3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Muntenia3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Muntenia3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Muntenia3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Muntenia3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonDobrogea3x3_clicked() {
-	Dobrogea3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Dobrogea3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Dobrogea3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Dobrogea3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Dobrogea3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMaramures3x3_clicked() {
-	Maramures3x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Maramures3x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Maramures3x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Maramures3x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
+		Maramures3x3->setDisabled(true);
+		nrCounty3x3--;
+		if (nrCounty3x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonSatuMare5x3_clicked() {
-	SatuMare5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = SatuMare5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		SatuMare5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = SatuMare5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		SatuMare5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMaramures5x3_clicked() {
-	Maramures5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Maramures5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Maramures5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Maramures5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Maramures5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonIasi5x3_clicked() {
-	Iasi5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Iasi5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Iasi5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Iasi5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Iasi5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTimisoara5x3_clicked() {
-	Timisoara5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Timisoara5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Timisoara5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Timisoara5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Timisoara5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCluj5x3_clicked() {
-	Cluj5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Cluj5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Cluj5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Cluj5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Cluj5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTransilvania5x3_clicked() {
-	Transilvania5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Transilvania5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Transilvania5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Transilvania5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Transilvania5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBrasov5x3_clicked() {
-	Brasov5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Brasov5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Brasov5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Brasov5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Brasov5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonGalati5x3_clicked() {
-	Galati5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Galati5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Galati5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Galati5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Galati5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBanat5x3_clicked() {
-	Banat5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Banat5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Banat5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Banat5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Banat5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonOltenia5x3_clicked() {
-	Oltenia5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Oltenia5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Oltenia5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Oltenia5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Oltenia5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTeleorman5x3_clicked() {
-	Teleorman5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Teleorman5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Teleorman5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Teleorman5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Teleorman5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBucuresti5x3_clicked() {
-	Bucuresti5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Bucuresti5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Bucuresti5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Bucuresti5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Bucuresti5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCalarasi5x3_clicked() {
-	Calarasi5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Calarasi5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Calarasi5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Calarasi5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Calarasi5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTulcea5x3_clicked() {
-	Tulcea5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Tulcea5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Tulcea5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Tulcea5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Tulcea5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonConstanta5x3_clicked() {
-	Constanta5x3->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Constanta5x3->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Constanta5x3->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Constanta5x3->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		Constanta5x3->setDisabled(true);
+		nrCounty5x3--;
+		if (nrCounty5x3 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonSatuMare6x4_clicked() {
-	SatuMare6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = SatuMare6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		SatuMare6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = SatuMare6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
+		SatuMare6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMaramures6x4_clicked() {
-	Maramures6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Maramures6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Maramures6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Maramures6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Maramures6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonSuceava6x4_clicked() {
-	Suceava6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Suceava6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Suceava6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Suceava6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Suceava6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBotosani6x4_clicked() {
-	Botosani6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Botosani6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Botosani6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Botosani6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Botosani6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBihor6x4_clicked() {
-	Bihor6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Bihor6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Bihor6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Bihor6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Bihor6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCluj26x4_clicked() {
-	Cluj26x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Cluj26x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Cluj26x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Cluj26x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Cluj26x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCluj6x4_clicked() {
-	Cluj6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Cluj6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Cluj6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Cluj6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Cluj6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonHarghita6x4_clicked() {
-	Harghita6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Harghita6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Harghita6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Harghita6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Harghita6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonIasi6x4_clicked() {
-	Iasi6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Iasi6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Iasi6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Iasi6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Iasi6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonArad6x4_clicked() {
-	Arad6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Arad6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Arad6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Arad6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Arad6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBanat6x4_clicked() {
-	Banat6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Banat6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Banat6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Banat6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Banat6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonHunedoara6x4_clicked() {
-	Hunedoara6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Hunedoara6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Hunedoara6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Hunedoara6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Hunedoara6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonAlba6x4_clicked() {
-	Alba6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Alba6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Alba6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Alba6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Alba6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonSibiu6x4_clicked() {
-	Sibiu6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Sibiu6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Sibiu6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Sibiu6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Sibiu6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBrasov6x4_clicked() {
-	Brasov6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Brasov6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
-	
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Brasov6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Brasov6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Brasov6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonGalati6x4_clicked() {
-	Galati6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Galati6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Galati6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Galati6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Galati6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCarasSevarin6x4_clicked() {
-	CarasSevarin6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = CarasSevarin6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		CarasSevarin6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = CarasSevarin6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		CarasSevarin6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonMehedinti6x4_clicked() {
-	Mehedinti6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Mehedinti6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Mehedinti6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Mehedinti6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Mehedinti6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTeleorman6x4_clicked() {
-	Teleorman6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Teleorman6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Teleorman6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Teleorman6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Teleorman6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBucuresti6x4_clicked() {
-	Bucuresti6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Bucuresti6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Bucuresti6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Bucuresti6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Bucuresti6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonBraila6x4_clicked() {
-	Braila6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Braila6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Braila6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Braila6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Braila6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonCalarasi6x4_clicked() {
-	Calarasi6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Calarasi6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Calarasi6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Calarasi6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Calarasi6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
 }
 void MainWindow::on_buttonTulcea6x4_clicked() {
-	Tulcea6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Tulcea6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
-}
-void MainWindow::on_buttonConstanta6x4_clicked() {
-	Constanta6x4->setStyleSheet("background-color:blue");
-	AfterRegionSelect("a");
-	getQuestionNumber();
-	std::string nr = Constanta6x4->text().toStdString();
-	user1.setPoints(addPoints(nr));
-	ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+
+		Tulcea6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Tulcea6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Tulcea6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+
+			enableButton();
+			Round = true;
+		}
+	}
 }
 
+void MainWindow::on_buttonConstanta6x4_clicked() {
+	if (Round == true) {
+		getQuestionSimple();
+		ui.stackedWidget->setCurrentIndex(5);
+	} else {
+		Constanta6x4->setStyleSheet("background-color:blue");
+		AfterRegionSelect("a");
+		getQuestionNumber();
+		std::string nr = Constanta6x4->text().toStdString();
+		user1.setPoints(addPoints(nr));
+		ui.lcdNumberGame6x4Points1->display(user1.getPoints());
+		Constanta6x4->setDisabled(true);
+		nrCounty6x4--;
+		if (nrCounty6x4 == 0) {
+			enableButton();
+			Round = true;
+		}
+	}
+}
+
+void MainWindow::on_buttonHelp4Raspunsiri_clicked() {
+	if (user1.getPoints() > 200) {
+		user1.setPoints(user1.getPoints() - 100);
+	}
+}
+
+void MainWindow::on_buttonHelpSugestie_clicked() {
+	if (user1.getPoints() > 200) {
+		user1.setPoints(user1.getPoints() - 100);
+	}
+}
 
 void MainWindow::StartGame(int nrPlayer) {
 	session.Verify(session.getNumberPlayer());
 	QString name;
 	if (nrPlayer == 2) {
 		SatuMare3x3->setStyleSheet("background-color: red;");
-		SatuMare3x3->disconnect();
+		SatuMare3x3->setDisabled(true);
 		Dobrogea3x3->setStyleSheet("background-color: blue;");
-		Dobrogea3x3->disconnect();
+		Dobrogea3x3->setDisabled(true);
 		name = session.getUser(1).c_str();
 		ui.labelGame3x3Username1->setText(name);
 		name = session.getUser(2).c_str();
 		ui.labelGame3x3Username2->setText(name);
 		ui.lcdNumberGame3x3Points1->display(user1.getPoints());
 		ui.lcdNumberGame3x3Points2->display(user2.getPoints());
-
+		user1.setColor(1);
+		user2.setColor(2);
 	} else if (nrPlayer == 3) {
 		Iasi5x3->setStyleSheet("background-color: red;");
+		Iasi5x3->setDisabled(true);
 		Constanta5x3->setStyleSheet("background-color: blue;");
+		Constanta5x3->setDisabled(true);
 		Timisoara5x3->setStyleSheet("background-color: green;");
+		Timisoara5x3->setDisabled(true);
 		name = session.getUser(1).c_str();
 		ui.labelGame5x3Username1->setText(name);
 		name = session.getUser(2).c_str();
@@ -804,12 +1357,20 @@ void MainWindow::StartGame(int nrPlayer) {
 		ui.lcdNumberGame5x3Points1->display(user1.getPoints());
 		ui.lcdNumberGame5x3Points2->display(user2.getPoints());
 		ui.lcdNumberGame5x3Points3->display(user3.getPoints());
+		user1.setColor(1);
+		user2.setColor(2);
+		user3.setColor(3);
 
 	} else if (nrPlayer == 4) {
+		user1.setMoves(2);
 		SatuMare6x4->setStyleSheet("background-color: red;");
+		SatuMare6x4->setDisabled(true);
 		Constanta6x4->setStyleSheet("background-color: blue;");
+		Constanta6x4->setDisabled(true);
 		Iasi6x4->setStyleSheet("background-color: green;");
+		Iasi6x4->setDisabled(true);
 		CarasSevarin6x4->setStyleSheet("background-color: purple;");
+		CarasSevarin6x4->setDisabled(true);
 		name = session.getUser(1).c_str();
 		ui.labelGame6x4Username1->setText(name);
 		name = session.getUser(2).c_str();
@@ -822,6 +1383,10 @@ void MainWindow::StartGame(int nrPlayer) {
 		ui.lcdNumberGame6x4Points2->display(user2.getPoints());
 		ui.lcdNumberGame6x4Points3->display(user3.getPoints());
 		ui.lcdNumberGame6x4Points4->display(user4.getPoints());
+		user1.setColor(1);
+		user2.setColor(2);
+		user3.setColor(3);
+		user4.setColor(4);
 	}
 }
 
@@ -841,6 +1406,57 @@ int MainWindow::addPoints(std::string points) {
 	return nr;
 }
 
+void MainWindow::enableButton() {
+	SatuMare3x3->setEnabled(true);
+	Moldova3x3->setEnabled(true);
+	Timisoara3x3->setEnabled(true);
+	Ardeal3x3->setEnabled(true);
+	Transilvania3x3->setEnabled(true);
+	Oltenia3x3->setEnabled(true);
+	Muntenia3x3->setEnabled(true);
+	Dobrogea3x3->setEnabled(true);
+	Maramures3x3->setEnabled(true);
+	SatuMare5x3->setEnabled(true);
+	Maramures5x3->setEnabled(true);
+	Iasi5x3->setEnabled(true);
+	Timisoara5x3->setEnabled(true);
+	Cluj5x3->setEnabled(true);
+	Transilvania5x3->setEnabled(true);
+	Brasov5x3->setEnabled(true);
+	Galati5x3->setEnabled(true);
+	Banat5x3->setEnabled(true);
+	Oltenia5x3->setEnabled(true);
+	Teleorman5x3->setEnabled(true);
+	Bucuresti5x3->setEnabled(true);
+	Calarasi5x3->setEnabled(true);
+	Tulcea5x3->setEnabled(true);
+	Constanta5x3->setEnabled(true);
+	SatuMare6x4->setEnabled(true);
+	Maramures6x4->setEnabled(true);
+	Suceava6x4->setEnabled(true);
+	Botosani6x4->setEnabled(true);
+	Bihor6x4->setEnabled(true);
+	Cluj26x4->setEnabled(true);
+	Cluj6x4->setEnabled(true);
+	Harghita6x4->setEnabled(true);
+	Iasi6x4->setEnabled(true);
+	Arad6x4->setEnabled(true);
+	Banat6x4->setEnabled(true);
+	Hunedoara6x4->setEnabled(true);
+	Alba6x4->setEnabled(true);
+	Sibiu6x4->setEnabled(true);
+	Brasov6x4->setEnabled(true);
+	Galati6x4->setEnabled(true);
+	CarasSevarin6x4->setEnabled(true);
+	Mehedinti6x4->setEnabled(true);
+	Teleorman6x4->setEnabled(true);
+	Bucuresti6x4->setEnabled(true);
+	Braila6x4->setEnabled(true);
+	Calarasi6x4->setEnabled(true);
+	Tulcea6x4->setEnabled(true);
+	Constanta6x4->setEnabled(true);
+}
+
 int MainWindow::generateRandomNumberNumber() {
 	int n = this->distNumber(this->mt);
 	if (this->randomNumbersNumberHistory.contains(n))
@@ -857,8 +1473,23 @@ int MainWindow::generateRandomSimpleNumber() {
 	return n;
 }
 
-
 void MainWindow::getQuestionNumber() {
-	auto question = intrebariNumere[generateRandomNumberNumber()]["intrebare"].get<std::string>();
+	int n;
+	n = generateRandomNumberNumber();
+	auto question = intrebariNumere[n]["intrebare"].get<std::string>();
 	ui.labelQuestionNumberQuestion->setText(question.c_str());
+	auto answer = intrebariNumere[n]["raspuns"].get<std::string>();
+	ui.labelQuestionNumberAnswear->setText(answer.c_str());
+}
+
+void MainWindow::getQuestionSimple() {
+	int n;
+	n = generateRandomSimpleNumber();
+	auto question = intrebariSimple[n]["intrebare"].get<std::string>();
+	ui.labelQuestionQuestion->setText(question.c_str());
+
+	auto answer1 = intrebariSimple[n]["raspunsuri"][0].get<std::string>();
+	auto answer2 = intrebariSimple[n]["raspunsuri"][1].get<std::string>();
+	auto answer3 = intrebariSimple[n]["raspunsuri"][2].get<std::string>();
+	auto answer4 = intrebariSimple[n]["raspunsuri"][3].get<std::string>();
 }

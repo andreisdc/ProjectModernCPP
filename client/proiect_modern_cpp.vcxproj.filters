@@ -5,12 +5,12 @@
     <ClCompile Include="src\User.cpp" />
     <ClCompile Include="src/MainWindow.cpp" />
     <ClCompile Include="src/main.cpp" />
-    <ClCompile Include="src\MyThread.cpp" />
+    <ClCompile Include="src\Lobby.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\User.hpp" />
     <ClInclude Include="src\Session.hpp" />
-    <ClInclude Include="src\MyThread.hpp" />
+    <ClInclude Include="src\Lobby.hpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="src\MainWindow.hpp" />

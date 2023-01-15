@@ -12,11 +12,14 @@ private:
 	int m_points;
 	int nrMoves;
 	std::vector<QPushButton> m_myCounty;
+	int nrColor;
+
 public:
 	User(std::string userName, int point);
 	User();
 	const std::string getUsername();
 	const std::string getPassword();
+	void setColor(int nr);
 	const int getRank();
 	const int getPoints();
 	void setMoves(int nr);
