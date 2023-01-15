@@ -1,220 +1,741 @@
-#include <crow.h>
-#include <crow/middlewares/session.h>
-#include <memory>
-#include <sqlite_orm/sqlite_orm.h>
-#include <vector>
 #include <iostream>
+#include <memory>
+#include <vector>
 
-struct User {
+#include <crow.h>
+#include <nlohmann/json.hpp>
+#include <sqlite_orm/sqlite_orm.h>
+
+#include "Database.hpp"
+#include "game/Lobby.hpp"
+#include "game/Match.hpp"
+#include "game/Player.hpp"
+#include "game/Territory.hpp"
+#include "game/User.hpp"
+#include "middlewares/AuthenticatedGuard.hpp"
+#include "middlewares/NotAuthenticatedGuard.hpp"
+#include "middlewares/Session.hpp"
+#include "models/PastMatch.hpp"
+#include "models/User.hpp"
+#include "models/UserMatch.hpp"
+
+struct WebSocketUser {
 	int id;
 	std::string username;
-	std::string password;
+	int lobby_id;
+	int match_id;
 };
 
-struct UserMatch {
-	int id;
-	std::unique_ptr<int> player_id;
-	int score;
-};
+using CustomApp = crow::App<
+		crow::CookieParser,
+		middlewares::Session>;
 
-struct PastMatch {
-	int id;
-	std::unique_ptr<int> player1;
-	std::unique_ptr<int> player2;
-	std::unique_ptr<int> player3;
-	std::unique_ptr<int> player4;
-};
-
-struct Player {
-	User *user;
-};
-
-struct Lobby {
-public:
-	Lobby(Player *creator) {
-		static int LAST_ID = 0;
-
-		this->id = LAST_ID;
-		this->player1 = creator;
-
-		LAST_ID++;
-	}
-
-	int getId() const {
-		return this->id;
-	}
-
-	int id;
-	Player *player1;
-	Player *player2;
-	Player *player3;
-	Player *player4;
-};
-
-struct Match {
-	int id;
-	Player *player1;
-	Player *player2;
-	Player *player3;
-	Player *player4;
-};
+std::unique_ptr<Storage> storage;
 
 int main() {
-	using SessionMiddleware = crow::SessionMiddleware<crow::InMemoryStore>;
-	using CustomApp = crow::App<crow::CookieParser, SessionMiddleware>;
-
+	/*
+	 * Application instance
+	 */
 	CustomApp app;
 
+	/*
+	 * Database init
+	 */
 	using namespace sqlite_orm;
 
-	auto storage = make_storage(
-		"db.sqlite",
-		make_table(
-			"users",
-			make_column("id", &User::id, autoincrement(), primary_key()),
-			make_column("username", &User::username),
-			make_column("password", &User::password)),
-		make_table(
-			"user_matches",
-			make_column("id", &UserMatch::id, autoincrement(), primary_key()),
-			make_column("player_id", &UserMatch::player_id),
-			make_column("score", &UserMatch::score),
-			foreign_key(&UserMatch::player_id).references(&User::id).on_delete.cascade()),
-		make_table(
-			"past_matches",
-			make_column("id", &PastMatch::id, autoincrement(), primary_key()),
-			make_column("player1", &UserMatch::player_id),
-			make_column("player2", &UserMatch::player_id),
-			make_column("player3", &UserMatch::player_id),
-			make_column("player4", &UserMatch::player_id),
-			foreign_key(&PastMatch::player1).references(&UserMatch::id).on_delete.cascade(),
-			foreign_key(&PastMatch::player2).references(&UserMatch::id).on_delete.cascade(),
-			foreign_key(&PastMatch::player3).references(&UserMatch::id).on_delete.cascade(),
-			foreign_key(&PastMatch::player4).references(&UserMatch::id).on_delete.cascade()));
+	storage = std::make_unique<Storage>(initStorage("db.sqlite"));
 
-	std::vector<Lobby*> vecLobbies = {};
-	std::vector<Match*> vecMatches = {};
+	/*
+	 * Questions file
+	 */
+	std::ifstream json_file("intrebari.json");
+	nlohmann::json questions_json = nlohmann::json::parse(json_file);
+	json_file.close();
+	MultipleChoiceQuestion::load(questions_json.at("Standard questions"));
+	NumericQuestion::load(questions_json.at("Numerical questions"));
 
+	/*
+	 * WebSockets misc
+	 */
+	std::mutex websocket_mutex;
+	std::unordered_set<crow::websocket::connection *> websocket_users;
+
+	auto broadcast_to_lobby = [&websocket_users](int id, int lobby_id, const std::string &message) -> void {
+		for (auto user: websocket_users) {
+			auto userdata = reinterpret_cast<WebSocketUser *>(user->userdata());
+
+			if (userdata->id == id)
+				continue;
+
+			if (userdata->lobby_id != lobby_id)
+				continue;
+
+			user->send_text(message);
+		}
+	};
+
+	auto broadcast_to_match = [&websocket_users](int id, int match_id, const std::string &message) -> void {
+		for (auto user: websocket_users) {
+			auto userdata = reinterpret_cast<WebSocketUser *>(user->userdata());
+
+			if (userdata->id == id)
+				continue;
+
+			if (userdata->match_id)
+				continue;
+
+			user->send_text(message);
+		}
+	};
+
+	/*
+	 * Router
+	 */
 	CROW_ROUTE(app, "/users/login")
-		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
-			auto jsonBody = crow::json::load(req.body);
-			if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
-				return crow::response(crow::status::BAD_REQUEST);
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("username") || !json_body.has("password"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
 
-			if (app.get_context<SessionMiddleware>(req).contains("id"))
-				return crow::response(crow::status::BAD_REQUEST, "Already logged in!");
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
 
-			std::string username = jsonBody["username"].s();
-			std::string password = jsonBody["password"].s();
+				if (session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Already logged in!");
 
-			auto selectedIds = storage.select(
-				&User::id,
-				where(is_equal(&User::username, username) and is_equal(&User::password, password)));
+				const std::string username = json_body["username"].s();
+				const std::string password = json_body["password"].s();
 
-			if (selectedIds.empty())
-				return crow::response(crow::status::NOT_FOUND);
+				const std::vector<int> selected_ids = storage->select(
+						&models::User::id,
+						where(is_equal(&models::User::username, username) && is_equal(&models::User::password, password)));
 
-			auto selectedId = selectedIds.front();
+				if (selected_ids.empty())
+					return crow::response(crow::status::NOT_FOUND, "User not found.");
 
-			app.get_context<SessionMiddleware>(req).set("id", selectedId);
+				const int selected_id = selected_ids.front();
 
-			return crow::response(crow::status::OK);
-		});
+				session_ctx.set<int>("id", selected_id);
+
+				return crow::response(crow::status::OK, "Logged in!");
+			});
 
 	CROW_ROUTE(app, "/users/register")
-		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
-			auto jsonBody = crow::json::load(req.body);
-			if (!jsonBody || !jsonBody.has("username") || !jsonBody.has("password"))
-				return crow::response(crow::status::BAD_REQUEST);
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("username") || !json_body.has("password"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
 
-			if (app.get_context<SessionMiddleware>(req).contains("id"))
-				return crow::response(crow::status::BAD_REQUEST, "Already logged in!");
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
 
-			std::string username = jsonBody["username"].s();
-			std::string password = jsonBody["password"].s();
+				if (session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Already logged in!");
 
-			auto selectedIds = storage.select(
-				&User::id,
-				where(is_equal(&User::username, username)));
+				const std::string username = json_body["username"].s();
+				const std::string password = json_body["password"].s();
 
-			if (!selectedIds.empty())
-				return crow::response(crow::status::BAD_REQUEST, "User already exists!");
+				const std::vector<int> selected_ids = storage->select(
+						&models::User::id,
+						where(is_equal(&models::User::username, username)));
 
-			User user{-1, username, password};
-			auto newUserId = storage.insert(user);
-			user.id = newUserId;
+				if (!selected_ids.empty())
+					return crow::response(crow::status::BAD_REQUEST, "User already exists!");
 
-			return crow::response(crow::status::CREATED);
-		});
+				models::User user{-1, username, password};
+				const int new_user_id = storage->insert(user);
+				user.id = new_user_id;
+
+				return crow::response(crow::status::CREATED, "Registered!");
+			});
 
 	CROW_ROUTE(app, "/users/logout")
-		.methods(crow::HTTPMethod::GET)([&app](const crow::request &req) {
-			app.get_context<SessionMiddleware>(req).remove("id");
+			.methods(crow::HTTPMethod::GET)([&app](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
 
-			return crow::response(crow::status::OK);
-		});
+				if (session_ctx.contains("id"))
+					session_ctx.remove("id");
 
-	CROW_WEBSOCKET_ROUTE(app, "/ws")
-		.onaccept([&](const crow::request &req, void **userdata) -> bool {
-			std::cout << "New WebSocket connection!" << std::endl;
-			return true;
-		})
-		.onopen([&](crow::websocket::connection &conn) {
-			std::cout << "WebSocket connection opened!" << std::endl;
-		})
-		.onmessage([&](crow::websocket::connection &conn, const std::string &message, bool is_binary) {
-			std::cout << "New WebSocket message: " << message << std::endl;
-		})
-		.onerror([&](crow::websocket::connection &conn, const std::string &error_message) {
-			std::cout << "WebSocket connection error! " << error_message << std::endl;
-		})
-		.onclose([&](crow::websocket::connection &conn, const std::string &reason) {
-			std::cout << "WebSocket connection closed." << std::endl;
-		});
+				if (session_ctx.contains("lobby_id"))
+					session_ctx.remove("lobby_id");
+
+				if (session_ctx.contains("match_id"))
+					session_ctx.remove("match_id");
+
+				return crow::response(crow::status::OK, "Logged out!");
+			});
+
+	CROW_ROUTE(app, "/users/profile")
+			.methods(crow::HTTPMethod::GET)([&app](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				crow::json::wvalue json_body;
+
+				// TODO: populate json_body
+
+				return crow::response(crow::status::OK, json_body);
+			});
 
 	CROW_ROUTE(app, "/lobby/create")
-		.methods(crow::HTTPMethod::POST)([&app, &storage](const crow::request &req) {
-			if (!app.get_context<SessionMiddleware>(req).contains("id"))
-				return crow::response(crow::status::BAD_REQUEST, "Not logged in!");
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
 
-			crow::json::wvalue jsonBody;
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
 
-			return crow::response(crow::status::CREATED, jsonBody);
-		});
+				if (session_ctx.contains("lobby_id"))
+					return crow::response(crow::status::FORBIDDEN, "Already in a lobby!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				Lobby *new_lobby = new Lobby(new User(current_user->id, current_user->username));
+
+				Lobby::lobbies.push_back(new_lobby);
+
+				session_ctx.set<int>("lobby_id", new_lobby->get_id());
+
+				crow::json::wvalue json_body;
+
+				json_body["lobbyId"] = new_lobby->get_id();
+
+				return crow::response(crow::status::CREATED, json_body);
+			});
 
 	CROW_ROUTE(app, "/lobby/delete")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+			.methods(crow::HTTPMethod::POST)([&app, &broadcast_to_lobby](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("lobby_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a lobby!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int lobby_id = session_ctx.get<int>("lobby_id");
+
+				auto current_lobby = Lobby::find_by_id(lobby_id);
+
+				if (!current_lobby) {
+					session_ctx.remove("lobby_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid lobby!");
+				}
+
+				if (current_lobby->creator->id != current_user->id) {
+					return crow::response(crow::status::UNAUTHORIZED, "Not the lobby creator!");
+				}
+
+				crow::json::wvalue message = {{"type", "lobby_delete"}};
+				broadcast_to_lobby(current_user_id, lobby_id, message.dump());
+
+				Lobby::delete_by_ptr(current_lobby);
+
+				session_ctx.remove("lobby_id");
+
+				return crow::response(crow::status::OK, "Deleted.");
+			});
 
 	CROW_ROUTE(app, "/lobby/join")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+			.methods(crow::HTTPMethod::POST)([&app, &broadcast_to_lobby](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("lobbyId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
 
-	CROW_ROUTE(app, "/lobby/invite")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
 
-	CROW_ROUTE(app, "/lobby/cancel_invite")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
 
-	CROW_ROUTE(app, "/lobby/accept_invite")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+				if (session_ctx.contains("lobby_id"))
+					return crow::response(crow::status::FORBIDDEN, "Already in a lobby!");
 
-	CROW_ROUTE(app, "/lobby/deny_invite")
-		.methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-			return crow::response(crow::status::OK);
-		});
+				const int current_user_id = session_ctx.get<int>("id");
 
-	app.port(8080)
-		.multithreaded()
-		.run();
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int lobby_id = json_body["lobbyId"].i();
+
+				auto current_lobby = Lobby::find_by_id(lobby_id);
+
+				if (!current_lobby) {
+					session_ctx.remove("lobby_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid lobby session!");
+				}
+
+				if (!current_lobby->add_player(new User(current_user->id, current_user->username))) {
+					return crow::response(crow::status::BAD_REQUEST, "Lobby is full!");
+				}
+
+				session_ctx.set<int>("lobby_id", lobby_id);
+
+				crow::json::wvalue message = {
+						{"type", "lobby_join"},
+						{"id", current_user_id},
+						{"username", current_user->username},
+				};
+				broadcast_to_lobby(current_user_id, lobby_id, message.dump());
+
+				crow::json::wvalue wjson_body;
+				wjson_body[0] = {
+						{"id", current_lobby->creator->id},
+						{"username", current_lobby->creator->username},
+				};
+				wjson_body[1] = {
+						{"id", current_lobby->user2->id},
+						{"username", current_lobby->user2->username},
+				};
+				if (current_lobby->user3 != nullptr) {
+					wjson_body[2] = {
+							{"id", current_lobby->user3->id},
+							{"username", current_lobby->user3->username},
+					};
+				}
+				if (current_lobby->user4 != nullptr) {
+					wjson_body[3] = {
+							{"id", current_lobby->user4->id},
+							{"username", current_lobby->user4->username},
+					};
+				}
+
+				return crow::response(crow::status::OK, wjson_body);
+			});
+
+	CROW_ROUTE(app, "/lobby/leave")
+			.methods(crow::HTTPMethod::POST)([&app, &broadcast_to_lobby](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("lobby_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a lobby!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int lobby_id = session_ctx.get<int>("lobby_id");
+
+				auto current_lobby = Lobby::find_by_id(lobby_id);
+
+				if (!current_lobby) {
+					session_ctx.remove("lobby_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid lobby session!");
+				}
+
+				if (current_lobby->creator->id == current_user->id) {
+					return crow::response(crow::status::BAD_REQUEST, "The host may not leave! Delete the lobby instead.");
+				}
+
+				if (!current_lobby->remove_player(current_user_id)) {
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR);
+				}
+
+				session_ctx.remove("lobby_id");
+
+				crow::json::wvalue message = {
+						{"type", "lobby_leave"},
+						{"id", current_user_id},
+				};
+				broadcast_to_lobby(current_user_id, lobby_id, message.dump());
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_ROUTE(app, "/match/start")
+			.methods(crow::HTTPMethod::POST)([&app, &websocket_users](const crow::request &req) -> crow::response {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("lobby_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a lobby!");
+
+				if (session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Already in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int lobby_id = session_ctx.get<int>("lobby_id");
+
+				auto current_lobby = Lobby::find_by_id(lobby_id);
+
+				if (!current_lobby) {
+					session_ctx.remove("lobby_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid lobby session!");
+				}
+
+				if (current_lobby->creator->id != current_user->id) {
+					return crow::response(crow::status::UNAUTHORIZED, "Only the host may start the match.");
+				}
+
+				auto current_match = new Match(current_lobby);
+
+				Match::matches.push_back(current_match);
+
+				crow::json::wvalue message = {
+					{"type", "match_start"}
+				};
+				
+				for (auto user: websocket_users) {
+					auto userdata = reinterpret_cast<WebSocketUser *>(user->userdata());
+
+					if (userdata->id == current_user_id)
+						continue;
+
+					if (userdata->lobby_id != lobby_id)
+						continue;
+
+					userdata->match_id = current_match->id;
+
+					user->send_text(message.dump());
+				}
+
+				Lobby::delete_by_ptr(current_lobby);
+
+				session_ctx.remove("lobby_id");
+
+				session_ctx.set<int>("match_id", current_match->id);
+
+				return crow::response(crow::status::CREATED);
+			});
+
+	CROW_ROUTE(app, "/match/pre_base_selection_answer")
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("answerId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
+
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+					
+				if (!session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int current_match_id = session_ctx.get<int>("id");
+
+				auto current_match = Match::find_by_id(current_match_id);
+
+				if (!current_match) {
+					session_ctx.remove("match_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid match session!");
+				}
+
+				const int answer_id = json_body["answerId"].i();
+
+				current_match->submit_pre_base_selection_answer(current_user_id, answer_id);
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_ROUTE(app, "/match/base_choice")
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("answerId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
+
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int current_match_id = session_ctx.get<int>("id");
+
+				auto current_match = Match::find_by_id(current_match_id);
+
+				if (!current_match) {
+					session_ctx.remove("match_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid match session!");
+				}
+
+				const int answer_id = json_body["answerId"].i();
+
+				current_match->submit_base_choice(current_user_id, answer_id);
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_ROUTE(app, "/match/territory_selection_answer")
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("answerId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
+
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int current_match_id = session_ctx.get<int>("id");
+
+				auto current_match = Match::find_by_id(current_match_id);
+
+				if (!current_match) {
+					session_ctx.remove("match_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid match session!");
+				}
+
+				const int answer_id = json_body["answerId"].i();
+
+				current_match->submit_territory_selection_answer(current_user_id, answer_id);
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_ROUTE(app, "/match/territory_choice")
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("answerId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
+
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int current_match_id = session_ctx.get<int>("id");
+
+				auto current_match = Match::find_by_id(current_match_id);
+
+				if (!current_match) {
+					session_ctx.remove("match_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid match session!");
+				}
+
+				const int answer_id = json_body["answerId"].i();
+
+				current_match->submit_territory_choice(current_user_id, answer_id);
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_ROUTE(app, "/match/duel_choice")
+			.methods(crow::HTTPMethod::POST)([&app](const crow::request &req) -> crow::response {
+				auto json_body = crow::json::load(req.body);
+				if (!json_body || !json_body.has("answerId"))
+					return crow::response(crow::status::BAD_REQUEST, "Incorrect body format.");
+
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return crow::response(crow::status::FORBIDDEN, "Not logged in!");
+
+				if (!session_ctx.contains("match_id"))
+					return crow::response(crow::status::FORBIDDEN, "Not in a match!");
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid session!");
+				}
+
+				const int current_match_id = session_ctx.get<int>("id");
+
+				auto current_match = Match::find_by_id(current_match_id);
+
+				if (!current_match) {
+					session_ctx.remove("match_id");
+					return crow::response(crow::status::INTERNAL_SERVER_ERROR, "Invalid match session!");
+				}
+
+				const int answer_id = json_body["answerId"].i();
+
+				current_match->submit_duel_choice(current_user_id, answer_id);
+
+				return crow::response(crow::status::OK);
+			});
+
+	CROW_WEBSOCKET_ROUTE(app, "/game_socket")
+			.onaccept([&](const crow::request &req, void **userdata) -> bool {
+				auto &session_ctx = app.get_context<middlewares::Session>(req);
+
+				if (!session_ctx.contains("id"))
+					return false;
+
+				if (!session_ctx.contains("lobby_id"))
+					return false;
+
+				const int current_user_id = session_ctx.get<int>("id");
+
+				auto current_user = storage->get_pointer<models::User>(current_user_id);
+
+				if (!current_user) {
+					session_ctx.remove("id");
+					return false;
+				}
+
+				const int lobby_id = session_ctx.get<int>("lobby_id");
+
+				auto current_lobby = Lobby::find_by_id(lobby_id);
+
+				if (!current_lobby) {
+					session_ctx.remove("lobby_id");
+					return false;
+				}
+
+				*userdata = new WebSocketUser{
+						current_user->id,
+						current_user->username,
+						lobby_id,
+				};
+
+				return true;
+			})
+			.onopen([&](crow::websocket::connection &conn) -> void {
+				CROW_LOG_INFO << "WebSocket connection opened!";
+
+				std::lock_guard<std::mutex> mutex_lock(websocket_mutex);
+
+				websocket_users.insert(&conn);
+			})
+			.onmessage([&](crow::websocket::connection &conn, const std::string &message, bool is_binary) -> void {
+				std::lock_guard<std::mutex> mutex_lock(websocket_mutex);
+
+				auto conn_userdata = reinterpret_cast<WebSocketUser *>(conn.userdata());
+
+				crow::json::rvalue json_message = crow::json::load(message);
+				if (json_message.error())
+					return;
+				if (!json_message.has("type"))
+					return;
+
+				std::string message_type = json_message["type"].s();
+
+				for (auto user: websocket_users) {
+					if (user == &conn)
+						continue;
+
+					if (is_binary) {
+						user->send_binary(message);
+					} else {
+						user->send_text(message);
+					}
+				}
+			})
+			.onerror([&](crow::websocket::connection &conn, const std::string &error_message) -> void {
+				CROW_LOG_ERROR << "WebSocket connection error! " << error_message;
+			})
+			.onclose([&](crow::websocket::connection &conn, const std::string &reason) -> void {
+				CROW_LOG_INFO << "WebSocket connection closed! " << reason;
+
+				std::lock_guard<std::mutex> mutex_lock(websocket_mutex);
+
+				auto conn_userdata = reinterpret_cast<WebSocketUser *>(conn.userdata());
+
+				crow::json::wvalue message = {
+						{"type", "lobby_leave"},
+						{"id", conn_userdata->id},
+				};
+
+				for (auto user: websocket_users) {
+					if (user == &conn)
+						continue;
+
+					auto userdata = reinterpret_cast<WebSocketUser *>(user->userdata());
+
+					if (userdata->lobby_id == conn_userdata->lobby_id)
+						continue;
+
+					user->send_text(message.dump());
+				}
+
+				websocket_users.erase(&conn);
+			});
+
+	app.port(8080).multithreaded().run();
 
 	return 0;
 }

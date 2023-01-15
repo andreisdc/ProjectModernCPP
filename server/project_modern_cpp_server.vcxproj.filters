@@ -2,8 +2,67 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\game\Territory.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\Lobby.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\Match.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\Question.cpp">
+      <Filter>game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\database\db.json" />
+    <Filter Include="models">
+      <UniqueIdentifier>{5f860b77-5b02-48a9-8903-2065a248ed44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="middlewares">
+      <UniqueIdentifier>{405c1f3a-0d5a-4b03-8e10-756c991f3f21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="game">
+      <UniqueIdentifier>{89590585-0f4f-41df-83e6-923b240e9562}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\models\PastMatch.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\models\User.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\models\UserMatch.hpp">
+      <Filter>models</Filter>
+    </ClInclude>
+    <ClInclude Include="src\middlewares\AuthenticatedGuard.hpp">
+      <Filter>middlewares</Filter>
+    </ClInclude>
+    <ClInclude Include="src\middlewares\NotAuthenticatedGuard.hpp">
+      <Filter>middlewares</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Database.hpp" />
+    <ClInclude Include="src\middlewares\Session.hpp">
+      <Filter>middlewares</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\Territory.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\Lobby.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\Match.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\Player.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\User.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\Question.hpp">
+      <Filter>game</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

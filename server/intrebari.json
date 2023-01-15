@@ -1,7 +1,7 @@
 {
   "Standard questions": [
 	{
-	  "intrebare": "Care este indicativul autovehiculelor din judetul Alba?",
+	  "intrebare": "Care este indicativul autovehiculelor din acest judet?",
 	  "raspunsuri": [
 		"AB",
 		"PH",
@@ -10,7 +10,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune se afla judetul Cluj?",
+	  "intrebare": "In ce regiune se afla acest judet?",
 	  "raspunsuri": [
 		"Transilvania",
 		"Muntenia",
@@ -100,7 +100,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce rau trece prin judetul Bihor?",
+	  "intrebare": "Ce rau trece prin acest judet?",
 	  "raspunsuri": [
 		"Crisul negru",
 		"Crisul repede",
@@ -109,7 +109,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Resedinta judetului Bihor",
+	  "intrebare": "Resedinta judetului",
 	  "raspunsuri": [
 		"Oradea",
 		"Bihor",
@@ -118,7 +118,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "De cine a fost infiintata Bistrita?",
+	  "intrebare": "De cine este infiintata Bistrita?",
 	  "raspunsuri": [
 		"Nemti",
 		"Francezi",
@@ -127,7 +127,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Resedinta de judet a Bistritei-Nasaud este",
+	  "intrebare": "Resedinta de judet este",
 	  "raspunsuri": [
 		"Bistrita",
 		"Nasaud",
@@ -136,7 +136,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cine s-a nascut in judetul Botosani?",
+	  "intrebare": "Cine s-a nascut in acest judet?",
 	  "raspunsuri": [
 		"Mihai Eminescu",
 		"Ion Creanga",
@@ -145,12 +145,21 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este regiunea istorica a judetului Botosani?",
+	  "intrebare": "Care este regiunea istorica?",
 	  "raspunsuri": [
 		"Moldova",
 		"Muntenia",
 		"Transilvania",
 		"Dobrogea"
+	  ]
+	},
+	{
+	  "intrebare": "Care este principalul afluent?",
+	  "raspunsuri": [
+		"Sitna",
+		"Jiu",
+		"Ialomita",
+		"Bega"
 	  ]
 	},
 	{
@@ -163,7 +172,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cum se numeste orasul Brasov in germana",
+	  "intrebare": "Cum se numeste orasul in germana",
 	  "raspunsuri": [
 		"KronStadt",
 		"HermannStadt",
@@ -172,7 +181,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Unde este situat judetul Brasov?",
+	  "intrebare": "Unde este situat judetul?",
 	  "raspunsuri": [
 		"Fix in centru",
 		"Langa centru",
@@ -181,7 +190,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce nume mare al fotbalului romanesc s-a nascut in judetul Brasov?",
+	  "intrebare": "Ce nume mare al fotbalului romanesc s-a nascut aici?",
 	  "raspunsuri": [
 		"Marius Lacatus",
 		"Gheorghe Hagi",
@@ -190,7 +199,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce firma renumita de camasi se regaseste in Braila?",
+	  "intrebare": "Ce firma renumita de camasi se regaseste aici?",
 	  "raspunsuri": [
 		"Braiconf",
 		"Verlinne",
@@ -199,7 +208,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce apa trece prin judetul Braila?",
+	  "intrebare": "Ce apa trece prin judet?",
 	  "raspunsuri": [
 		"Dunarea",
 		"Amazon",
@@ -262,7 +271,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce vulcani se afla in judetul Buzau?",
+	  "intrebare": "Ce vulcani se afla in judet?",
 	  "raspunsuri": [
 		"Vulcanii noroiosi",
 		"Sfanta Ana",
@@ -271,7 +280,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune istorica se afla judetul Buzau?",
+	  "intrebare": "In ce regiune istorica se afla?",
 	  "raspunsuri": [
 		"Muntenia",
 		"Moldova",
@@ -280,7 +289,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce oras important se afla in judetul Buzau?",
+	  "intrebare": "Ce oras important se afla in judet?",
 	  "raspunsuri": [
 		"Ramnicul Sarat",
 		"Tecuci",
@@ -289,7 +298,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este resedinta judetului Caras-Severin?",
+	  "intrebare": "Care este resedinta judetului?",
 	  "raspunsuri": [
 		"Resita",
 		"Caras",
@@ -298,7 +307,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este indicatorul autovehiculelor in judetul Caras-Severin?",
+	  "intrebare": "Care este indicatorul autovehiculelor?",
 	  "raspunsuri": [
 		"CS",
 		"SC",
@@ -307,7 +316,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este suprafata judetului Caras-Severin?",
+	  "intrebare": "Care este suprafata judetului?",
 	  "raspunsuri": [
 		"133,22 km^2",
 		"208,32 km^2",
@@ -325,7 +334,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune se afla judetul Cluj?",
+	  "intrebare": "In ce regiune se afla judetul?",
 	  "raspunsuri": [
 		"Transilvania",
 		"Moldova",
@@ -334,7 +343,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este resedinta de judet al judetului Cluj?",
+	  "intrebare": "Care este resedinta de judet?",
 	  "raspunsuri": [
 		"Cluj Napoca",
 		"Napoca",
@@ -379,7 +388,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cum se numeste renumitul vulcan din judetul Covasna?",
+	  "intrebare": "Cum se numeste renumitul vulcan?",
 	  "raspunsuri": [
 		"Balta Dracului",
 		"Valea Incinsa",
@@ -472,155 +481,163 @@
   "Numerical questions": [
 	{
 	  "intrebare": "In ce an a avut loc Capitularea de la Siria?",
-	  "raspuns": "1849"
+	  "raspuns": 1849
 	},
 	{
 	  "intrebare": "In ce an Paul al V-lea a infiintat Episcopia de la Bacau?",
-	  "raspuns": "1859"
+	  "raspuns": 1859
 	},
 	{
 	  "intrebare": "In ce an este infiintata prima scoala Greco Catolica?",
-	  "raspuns": "1777"
+	  "raspuns": 1777
 	},
 	{
-	  "intrebare": "In ce secol a devenit Iasi capitala a Moldovei?",
-	  "raspuns": "16"
+	  "intrebare": "In ce secol a devenit capitala?",
+	  "raspuns": 16
 	},
 	{
-	  "intrebare": "In ce an a fost construita prima locomotiva cu aburi",
-	  "raspuns": "1872"
+	  "intrebare": "In ce an a fost construita prima locomotiva cu aburi din judet?",
+	  "raspuns": 1872
+	},
+	{
+	  "intrebare": "In ce an a fost atestat documentar?",
+	  "raspuns": 1700
+	},
+	{
+	  "intrebare": "Care este numarul aproximativ de locuitori?",
+	  "raspuns": 65000
 	},
 	{
 	  "intrebare": "In ce secol a fost construita Biserica Calvaria?",
-	  "raspuns": "11"
+	  "raspuns": 11
 	},
 	{
 	  "intrebare": "Cati metri are Farul Genovez?",
-	  "raspuns": "8"
+	  "raspuns": 8
 	},
 	{
 	  "intrebare": "Ce inaltime are Turnul Chindiei?",
-	  "raspuns": "27"
+	  "raspuns": 27
 	},
 	{
 	  "intrebare": "Acum cati ani a fost construita Manastirea Dealu?",
-	  "raspuns": "500"
+	  "raspuns": 500
 	},
 	{
 	  "intrebare": "In ce an a fost ridicat Muzeul de Arta din Craiova?",
-	  "raspuns": "1896"
+	  "raspuns": 1896
 	},
 	{
 	  "intrebare": "Din ce an dateaza Casa Baniei?",
-	  "raspuns": "1699"
+	  "raspuns": 1699
 	},
 	{
 	  "intrebare": "Cati km are Faleza Dunarii?",
-	  "raspuns": "4"
+	  "raspuns": 4
 	},
 	{
 	  "intrebare": "Cati m are Turnul Televiziunii?",
-	  "raspuns": "150"
+	  "raspuns": 150
 	},
 	{
 	  "intrebare": "In ce an a fost terminata Biserica Precista?",
-	  "raspuns": "1647"
+	  "raspuns": 1647
 	},
 	{
 	  "intrebare": "Cati ani a condus Nicolae Ceausescu tara noastra?",
-	  "raspuns": "24"
+	  "raspuns": 24
 	},
 	{
 	  "intrebare": "In ce an a reusit Mihai Viteazul unirea celor trei mari tari medievale?",
-	  "raspuns": "1600"
+	  "raspuns": 1600
 	},
 	{
 	  "intrebare": "In ce an s-a proclamat independența de stat a Romaniei? ",
-	  "raspuns": "1877"
+	  "raspuns": 1877
 	},
 	{
 	  "intrebare": "Câte strofe are poezia “Luceafarul” de Mihai Eminescu? ",
-	  "raspuns": "98"
+	  "raspuns": 98
 	},
 	{
 	  "intrebare": "Cati ani a durat Razboiul de 100 de ani? ",
-	  "raspuns": "116"
+	  "raspuns": 116
 	},
 	{
 	  "intrebare": "In ce an an a avut loc revolutia in urma careia a fost inlaturat Nicolae Ceausescu?",
-	  "raspuns": "1989"
+	  "raspuns": 1989
 	},
 	{
 	  "intrebare": "Care a fost primul model de masina Dacia?",
-	  "raspuns": "1100"
+	  "raspuns": 1100
 	},
 	{
 	  "intrebare": "Care este numarul de sateliti ai planetei Venus?",
-	  "raspuns": "0"
+	  "raspuns": 0
 	},
 	{
 	  "intrebare": "A cata planeta de la Soare este Mercur?",
-	  "raspuns": "1"
+	  "raspuns": 1
 	},
 	{
 	  "intrebare": "Cati atomi de oxigen are in componenta sa molecula de bioxid de carbon?",
-	  "raspuns": "2"
+	  "raspuns": 2
 	},
 	{
 	  "intrebare": "In ce an s-a scufundat Titanicul?",
-	  "raspuns": "1912"
+	  "raspuns": 1912
 	},
 	{
 	  "intrebare": "In ce an a intrat România in UE?",
-	  "raspuns": "2007"
+	  "raspuns": 2007
 	},
 	{
 	  "intrebare": "Cate state are Statele Unite ale Americii?",
-	  "raspuns": "50"
+	  "raspuns": 50
 	},
 	{
 	  "intrebare": "In ce an a murit Printesa Diana?",
-	  "raspuns": "1997"
+	  "raspuns": 1997
 	},
 	{
 	  "intrebare": "Cate perechi de aripi are o albina?",
-	  "raspuns": "2"
+	  "raspuns": 2
 	},
 	{
 	  "intrebare": "La cati ani se renoieste complet corpul uman?",
-	  "raspuns": "7"
+	  "raspuns": 7
 	},
 	{
 	  "intrebare": "Cate cadre pe secunda pot surprinde ochii umani?",
-	  "raspuns": "60"
+	  "raspuns": 60
 	},
 	{
 	  "intrebare": "Cate saptamani sunt intr-un an de zile?",
-	  "raspuns": "52"
+	  "raspuns": 52
 	},
 	{
 	  "intrebare": "Cate regiuni are creierul",
-	  "raspuns": "5"
+	  "raspuns": 5
 	},
 	{
 	  "intrebare": "Cate judete are romania",
-	  "raspuns": "41"
+	  "raspuns": 41
 	},
 	{
 	  "intrebare": "Cu cate tari se invecineaza romania?",
-	  "raspuns": "5"
+	  "raspuns": 5
 	},
 	{
 	  "intrebare": "Cate oceane exista",
-	  "raspuns": "4"
+	  "raspuns": 4
 	},
 	{
 	  "intrebare": "In ce an a fost marea revolutie? ",
-	  "raspuns": "1989"
+	  "raspuns": 1989
 	},
 	{
 	  "intrebare": "Cati ani a trait cel mai batran om din lume?",
-	  "raspuns": "116"
+	  "raspuns": 116
 	}
   ]
 }
