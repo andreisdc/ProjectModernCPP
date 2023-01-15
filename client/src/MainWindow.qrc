@@ -41,5 +41,29 @@
         <file>assets/5x3/Timisoara.png</file>
         <file>assets/5x3/Transilvania.png</file>
         <file>assets/5x3/Tulcea.png</file>
+        <file>assets/6x4/Alba.png</file>
+        <file>assets/6x4/Arad.png</file>
+        <file>assets/6x4/Banat.png</file>
+        <file>assets/6x4/Bihor.png</file>
+        <file>assets/6x4/Botosani.png</file>
+        <file>assets/6x4/Braila.png</file>
+        <file>assets/6x4/Brasov.png</file>
+        <file>assets/6x4/Bucuresti.png</file>
+        <file>assets/6x4/Calarasi.png</file>
+        <file>assets/6x4/CaraSever.png</file>
+        <file>assets/6x4/Cluj.png</file>
+        <file>assets/6x4/Cluj2.png</file>
+        <file>assets/6x4/Constanta.png</file>
+        <file>assets/6x4/Harghita.png</file>
+        <file>assets/6x4/Hunedoara.png</file>
+        <file>assets/6x4/Iasi.png</file>
+        <file>assets/6x4/Maramures.png</file>
+        <file>assets/6x4/Mehedinti.png</file>
+        <file>assets/6x4/SatuMare.png</file>
+        <file>assets/6x4/Sibiu.png</file>
+        <file>assets/6x4/Suceava.png</file>
+        <file>assets/6x4/Teleorman.png</file>
+        <file>assets/6x4/Tulcea.png</file>
+        <file>assets/6x4/Vaslui.png</file>
     </qresource>
 </RCC>
