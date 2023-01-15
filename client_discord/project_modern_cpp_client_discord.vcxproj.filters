@@ -2,7 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="discord_game_sdk">
-      <UniqueIdentifier>{d9026523-fa77-4f1f-99d0-513665d4b8c9}</UniqueIdentifier>
+      <UniqueIdentifier>{56e0991a-2d70-4490-8e72-5db1d3304193}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,7 +48,7 @@
     <ClCompile Include="src\discord_game_sdk\voice_manager.cpp">
       <Filter>discord_game_sdk</Filter>
     </ClCompile>
-    <ClCompile Include="src\dllmain.cpp" />
+    <ClCompile Include="src\RichPresence.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\discord_game_sdk\achievement_manager.h">
@@ -102,5 +102,6 @@
     <ClInclude Include="src\discord_game_sdk\voice_manager.h">
       <Filter>discord_game_sdk</Filter>
     </ClInclude>
+    <ClInclude Include="src\RichPresence.hpp" />
   </ItemGroup>
 </Project>
