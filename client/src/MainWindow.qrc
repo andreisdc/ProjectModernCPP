@@ -17,5 +17,14 @@
         <file>assets/LoginSignupBackground.png</file>
         <file>assets/bej.png</file>
         <file>assets/bleu.png</file>
+        <file>assets/3x3/Ardeal Vest.png</file>
+        <file>assets/3x3/Dobrogea.png</file>
+        <file>assets/3x3/Maramures.png</file>
+        <file>assets/3x3/Moldova.png</file>
+        <file>assets/3x3/Muntenia.png</file>
+        <file>assets/3x3/Oltenia.png</file>
+        <file>assets/3x3/Satu Mare.png</file>
+        <file>assets/3x3/Timisoara.png</file>
+        <file>assets/3x3/Transilvania.png</file>
     </qresource>
 </RCC>
