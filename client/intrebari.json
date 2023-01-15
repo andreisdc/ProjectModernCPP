@@ -521,12 +521,34 @@
 		"Alba Iulia",
 		"Brasov"
 	  ]
+	},
+	{
+	  "intrebare": "Cine a scris versurile imnului nostru?",
+	  "raspunsuri": [
+		"Andrei Muresan",
+		"Mihai Eminescu",
+		"George Calinescu",
+		"Adrian Paunescu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce poet a ocupat functia de Ministru al Culturii?",
+	  "raspunsuri": [
+		"Marin Sorescu",
+		"Mihai Eminescu",
+		"George Calinescu",
+		"Adrian Paunescu"
+	  ]
 	}
   ],
   "Numerical questions": [
 	{
 	  "intrebare": "In ce an a avut loc Capitularea de la Siria?",
 	  "raspuns": "1849"
+	},
+	{
+	  "intrebare": "In ce an s-a proclamat independenta de stat a Romaniei?",
+	  "raspuns": "1877"
 	},
 	{
 	  "intrebare": "In ce an Paul al V-lea a infiintat Episcopia de la Bacau?",
