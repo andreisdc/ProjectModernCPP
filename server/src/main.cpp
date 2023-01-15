@@ -685,25 +685,6 @@ int main() {
 				std::lock_guard<std::mutex> mutex_lock(websocket_mutex);
 
 				auto conn_userdata = reinterpret_cast<WebSocketUser *>(conn.userdata());
-
-				crow::json::rvalue json_message = crow::json::load(message);
-				if (json_message.error())
-					return;
-				if (!json_message.has("type"))
-					return;
-
-				std::string message_type = json_message["type"].s();
-
-				for (auto user: websocket_users) {
-					if (user == &conn)
-						continue;
-
-					if (is_binary) {
-						user->send_binary(message);
-					} else {
-						user->send_text(message);
-					}
-				}
 			})
 			.onerror([&](crow::websocket::connection &conn, const std::string &error_message) -> void {
 				CROW_LOG_ERROR << "WebSocket connection error! " << error_message;
