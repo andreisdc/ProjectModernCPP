@@ -1,21 +1,19 @@
 #pragma once
 
-#include <QtGui>
-#include <QtCore>
-#include <QDialog>
-#include "ui_MainWindow.h"
-#include <QtWidgets/QMainWindow>
-#include "Session.hpp"
-#include "User.hpp"
-#include <ctime>
-#include <cstdlib>
-#include "Lobby.hpp"
-#include "MyThread.hpp"
-#include <thread>
-#include <nlohmann/json.hpp>
 #include <fstream>
 #include <random>
 #include <set>
+#include <cstdlib>
+#include <ctime>
+
+#include <QtGui>
+#include <QtCore>
+#include <QDialog>
+#include <QtWidgets/QMainWindow>
+#include "ui_MainWindow.h"
+
+#include "Session.hpp"
+#include "User.hpp"
 
 class MainWindow : public QMainWindow {
 	Q_OBJECT
@@ -121,9 +119,6 @@ protected slots:
 	void AfterRegionSelect(const std::string& regionName);
 	int addPoints(std::string points);
 	void enableButton();
-	
-
-
 
 private:
 	Ui::MainWindowClass ui;
@@ -186,11 +181,9 @@ private:
 	User user2;
 	User user3;
 	User user4;
-
-	MyThread myThread;
+	
 	nlohmann::json intrebariSimple;
 	nlohmann::json intrebariNumere;
-
 
 	std::uniform_int_distribution<int> distSimple;
 	std::uniform_int_distribution<int> distNumber;

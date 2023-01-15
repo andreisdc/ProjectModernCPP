@@ -1,7 +1,7 @@
 #pragma once
 
 #include "User.hpp"
-#include "Lobby.hpp"
+
 class Session {
 private:
 	User *m_player1 = nullptr;
