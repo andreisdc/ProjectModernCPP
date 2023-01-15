@@ -494,6 +494,33 @@
 		"Marin Sorescu",
 		"Liviu Rebreanu"
 	  ]
+	},
+	{
+	  "intrebare": "Care este cel mai lung fluviu din Europa?",
+	  "raspunsuri": [
+		"Volga",
+		"Amazon",
+		"Pad",
+		"Siret"
+	  ]
+	},
+	{
+	  "intrebare": "Ce nationalitate are Papa Francisc I?",
+	  "raspunsuri": [
+		"Argentiniana",
+		"Italiana",
+		"Vaticana",
+		"Braziliana"
+	  ]
+	},
+	{
+	  "intrebare": "In ce oras au fost executati sotii Ceausescu?",
+	  "raspunsuri": [
+		"Arges",
+		"Bucuresti",
+		"Alba Iulia",
+		"Brasov"
+	  ]
 	}
   ],
   "Numerical questions": [
