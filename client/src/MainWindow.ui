@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1240</width>
-    <height>859</height>
+    <width>1269</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,10 +17,10 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>-20</x>
+      <x>-40</x>
       <y>0</y>
-      <width>1261</width>
-      <height>1091</height>
+      <width>1311</width>
+      <height>860</height>
      </rect>
     </property>
     <property name="sizePolicy">
@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -910,9 +910,9 @@ background-color: rgb(255, 138, 99);</string>
      <widget class="QFrame" name="frame_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>-31</y>
-        <width>1261</width>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
         <height>961</height>
        </rect>
       </property>
@@ -925,6 +925,421 @@ background-color: rgb(255, 138, 99);</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
+      <widget class="QLabel" name="labelStartpageTriviador_2">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>70</y>
+         <width>371</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="font">
+        <font>
+         <family>Viner Hand ITC</family>
+         <pointsize>48</pointsize>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/MainWindow/assets/Triviador.png);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
      <zorder>frame_2</zorder>
      <zorder>labelLoginLogin</zorder>
@@ -1120,9 +1535,454 @@ background-color: rgb(255, 138, 99);
      <widget class="QFrame" name="frame_3">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>-30</y>
-        <width>1261</width>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
+        <height>931</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="labelStartpageTriviador_3">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>70</y>
+         <width>371</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Button">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Base">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+          <colorrole role="Window">
+           <brush brushstyle="LinearGradientPattern">
+            <gradient startx="1.000000000000000" starty="1.000000000000000" endx="0.000000000000000" endy="1.000000000000000" type="LinearGradient" spread="PadSpread" coordinatemode="ObjectBoundingMode">
+             <gradientstop position="0.329545000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>0</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.335227000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>252</green>
+               <blue>30</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.660000000000000">
+              <color alpha="255">
+               <red>237</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.670000000000000">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>0</blue>
+              </color>
+             </gradientstop>
+             <gradientstop position="0.687500000000000">
+              <color alpha="255">
+               <red>0</red>
+               <green>15</green>
+               <blue>255</blue>
+              </color>
+             </gradientstop>
+            </gradient>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <property name="font">
+        <font>
+         <family>Viner Hand ITC</family>
+         <pointsize>48</pointsize>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-image: url(:/MainWindow/assets/Triviador.png);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <zorder>frame_3</zorder>
+     <zorder>labelSignupSignup</zorder>
+     <zorder>buttonSignupBack</zorder>
+     <zorder>labelSignupUsername</zorder>
+     <zorder>lineEditSignupUsername</zorder>
+     <zorder>labelSignupPassword</zorder>
+     <zorder>lineEditSignupPassword</zorder>
+     <zorder>radioButtonSignupShowPassword</zorder>
+     <zorder>buttonSignupSignup</zorder>
+    </widget>
+    <widget class="QWidget" name="MainMenu">
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
         <height>931</height>
        </rect>
       </property>
@@ -1136,15 +1996,38 @@ background-color: rgb(255, 138, 99);
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
-     <zorder>frame_3</zorder>
-     <zorder>labelSignupSignup</zorder>
-     <zorder>buttonSignupBack</zorder>
-     <zorder>labelSignupUsername</zorder>
-     <zorder>lineEditSignupUsername</zorder>
-     <zorder>labelSignupPassword</zorder>
-     <zorder>lineEditSignupPassword</zorder>
-     <zorder>radioButtonSignupShowPassword</zorder>
-     <zorder>buttonSignupSignup</zorder>
+     <widget class="QPushButton" name="buttonMainMenuJoinGame">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>400</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Join Game</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonMainMenuCreateGame">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>400</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Create Game</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="Lobby">
      <widget class="QLabel" name="labelLobbyPlayername1">
@@ -1267,26 +2150,10 @@ background-color: rgb(255, 138, 99);
        <string>Kick</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="buttonLobbyAddplayer">
-      <property name="geometry">
-       <rect>
-        <x>1010</x>
-        <y>700</y>
-        <width>171</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="buttonLobbyStart">
       <property name="geometry">
        <rect>
-        <x>830</x>
+        <x>1050</x>
         <y>700</y>
         <width>171</width>
         <height>51</height>
@@ -1312,7 +2179,7 @@ background-color: rgb(255, 138, 99);
        <string notr="true">background-color: rgb(255, 85, 0);</string>
       </property>
       <property name="text">
-       <string>Log Out</string>
+       <string>Exit</string>
       </property>
      </widget>
      <widget class="QFrame" name="frameAvatar1">
@@ -1402,10 +2269,10 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QFrame" name="frame_6">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>30</x>
         <y>-10</y>
-        <width>1251</width>
-        <height>881</height>
+        <width>1281</width>
+        <height>921</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1435,57 +2302,39 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-      </widget>
-      <widget class="QFrame" name="frameBkgR">
-       <property name="geometry">
-        <rect>
-         <x>800</x>
-         <y>20</y>
-         <width>421</width>
-         <height>561</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-image: url(:/MainWindow/assets/bleu.png);</string>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Raised</enum>
-       </property>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>340</x>
+          <y>630</y>
+          <width>41</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>1234</string>
+        </property>
+       </widget>
       </widget>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QLabel" name="Error">
       <property name="geometry">
        <rect>
-        <x>1170</x>
-        <y>613</y>
-        <width>75</width>
-        <height>41</height>
+        <x>940</x>
+        <y>720</y>
+        <width>91</width>
+        <height>20</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
+       <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
-       <string>ENTER</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelChat">
-      <property name="geometry">
-       <rect>
-        <x>820</x>
-        <y>610</y>
-        <width>331</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-image: url(:/MainWindow/assets/bleu.png);</string>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
+       <string>more than 1</string>
       </property>
      </widget>
      <zorder>frame_6</zorder>
@@ -1496,695 +2345,13 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <zorder>buttonLobbyKickplayer1</zorder>
      <zorder>buttonLobbyKickplayer2</zorder>
      <zorder>buttonLobbyKickplayer3</zorder>
-     <zorder>buttonLobbyAddplayer</zorder>
      <zorder>buttonLobbyStart</zorder>
      <zorder>buttonLobbyLogout</zorder>
      <zorder>frameAvatar1</zorder>
      <zorder>frameAvatar2</zorder>
      <zorder>frameAvatar3</zorder>
      <zorder>frameAvatar4</zorder>
-     <zorder>pushButton</zorder>
-     <zorder>labelChat</zorder>
-    </widget>
-    <widget class="QWidget" name="windowInvite">
-     <widget class="QPushButton" name="buttonWindowInviteAdd">
-      <property name="geometry">
-       <rect>
-        <x>830</x>
-        <y>410</y>
-        <width>75</width>
-        <height>24</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Viner Hand ITC</family>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="lindeEditWindowInviteUsername">
-      <property name="geometry">
-       <rect>
-        <x>520</x>
-        <y>410</y>
-        <width>291</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelWindowInviteUsername">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>400</y>
-        <width>111</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Viner Hand ITC</family>
-        <pointsize>18</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Username</string>
-      </property>
-     </widget>
-     <widget class="QFrame" name="frame_19">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>-10</y>
-        <width>1241</width>
-        <height>871</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-     <zorder>frame_19</zorder>
-     <zorder>buttonWindowInviteAdd</zorder>
-     <zorder>lindeEditWindowInviteUsername</zorder>
-     <zorder>labelWindowInviteUsername</zorder>
-    </widget>
-    <widget class="QWidget" name="Game">
-     <widget class="QLabel" name="labelGameUsername1">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>40</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Player 1</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameUsername2">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>40</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Player 2</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameUsername3">
-      <property name="geometry">
-       <rect>
-        <x>620</x>
-        <y>40</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Player 3</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameUsername4">
-      <property name="geometry">
-       <rect>
-        <x>880</x>
-        <y>40</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Player 4</string>
-      </property>
-     </widget>
-     <widget class="QLCDNumber" name="lcdNumberGamePoints1">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>60</y>
-        <width>111</width>
-        <height>23</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLCDNumber" name="lcdNumberGamePoints2">
-      <property name="geometry">
-       <rect>
-        <x>350</x>
-        <y>60</y>
-        <width>111</width>
-        <height>23</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLCDNumber" name="lcdNumberGamePoints3">
-      <property name="geometry">
-       <rect>
-        <x>580</x>
-        <y>60</y>
-        <width>111</width>
-        <height>23</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLCDNumber" name="lcdNumberGamePoints4">
-      <property name="geometry">
-       <rect>
-        <x>840</x>
-        <y>60</y>
-        <width>111</width>
-        <height>23</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty2">
-      <property name="geometry">
-       <rect>
-        <x>466</x>
-        <y>260</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty3">
-      <property name="geometry">
-       <rect>
-        <x>566</x>
-        <y>260</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty4">
-      <property name="geometry">
-       <rect>
-        <x>666</x>
-        <y>260</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty5">
-      <property name="geometry">
-       <rect>
-        <x>756</x>
-        <y>260</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty10">
-      <property name="geometry">
-       <rect>
-        <x>756</x>
-        <y>370</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty9">
-      <property name="geometry">
-       <rect>
-        <x>666</x>
-        <y>370</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty8">
-      <property name="geometry">
-       <rect>
-        <x>566</x>
-        <y>370</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty7">
-      <property name="geometry">
-       <rect>
-        <x>466</x>
-        <y>370</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty12">
-      <property name="geometry">
-       <rect>
-        <x>466</x>
-        <y>480</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty13">
-      <property name="geometry">
-       <rect>
-        <x>566</x>
-        <y>480</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty14">
-      <property name="geometry">
-       <rect>
-        <x>666</x>
-        <y>480</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty15">
-      <property name="geometry">
-       <rect>
-        <x>756</x>
-        <y>480</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty1">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>260</y>
-        <width>81</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty6">
-      <property name="geometry">
-       <rect>
-        <x>366</x>
-        <y>370</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="buttonGameCounty11">
-      <property name="geometry">
-       <rect>
-        <x>366</x>
-        <y>480</y>
-        <width>75</width>
-        <height>91</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(170, 170, 127);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints1">
-      <property name="geometry">
-       <rect>
-        <x>376</x>
-        <y>320</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints2">
-      <property name="geometry">
-       <rect>
-        <x>476</x>
-        <y>320</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints3">
-      <property name="geometry">
-       <rect>
-        <x>576</x>
-        <y>320</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints4">
-      <property name="geometry">
-       <rect>
-        <x>676</x>
-        <y>320</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints5">
-      <property name="geometry">
-       <rect>
-        <x>766</x>
-        <y>320</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints8">
-      <property name="geometry">
-       <rect>
-        <x>576</x>
-        <y>430</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints7">
-      <property name="geometry">
-       <rect>
-        <x>476</x>
-        <y>430</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints6">
-      <property name="geometry">
-       <rect>
-        <x>376</x>
-        <y>430</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints9">
-      <property name="geometry">
-       <rect>
-        <x>676</x>
-        <y>430</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints10">
-      <property name="geometry">
-       <rect>
-        <x>766</x>
-        <y>430</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints15">
-      <property name="geometry">
-       <rect>
-        <x>766</x>
-        <y>540</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints14">
-      <property name="geometry">
-       <rect>
-        <x>676</x>
-        <y>540</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints13">
-      <property name="geometry">
-       <rect>
-        <x>576</x>
-        <y>540</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints12">
-      <property name="geometry">
-       <rect>
-        <x>476</x>
-        <y>540</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="labelGameCountyPoints11">
-      <property name="geometry">
-       <rect>
-        <x>376</x>
-        <y>540</y>
-        <width>49</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QFrame" name="frame_4">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>-1</y>
-        <width>1251</width>
-        <height>861</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-     </widget>
-     <zorder>frame_4</zorder>
-     <zorder>labelGameUsername1</zorder>
-     <zorder>labelGameUsername2</zorder>
-     <zorder>labelGameUsername3</zorder>
-     <zorder>labelGameUsername4</zorder>
-     <zorder>lcdNumberGamePoints1</zorder>
-     <zorder>lcdNumberGamePoints2</zorder>
-     <zorder>lcdNumberGamePoints3</zorder>
-     <zorder>lcdNumberGamePoints4</zorder>
-     <zorder>buttonGameCounty2</zorder>
-     <zorder>buttonGameCounty3</zorder>
-     <zorder>buttonGameCounty4</zorder>
-     <zorder>buttonGameCounty5</zorder>
-     <zorder>buttonGameCounty10</zorder>
-     <zorder>buttonGameCounty9</zorder>
-     <zorder>buttonGameCounty8</zorder>
-     <zorder>buttonGameCounty7</zorder>
-     <zorder>buttonGameCounty12</zorder>
-     <zorder>buttonGameCounty13</zorder>
-     <zorder>buttonGameCounty14</zorder>
-     <zorder>buttonGameCounty15</zorder>
-     <zorder>buttonGameCounty1</zorder>
-     <zorder>buttonGameCounty6</zorder>
-     <zorder>buttonGameCounty11</zorder>
-     <zorder>labelGameCountyPoints1</zorder>
-     <zorder>labelGameCountyPoints2</zorder>
-     <zorder>labelGameCountyPoints3</zorder>
-     <zorder>labelGameCountyPoints4</zorder>
-     <zorder>labelGameCountyPoints5</zorder>
-     <zorder>labelGameCountyPoints8</zorder>
-     <zorder>labelGameCountyPoints7</zorder>
-     <zorder>labelGameCountyPoints6</zorder>
-     <zorder>labelGameCountyPoints9</zorder>
-     <zorder>labelGameCountyPoints10</zorder>
-     <zorder>labelGameCountyPoints15</zorder>
-     <zorder>labelGameCountyPoints14</zorder>
-     <zorder>labelGameCountyPoints13</zorder>
-     <zorder>labelGameCountyPoints12</zorder>
-     <zorder>labelGameCountyPoints11</zorder>
+     <zorder>Error</zorder>
     </widget>
     <widget class="QWidget" name="Question">
      <widget class="QLabel" name="labelQuestionQuestion">
@@ -2200,6 +2367,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <font>
         <pointsize>18</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Intrebare normala:</string>
@@ -2321,10 +2491,10 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QFrame" name="frame_5">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>-1</y>
-        <width>1241</width>
-        <height>861</height>
+        <x>30</x>
+        <y>-10</y>
+        <width>1291</width>
+        <height>921</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2359,6 +2529,9 @@ image: url(:/MainWindow/assets/GoldBorder.png);
        <font>
         <pointsize>18</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
       </property>
       <property name="text">
        <string>Intrebare Numar:</string>
@@ -2415,18 +2588,29 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QLabel" name="labelQuestionNumberAnswear">
       <property name="geometry">
        <rect>
-        <x>500</x>
-        <y>300</y>
+        <x>490</x>
+        <y>290</y>
         <width>251</width>
-        <height>20</height>
+        <height>61</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>14</pointsize>
-        <italic>true</italic>
+        <family>Segoe UI</family>
+        <pointsize>24</pointsize>
+        <italic>false</italic>
         <bold>true</bold>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::NoContextMenu</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 700 24pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="text">
        <string>TextLabel</string>
@@ -2537,7 +2721,7 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QPushButton" name="buttonQuestionNumberEnter">
       <property name="geometry">
        <rect>
-        <x>810</x>
+        <x>790</x>
         <y>260</y>
         <width>75</width>
         <height>24</height>
@@ -2550,10 +2734,10 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <widget class="QFrame" name="frame_20">
       <property name="geometry">
        <rect>
-        <x>19</x>
+        <x>30</x>
         <y>-10</y>
-        <width>1251</width>
-        <height>871</height>
+        <width>1281</width>
+        <height>921</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2579,6 +2763,308 @@ image: url(:/MainWindow/assets/GoldBorder.png);
      <zorder>labelQuestionNumberUsername4</zorder>
      <zorder>labelQuestionNumberPlayer4Answear</zorder>
      <zorder>buttonQuestionNumberEnter</zorder>
+    </widget>
+    <widget class="QWidget" name="Game2Pers">
+     <widget class="QLabel" name="labelGame3x3Username1">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame3x3Username2">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>80</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 2</string>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame3x3Points2">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>80</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame3x3Points1">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>40</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_23">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
+        <height>921</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <zorder>frame_23</zorder>
+     <zorder>labelGame3x3Username1</zorder>
+     <zorder>labelGame3x3Username2</zorder>
+     <zorder>lcdNumberGame3x3Points2</zorder>
+     <zorder>lcdNumberGame3x3Points1</zorder>
+    </widget>
+    <widget class="QWidget" name="Game3Pers">
+     <widget class="QFrame" name="frame_21">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
+        <height>921</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame5x3Points1">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>40</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame5x3Points2">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>80</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame5x3Points3">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>120</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame5x3Username1">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame5x3Username2">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>80</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame5x3Username3">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>120</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Game4Pers">
+     <widget class="QFrame" name="frame_22">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>-10</y>
+        <width>1281</width>
+        <height>921</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/MainWindow/assets/LoginSignupBackground.png);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame6x4Points1">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>40</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame6x4Points2">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>80</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame6x4Points3">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>120</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLCDNumber" name="lcdNumberGame6x4Points4">
+      <property name="geometry">
+       <rect>
+        <x>1120</x>
+        <y>160</y>
+        <width>111</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame6x4Username1">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>40</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame6x4Username2">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>80</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame6x4Username3">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>120</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="labelGame6x4Username4">
+      <property name="geometry">
+       <rect>
+        <x>1070</x>
+        <y>160</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Player 1</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
