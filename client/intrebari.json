@@ -467,6 +467,33 @@
 		"Ierusalim",
 		"Atena"
 	  ]
+	},
+	{
+	  "intrebare": "Din ce tara izvoreste Dunarea?",
+	  "raspunsuri": [
+		"Germania",
+		"Olanda",
+		"Suedia",
+		"Franta"
+	  ]
+	},
+	{
+	  "intrebare": "Cine a realizat prima calatorie in jurul lumii?",
+	  "raspunsuri": [
+		"Fernando Magellan",
+		"Amerigo Vespucci",
+		"Cristofor Columb",
+		"Erik cel Rosu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce poet a scris poezia “Plumb”?",
+	  "raspunsuri": [
+		"George Bacovia",
+		"Mihai Eminescu",
+		"Marin Sorescu",
+		"Liviu Rebreanu"
+	  ]
 	}
   ],
   "Numerical questions": [
