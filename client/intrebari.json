@@ -1,7 +1,7 @@
 {
   "Standard questions": [
 	{
-	  "intrebare": "Care este indicativul autovehiculelor din acest judet?",
+	  "intrebare": "Care este indicativul autovehiculelor din judetul Alba?",
 	  "raspunsuri": [
 		"AB",
 		"PH",
@@ -10,7 +10,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune se afla acest judet?",
+	  "intrebare": "In ce regiune se afla judetul Cluj?",
 	  "raspunsuri": [
 		"Transilvania",
 		"Muntenia",
@@ -100,7 +100,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce rau trece prin acest judet?",
+	  "intrebare": "Ce rau trece prin judetul Bihor?",
 	  "raspunsuri": [
 		"Crisul negru",
 		"Crisul repede",
@@ -109,7 +109,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Resedinta judetului",
+	  "intrebare": "Resedinta judetului Bihor",
 	  "raspunsuri": [
 		"Oradea",
 		"Bihor",
@@ -118,7 +118,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "De cine este infiintata Bistrita?",
+	  "intrebare": "De cine a fost infiintata Bistrita?",
 	  "raspunsuri": [
 		"Nemti",
 		"Francezi",
@@ -127,7 +127,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Resedinta de judet este",
+	  "intrebare": "Resedinta de judet a Bistritei-Nasaud este",
 	  "raspunsuri": [
 		"Bistrita",
 		"Nasaud",
@@ -136,7 +136,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cine s-a nascut in acest judet?",
+	  "intrebare": "Cine s-a nascut in judetul Botosani?",
 	  "raspunsuri": [
 		"Mihai Eminescu",
 		"Ion Creanga",
@@ -145,21 +145,12 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este regiunea istorica?",
+	  "intrebare": "Care este regiunea istorica a judetului Botosani?",
 	  "raspunsuri": [
 		"Moldova",
 		"Muntenia",
 		"Transilvania",
 		"Dobrogea"
-	  ]
-	},
-	{
-	  "intrebare": "Care este principalul afluent?",
-	  "raspunsuri": [
-		"Sitna",
-		"Jiu",
-		"Ialomita",
-		"Bega"
 	  ]
 	},
 	{
@@ -172,7 +163,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cum se numeste orasul in germana",
+	  "intrebare": "Cum se numeste orasul Brasov in germana",
 	  "raspunsuri": [
 		"KronStadt",
 		"HermannStadt",
@@ -181,7 +172,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Unde este situat judetul?",
+	  "intrebare": "Unde este situat judetul Brasov?",
 	  "raspunsuri": [
 		"Fix in centru",
 		"Langa centru",
@@ -190,7 +181,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce nume mare al fotbalului romanesc s-a nascut aici?",
+	  "intrebare": "Ce nume mare al fotbalului romanesc s-a nascut in judetul Brasov?",
 	  "raspunsuri": [
 		"Marius Lacatus",
 		"Gheorghe Hagi",
@@ -199,7 +190,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce firma renumita de camasi se regaseste aici?",
+	  "intrebare": "Ce firma renumita de camasi se regaseste in Braila?",
 	  "raspunsuri": [
 		"Braiconf",
 		"Verlinne",
@@ -208,7 +199,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce apa trece prin judet?",
+	  "intrebare": "Ce apa trece prin judetul Braila?",
 	  "raspunsuri": [
 		"Dunarea",
 		"Amazon",
@@ -271,7 +262,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce vulcani se afla in judet?",
+	  "intrebare": "Ce vulcani se afla in judetul Buzau?",
 	  "raspunsuri": [
 		"Vulcanii noroiosi",
 		"Sfanta Ana",
@@ -280,7 +271,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune istorica se afla?",
+	  "intrebare": "In ce regiune istorica se afla judetul Buzau?",
 	  "raspunsuri": [
 		"Muntenia",
 		"Moldova",
@@ -289,7 +280,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Ce oras important se afla in judet?",
+	  "intrebare": "Ce oras important se afla in judetul Buzau?",
 	  "raspunsuri": [
 		"Ramnicul Sarat",
 		"Tecuci",
@@ -298,7 +289,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este resedinta judetului?",
+	  "intrebare": "Care este resedinta judetului Caras-Severin?",
 	  "raspunsuri": [
 		"Resita",
 		"Caras",
@@ -307,7 +298,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este indicatorul autovehiculelor?",
+	  "intrebare": "Care este indicatorul autovehiculelor in judetul Caras-Severin?",
 	  "raspunsuri": [
 		"CS",
 		"SC",
