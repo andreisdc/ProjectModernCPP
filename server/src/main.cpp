@@ -138,7 +138,7 @@ int main() {
 						where(is_equal(&models::User::username, username)));
 
 				if (!selected_ids.empty())
-					return crow::response(crow::status::BAD_REQUEST, "User already exists!");
+					return crow::response(crow::status::CONFLICT, "User already exists!");
 
 				models::User user{-1, username, password};
 				const int new_user_id = storage->insert(user);
