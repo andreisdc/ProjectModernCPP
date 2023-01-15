@@ -539,6 +539,33 @@
 		"George Calinescu",
 		"Adrian Paunescu"
 	  ]
+	},
+	{
+	  "intrebare": "In ce an s-a scufundat Titanicul?",
+	  "raspunsuri": [
+		"1912",
+		"1913",
+		"1914",
+		"1915"
+	  ]
+	},
+	{
+	  "intrebare": "Care este singurul continent pe care nu traiesc ursi?",
+	  "raspunsuri": [
+		"Antarctica",
+		"Artica",
+		"America",
+		"Asia"
+	  ]
+	},
+	{
+	  "intrebare": "Unde s-a nascut Ion Creanga?",
+	  "raspunsuri": [
+		"Humulesti",
+		"Costinesti",
+		"Bucuresti",
+		"Floresti"
+	  ]
 	}
   ],
   "Numerical questions": [
@@ -697,6 +724,10 @@
 	{
 	  "intrebare": "Cati ani a trait cel mai batran om din lume?",
 	  "raspuns": "116"
+	},
+	{
+	  "intrebare": "Cate laturi are un hexagon?",
+	  "raspuns": 6
 	}
   ]
 }
