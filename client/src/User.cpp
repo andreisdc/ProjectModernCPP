@@ -23,6 +23,10 @@ const std::string User::getPassword() {
 	return m_password;
 }
 
+void User::setColor(int nr) {
+	nrColor = nr;
+}
+
 void User::setUsername(std::string username) {
 	this->m_username = username;
 }

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QtGui>
-#include <Qtcore>
+#include <QtCore>
 #include <QDialog>
 #include "ui_MainWindow.h"
 #include <QtWidgets/QMainWindow>
@@ -48,7 +48,7 @@ protected slots:
 	void on_buttonLobbyStart_clicked();
 
 	void setAllPoints();
-
+	void on_buttonQuestionFiftyFifty_clicked();
 
 	void on_buttonQuestionA_clicked();
 	void on_buttonQuestionB_clicked();
@@ -106,6 +106,9 @@ protected slots:
 	void on_buttonTulcea6x4_clicked();
 	void on_buttonConstanta6x4_clicked();
 
+	void on_buttonHelp4Raspunsiri_clicked();
+	void on_buttonHelpSugestie_clicked();
+
 	void changePassword();
 
 	void VerifyPlayer();
@@ -117,6 +120,10 @@ protected slots:
 	void verify_ans(std::string ans);
 	void AfterRegionSelect(const std::string& regionName);
 	int addPoints(std::string points);
+	void enableButton();
+	
+
+
 
 private:
 	Ui::MainWindowClass ui;
@@ -196,8 +203,14 @@ private:
 	std::string answerNumberUser3;
 	std::string answerNumberUser4;
 
+	int nrCounty3x3 = 7;
+	int nrCounty5x3 = 12;
+	int nrCounty6x4 = 20;
+
+	bool Round = false;
 
 	int generateRandomSimpleNumber();
 	int generateRandomNumberNumber();
 	void getQuestionNumber();
+	void getQuestionSimple();
 };

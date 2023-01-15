@@ -36,7 +36,7 @@
      <string notr="true">background-image: url(:/MainWindow/download.jfif);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Startpage">
      <widget class="QFrame" name="frame">
@@ -2359,7 +2359,7 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>80</x>
         <y>80</y>
-        <width>811</width>
+        <width>1201</width>
         <height>111</height>
        </rect>
       </property>
@@ -2463,7 +2463,7 @@ color: rgb(255, 255, 255);</string>
        <string>Raspuns 4</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="buttonQuestionFiftyFifty">
+     <widget class="QPushButton" name="buttonHelpFiftyFifty">
       <property name="geometry">
        <rect>
         <x>560</x>
@@ -2513,7 +2513,7 @@ color: rgb(255, 255, 255);</string>
      <zorder>buttonQuestionB</zorder>
      <zorder>buttonQuestionC</zorder>
      <zorder>buttonQuestionD</zorder>
-     <zorder>buttonQuestionFiftyFifty</zorder>
+     <zorder>buttonHelpFiftyFifty</zorder>
     </widget>
     <widget class="QWidget" name="QuestionNumber">
      <widget class="QLabel" name="labelQuestionNumberQuestion">
@@ -2521,7 +2521,7 @@ color: rgb(255, 255, 255);</string>
        <rect>
         <x>50</x>
         <y>30</y>
-        <width>811</width>
+        <width>1231</width>
         <height>111</height>
        </rect>
       </property>
@@ -2750,6 +2750,56 @@ font: 700 24pt &quot;Segoe UI&quot;;</string>
        <enum>QFrame::Raised</enum>
       </property>
      </widget>
+     <widget class="QPushButton" name="buttonHelp4Raspunsiri">
+      <property name="geometry">
+       <rect>
+        <x>1010</x>
+        <y>230</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>4 Raspunsiri</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="buttonHelpSugestie">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>230</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Viner Hand ITC</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(170, 170, 127);</string>
+      </property>
+      <property name="text">
+       <string>Sugestie</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+     </widget>
      <zorder>frame_20</zorder>
      <zorder>labelQuestionNumberQuestion</zorder>
      <zorder>lineEditQuestionNumberInput</zorder>
@@ -2763,6 +2813,8 @@ font: 700 24pt &quot;Segoe UI&quot;;</string>
      <zorder>labelQuestionNumberUsername4</zorder>
      <zorder>labelQuestionNumberPlayer4Answear</zorder>
      <zorder>buttonQuestionNumberEnter</zorder>
+     <zorder>buttonHelp4Raspunsiri</zorder>
+     <zorder>buttonHelpSugestie</zorder>
     </widget>
     <widget class="QWidget" name="Game2Pers">
      <widget class="QLabel" name="labelGame3x3Username1">

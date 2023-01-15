@@ -49,7 +49,7 @@ int Session::getNumberPlayer() {
 }
 void Session::Verify(int nrPlayer) {
 	if (m_player1 != nullptr)
-		lobby.push_back(m_player1);
+	{lobby.push_back(m_player1);}
 	if (m_player2 != nullptr)
 		lobby.push_back(m_player2);
 	if (m_player3 != nullptr)
