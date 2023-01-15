@@ -1,0 +1,643 @@
+{
+  "Standard questions": [
+	{
+	  "intrebare": "Care este indicativul autovehiculelor din acest judet?",
+	  "raspunsuri": [
+		"AB",
+		"PH",
+		"BV",
+		"CT"
+	  ]
+	},
+	{
+	  "intrebare": "In ce regiune se afla acest judet?",
+	  "raspunsuri": [
+		"Transilvania",
+		"Muntenia",
+		"Moldova",
+		"Nu se afla in Ro"
+	  ]
+	},
+	{
+	  "intrebare": "In ce zona a judetului se afla muntii Metaliferi?",
+	  "raspunsuri": [
+		"Est",
+		"Vest",
+		"Nord",
+		"Sud"
+	  ]
+	},
+	{
+	  "intrebare": "Orasul Batranei doamne (Echipa de fotbal)",
+	  "raspunsuri": [
+		"Arad",
+		"Unirea",
+		"Voluntari",
+		"FCSB"
+	  ]
+	},
+	{
+	  "intrebare": "Rau care traverseaza Aradul",
+	  "raspunsuri": [
+		"Mures",
+		"Dunarea",
+		"Dambovita",
+		"Crisul repede"
+	  ]
+	},
+	{
+	  "intrebare": "Vechea capitala a Tarii Romanesti",
+	  "raspunsuri": [
+		"Curtea de Arges",
+		"Sarmisegetuza",
+		"Bucuresti",
+		"Campulung"
+	  ]
+	},
+	{
+	  "intrebare": "Rau care traverseaza municipiul Pitesti",
+	  "raspunsuri": [
+		"Arges",
+		"Dambovita",
+		"Dunarea",
+		"Mures"
+	  ]
+	},
+	{
+	  "intrebare": "Care este municipiul resedinta de judet al Argesului",
+	  "raspunsuri": [
+		"Pitesti",
+		"Campulung",
+		"Ploiesti",
+		"Campina"
+	  ]
+	},
+	{
+	  "intrebare": "In ce regiune istorica se afla judetul Bacau?",
+	  "raspunsuri": [
+		"Moldova",
+		"Muntenia",
+		"Banat",
+		"Dobrogea"
+	  ]
+	},
+	{
+	  "intrebare": "Ce rau trece prin judetul Bacau",
+	  "raspunsuri": [
+		"Siret",
+		"Dunarea",
+		"Crisul repede",
+		"Olt"
+	  ]
+	},
+	{
+	  "intrebare": "Cum se mai numeste Varful Bihor?",
+	  "raspunsuri": [
+		"Cucurbata mare",
+		"Moldoveanu",
+		"Omu",
+		"Negoiu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce rau trece prin acest judet?",
+	  "raspunsuri": [
+		"Crisul negru",
+		"Crisul repede",
+		"Siret",
+		"Mures"
+	  ]
+	},
+	{
+	  "intrebare": "Resedinta judetului",
+	  "raspunsuri": [
+		"Oradea",
+		"Bihor",
+		"Bucuresti",
+		"Constanta"
+	  ]
+	},
+	{
+	  "intrebare": "De cine este infiintata Bistrita?",
+	  "raspunsuri": [
+		"Nemti",
+		"Francezi",
+		"Polonezi",
+		"Austrieci"
+	  ]
+	},
+	{
+	  "intrebare": "Resedinta de judet este",
+	  "raspunsuri": [
+		"Bistrita",
+		"Nasaud",
+		"Pitesti",
+		"Tecuci"
+	  ]
+	},
+	{
+	  "intrebare": "Cine s-a nascut in acest judet?",
+	  "raspunsuri": [
+		"Mihai Eminescu",
+		"Ion Creanga",
+		"Emil Constantinescu",
+		"Traian Basescu"
+	  ]
+	},
+	{
+	  "intrebare": "Care este regiunea istorica?",
+	  "raspunsuri": [
+		"Moldova",
+		"Muntenia",
+		"Transilvania",
+		"Dobrogea"
+	  ]
+	},
+	{
+	  "intrebare": "Care este principalul afluent?",
+	  "raspunsuri": [
+		"Sitna",
+		"Jiu",
+		"Ialomita",
+		"Bega"
+	  ]
+	},
+	{
+	  "intrebare": "Care oras este situat la cea mai mare altitudine?",
+	  "raspunsuri": [
+		"Predeal",
+		"Bran",
+		"Sacele",
+		"Rasnov"
+	  ]
+	},
+	{
+	  "intrebare": "Cum se numeste orasul in germana",
+	  "raspunsuri": [
+		"KronStadt",
+		"HermannStadt",
+		"Brasso",
+		"Corona"
+	  ]
+	},
+	{
+	  "intrebare": "Unde este situat judetul?",
+	  "raspunsuri": [
+		"Fix in centru",
+		"Langa centru",
+		"Pe langa centru",
+		"Centru"
+	  ]
+	},
+	{
+	  "intrebare": "Ce nume mare al fotbalului romanesc s-a nascut aici?",
+	  "raspunsuri": [
+		"Marius Lacatus",
+		"Gheorghe Hagi",
+		"Mihai Pintilii",
+		"Mihai Brasoveanu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce firma renumita de camasi se regaseste aici?",
+	  "raspunsuri": [
+		"Braiconf",
+		"Verlinne",
+		"Zara",
+		"H&M"
+	  ]
+	},
+	{
+	  "intrebare": "Ce apa trece prin judet?",
+	  "raspunsuri": [
+		"Dunarea",
+		"Amazon",
+		"Siret",
+		"Olt"
+	  ]
+	},
+	{
+	  "intrebare": "Ce teatrul celebru este in Braila?",
+	  "raspunsuri": [
+		"Rally",
+		"Teatrul mascarada",
+		"Odeon",
+		"Nottara"
+	  ]
+	},
+	{
+	  "intrebare": "Cum i se mai spune orasului Braila?",
+	  "raspunsuri": [
+		"Orasul cu salcami",
+		"Necaz",
+		"Ai si uitat",
+		"Saracie"
+	  ]
+	},
+	{
+	  "intrebare": "De cate ori a fost ars orasul Braila?",
+	  "raspunsuri": [
+		"De 2 ori",
+		"De 10 ori",
+		"O singura data",
+		"Inca arde"
+	  ]
+	},
+	{
+	  "intrebare": "Ce sunt Hrubele Brailei?",
+	  "raspunsuri": [
+		"Un sistem complex de galerii ce se intind sub centrul vechi",
+		"Porecla locuitorilor",
+		"Moneda lor nationala",
+		"Piesa la motor"
+	  ]
+	},
+	{
+	  "intrebare": "Domnitor in timpul caruia este atestat orasul Bucuresti",
+	  "raspunsuri": [
+		"Vlad Tepes",
+		"Burebista",
+		"Mihai Viteazul",
+		"Ion Iliescu"
+	  ]
+	},
+	{
+	  "intrebare": "Cea mai mare echipa de fotbal din tara?",
+	  "raspunsuri": [
+		"FCSB",
+		"Steaua Bucuresti",
+		"Rapid",
+		"Dinamo"
+	  ]
+	},
+	{
+	  "intrebare": "Ce vulcani se afla in judet?",
+	  "raspunsuri": [
+		"Vulcanii noroiosi",
+		"Sfanta Ana",
+		"Etna",
+		"Vezuviu"
+	  ]
+	},
+	{
+	  "intrebare": "In ce regiune istorica se afla?",
+	  "raspunsuri": [
+		"Muntenia",
+		"Moldova",
+		"Dobrogea",
+		"Oltenia"
+	  ]
+	},
+	{
+	  "intrebare": "Ce oras important se afla in judet?",
+	  "raspunsuri": [
+		"Ramnicul Sarat",
+		"Tecuci",
+		"Focsani",
+		"Iasi"
+	  ]
+	},
+	{
+	  "intrebare": "Care este resedinta judetului?",
+	  "raspunsuri": [
+		"Resita",
+		"Caras",
+		"Severin",
+		"Arad"
+	  ]
+	},
+	{
+	  "intrebare": "Care este indicatorul autovehiculelor?",
+	  "raspunsuri": [
+		"CS",
+		"SC",
+		"AR",
+		"SV"
+	  ]
+	},
+	{
+	  "intrebare": "Care este suprafata judetului?",
+	  "raspunsuri": [
+		"133,22 km^2",
+		"208,32 km^2",
+		"325,23 km^2",
+		"211,12 km^2"
+	  ]
+	},
+	{
+	  "intrebare": "Din ce regiune apartine judetul Calarasi?",
+	  "raspunsuri": [
+		"Muntenia",
+		"Moldova",
+		"Transilvania",
+		"Oltenia"
+	  ]
+	},
+	{
+	  "intrebare": "In ce regiune se afla judetul?",
+	  "raspunsuri": [
+		"Transilvania",
+		"Moldova",
+		"Oltenia",
+		"Dobrogea"
+	  ]
+	},
+	{
+	  "intrebare": "Care este resedinta de judet?",
+	  "raspunsuri": [
+		"Cluj Napoca",
+		"Napoca",
+		"Arad",
+		"Baia Mare"
+	  ]
+	},
+	{
+	  "intrebare": "In memoria cui a fost construita statuia Ovidiu?",
+	  "raspunsuri": [
+		"Publius Ovidiu Naso",
+		"Ovidiu Edvin",
+		"Augustin Ovidiu",
+		"Ovidiu Caius"
+	  ]
+	},
+	{
+	  "intrebare": "La initiativa cui a fost construita Moscheea Carol?",
+	  "raspunsuri": [
+		"Carol I",
+		"Carol II",
+		"Carol Ferdinand",
+		"Mihai Carol I"
+	  ]
+	},
+	{
+	  "intrebare": "Care dintre urmatoarele statiuni balneare se afla in Covasna?",
+	  "raspunsuri": [
+		"Baile Balvanyos",
+		"Baile Herculane",
+		"Baile Felix",
+		"Baile Olanesti"
+	  ]
+	},
+	{
+	  "intrebare": "Cea mai mare resedinta de judet este:",
+	  "raspunsuri": [
+		"Sfântu Gheorghe",
+		"Miercurea Ciuc",
+		"Tg. Mures",
+		"Mangalia"
+	  ]
+	},
+	{
+	  "intrebare": "Cum se numeste renumitul vulcan?",
+	  "raspunsuri": [
+		"Balta Dracului",
+		"Valea Incinsa",
+		"Piatra Arsa",
+		"Lacul Trotusi"
+	  ]
+	},
+	{
+	  "intrebare": "In ce sat se afla casa memoriala a lui I.L. Caragiale?",
+	  "raspunsuri": [
+		"Ion Luca Caragiale",
+		"Darmanesti",
+		"Humulesti",
+		"Targoviste"
+	  ]
+	},
+	{
+	  "intrebare": "Actor renumit din filmul Mihai Viteazul",
+	  "raspunsuri": [
+		"Amza Pellea",
+		"Toma Caragiu",
+		"Sergiu Nicolaescu",
+		"Florin Piersic"
+	  ]
+	},
+	{
+	  "intrebare": "Cum se numeste orasul Cluj-Napoca in maghiara?",
+	  "raspunsuri": [
+		"Kolozsvar",
+		"Klausenburg",
+		"Cloizanburg",
+		"Cluzvar"
+	  ]
+	},
+	{
+	  "intrebare": "Care este cel mai populat oras din lume?",
+	  "raspunsuri": [
+		"Tokyo",
+		"New York",
+		"Shangai",
+		"Milano"
+	  ]
+	},
+	{
+	  "intrebare": "Ce personalitate se afla pe bancnota de 10 lei?",
+	  "raspunsuri": [
+		"Nicolae Grigorescu",
+		"Nicolae Ceausescu",
+		"Ion Iliescu",
+		"Traian Basescu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce poet a ocupat functia de Ministru al Culturii?",
+	  "raspunsuri": [
+		"Marin Sonescu",
+		"Mircea Iliade",
+		"Mihai Eminescu",
+		"Cezar Petrescu"
+	  ]
+	},
+	{
+	  "intrebare": "Ce regina obisnuia sa se deghizeze in adolescenta si sa joace fotbal în apropierea palatului regal?",
+	  "raspunsuri": [
+		"Elisabeta a II-a",
+		"Maria",
+		"Elisabeta de Bourbon",
+		"Ecaterina a II-a"
+	  ]
+	},
+	{
+	  "intrebare": "Ce culoare are cutia neagra a unui avion?",
+	  "raspunsuri": [
+		"Portocalie",
+		"Neagra",
+		"Galbena",
+		"Maro"
+	  ]
+	},
+	{
+	  "intrebare": "Care a fost capitala Imperiului Bizantin?",
+	  "raspunsuri": [
+		"Constantinopol",
+		"Roma",
+		"Ierusalim",
+		"Atena"
+	  ]
+	}
+  ],
+  "Numerical questions": [
+	{
+	  "intrebare": "In ce an a avut loc Capitularea de la Siria?",
+	  "raspuns": 1849
+	},
+	{
+	  "intrebare": "In ce an Paul al V-lea a infiintat Episcopia de la Bacau?",
+	  "raspuns": 1859
+	},
+	{
+	  "intrebare": "In ce an este infiintata prima scoala Greco Catolica?",
+	  "raspuns": 1777
+	},
+	{
+	  "intrebare": "In ce secol a devenit capitala?",
+	  "raspuns": 16
+	},
+	{
+	  "intrebare": "In ce an a fost construita prima locomotiva cu aburi din judet?",
+	  "raspuns": 1872
+	},
+	{
+	  "intrebare": "In ce an a fost atestat documentar?",
+	  "raspuns": 1700
+	},
+	{
+	  "intrebare": "Care este numarul aproximativ de locuitori?",
+	  "raspuns": 65000
+	},
+	{
+	  "intrebare": "In ce secol a fost construita Biserica Calvaria?",
+	  "raspuns": 11
+	},
+	{
+	  "intrebare": "Cati metri are Farul Genovez?",
+	  "raspuns": 8
+	},
+	{
+	  "intrebare": "Ce inaltime are Turnul Chindiei?",
+	  "raspuns": 27
+	},
+	{
+	  "intrebare": "Acum cati ani a fost construita Manastirea Dealu?",
+	  "raspuns": 500
+	},
+	{
+	  "intrebare": "In ce an a fost ridicat Muzeul de Arta din Craiova?",
+	  "raspuns": 1896
+	},
+	{
+	  "intrebare": "Din ce an dateaza Casa Baniei?",
+	  "raspuns": 1699
+	},
+	{
+	  "intrebare": "Cati km are Faleza Dunarii?",
+	  "raspuns": 4
+	},
+	{
+	  "intrebare": "Cati m are Turnul Televiziunii?",
+	  "raspuns": 150
+	},
+	{
+	  "intrebare": "In ce an a fost terminata Biserica Precista?",
+	  "raspuns": 1647
+	},
+	{
+	  "intrebare": "Cati ani a condus Nicolae Ceausescu tara noastra?",
+	  "raspuns": 24
+	},
+	{
+	  "intrebare": "In ce an a reusit Mihai Viteazul unirea celor trei mari tari medievale?",
+	  "raspuns": 1600
+	},
+	{
+	  "intrebare": "In ce an s-a proclamat independența de stat a Romaniei? ",
+	  "raspuns": 1877
+	},
+	{
+	  "intrebare": "Câte strofe are poezia “Luceafarul” de Mihai Eminescu? ",
+	  "raspuns": 98
+	},
+	{
+	  "intrebare": "Cati ani a durat Razboiul de 100 de ani? ",
+	  "raspuns": 116
+	},
+	{
+	  "intrebare": "In ce an an a avut loc revolutia in urma careia a fost inlaturat Nicolae Ceausescu?",
+	  "raspuns": 1989
+	},
+	{
+	  "intrebare": "Care a fost primul model de masina Dacia?",
+	  "raspuns": 1100
+	},
+	{
+	  "intrebare": "Care este numarul de sateliti ai planetei Venus?",
+	  "raspuns": 0
+	},
+	{
+	  "intrebare": "A cata planeta de la Soare este Mercur?",
+	  "raspuns": 1
+	},
+	{
+	  "intrebare": "Cati atomi de oxigen are in componenta sa molecula de bioxid de carbon?",
+	  "raspuns": 2
+	},
+	{
+	  "intrebare": "In ce an s-a scufundat Titanicul?",
+	  "raspuns": 1912
+	},
+	{
+	  "intrebare": "In ce an a intrat România in UE?",
+	  "raspuns": 2007
+	},
+	{
+	  "intrebare": "Cate state are Statele Unite ale Americii?",
+	  "raspuns": 50
+	},
+	{
+	  "intrebare": "In ce an a murit Printesa Diana?",
+	  "raspuns": 1997
+	},
+	{
+	  "intrebare": "Cate perechi de aripi are o albina?",
+	  "raspuns": 2
+	},
+	{
+	  "intrebare": "La cati ani se renoieste complet corpul uman?",
+	  "raspuns": 7
+	},
+	{
+	  "intrebare": "Cate cadre pe secunda pot surprinde ochii umani?",
+	  "raspuns": 60
+	},
+	{
+	  "intrebare": "Cate saptamani sunt intr-un an de zile?",
+	  "raspuns": 52
+	},
+	{
+	  "intrebare": "Cate regiuni are creierul",
+	  "raspuns": 5
+	},
+	{
+	  "intrebare": "Cate judete are romania",
+	  "raspuns": 41
+	},
+	{
+	  "intrebare": "Cu cate tari se invecineaza romania?",
+	  "raspuns": 5
+	},
+	{
+	  "intrebare": "Cate oceane exista",
+	  "raspuns": 4
+	},
+	{
+	  "intrebare": "In ce an a fost marea revolutie? ",
+	  "raspuns": 1989
+	},
+	{
+	  "intrebare": "Cati ani a trait cel mai batran om din lume?",
+	  "raspuns": 116
+	}
+  ]
+}
