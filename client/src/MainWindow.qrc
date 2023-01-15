@@ -26,5 +26,20 @@
         <file>assets/3x3/Satu Mare.png</file>
         <file>assets/3x3/Timisoara.png</file>
         <file>assets/3x3/Transilvania.png</file>
+        <file>assets/5x3/Banat.png</file>
+        <file>assets/5x3/Brasov.png</file>
+        <file>assets/5x3/Bucuresti.png</file>
+        <file>assets/5x3/Calarasi.png</file>
+        <file>assets/5x3/Cluj.png</file>
+        <file>assets/5x3/Constanta.png</file>
+        <file>assets/5x3/Galati.png</file>
+        <file>assets/5x3/Iasi.png</file>
+        <file>assets/5x3/Maramures.png</file>
+        <file>assets/5x3/Oltenia.png</file>
+        <file>assets/5x3/SatuMare.png</file>
+        <file>assets/5x3/Teleorman.png</file>
+        <file>assets/5x3/Timisoara.png</file>
+        <file>assets/5x3/Transilvania.png</file>
+        <file>assets/5x3/Tulcea.png</file>
     </qresource>
 </RCC>
