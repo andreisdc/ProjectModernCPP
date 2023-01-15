@@ -12,16 +12,23 @@
 
 class RICHPRESENCE_API RichPresence {
 public:
-	RichPresence(int64_t clientID);
+	RichPresence(int64_t client_id);
 	~RichPresence();
 
-	void setActivityDetails(
-	std::string const &details,
-	std::string const &state,
-	std::string const &largeIcon,
-	std::string const &largeText,
-	std::string const &smallIcon,
-	std::string const &smallText);
+	void set_activity_details(
+			const std::string &details,
+			const std::string &state,
+			const std::string &largeIcon,
+			const std::string &largeText,
+			const std::string &smallIcon,
+			const std::string &smallText,
+			int currentSize,
+			int maxSize,
+			const std::string &partyId);
+
+	void clear_activity();
+
+	void tick();
 
 private:
 	std::unique_ptr<discord::Core> core;
