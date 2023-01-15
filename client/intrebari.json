@@ -307,7 +307,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este suprafata judetului?",
+	  "intrebare": "Care este suprafata judetului Caras-Severin?",
 	  "raspunsuri": [
 		"133,22 km^2",
 		"208,32 km^2",
@@ -325,7 +325,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "In ce regiune se afla judetul?",
+	  "intrebare": "In ce regiune se afla judetul Cluj?",
 	  "raspunsuri": [
 		"Transilvania",
 		"Moldova",
@@ -334,7 +334,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Care este resedinta de judet?",
+	  "intrebare": "Care este resedinta de judet al judetului Cluj?",
 	  "raspunsuri": [
 		"Cluj Napoca",
 		"Napoca",
@@ -379,7 +379,7 @@
 	  ]
 	},
 	{
-	  "intrebare": "Cum se numeste renumitul vulcan?",
+	  "intrebare": "Cum se numeste renumitul vulcan din judetul Covasna?",
 	  "raspunsuri": [
 		"Balta Dracului",
 		"Valea Incinsa",
@@ -483,20 +483,12 @@
 	  "raspuns": "1777"
 	},
 	{
-	  "intrebare": "In ce secol a devenit capitala?",
+	  "intrebare": "In ce secol a devenit Iasi capitala a Moldovei?",
 	  "raspuns": "16"
 	},
 	{
-	  "intrebare": "In ce an a fost construita prima locomotiva cu aburi din judet?",
+	  "intrebare": "In ce an a fost construita prima locomotiva cu aburi",
 	  "raspuns": "1872"
-	},
-	{
-	  "intrebare": "In ce an a fost atestat documentar?",
-	  "raspuns": "1700"
-	},
-	{
-	  "intrebare": "Care este numarul aproximativ de locuitori?",
-	  "raspuns": "65000"
 	},
 	{
 	  "intrebare": "In ce secol a fost construita Biserica Calvaria?",
